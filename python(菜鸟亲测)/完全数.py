@@ -13,3 +13,6 @@ for i in range(1, 1000):
          print(i)
          a.append(i)
 print("1000 以内完全数：%s" % a)
+
+
+print(sum(range(1, 101)))

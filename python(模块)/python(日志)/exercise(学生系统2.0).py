@@ -2,11 +2,10 @@
 ........学生系统2.0版本......
 """
 import time
-import logging
 # import logging_test
 import realize_logging
 
-logger = logging.getLogger("测试")
+# logger = logging.getLogger("测试")
 
 
 def handle():
