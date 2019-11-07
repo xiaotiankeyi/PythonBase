@@ -1,6 +1,6 @@
 import openpyxl
 import pandas as pd
-import xlrd
+import xlrd, xlwt
 from xlutils.copy import copy
 
 def openPyxl_way():

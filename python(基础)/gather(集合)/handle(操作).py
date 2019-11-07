@@ -6,7 +6,7 @@ paras = set(num)
 
 # ___intersection___求交集。。。。两个变量都存在
 num.intersection(number)
-print(num & number)
+print(set(num) & set(number))
 
 # ___union___求并集。。。。。把两个变量的元素相加,,,,去重复
 num.union(number)
