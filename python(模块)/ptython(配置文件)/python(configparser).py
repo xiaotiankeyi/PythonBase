@@ -47,7 +47,6 @@ def show_ini():
     print(res_4, '\t', res_5)
 
 
-add_ini()
 
 def alter():
     config = configparser.ConfigParser()
