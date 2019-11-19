@@ -7,7 +7,7 @@ handle = conn.cursor(cursor=pymysql.cursors.DictCursor)  # 生成对象
 # sql = "create table s1(id tinyint, name varchar(10))"
 # handle.execute(sql)
 
-data = handle.execute("SELECT * from jforum_posts")
+data = handle.execute("SELECT * from jforum_posts")     #显示数据条数
 # print(data)
 
 #获取下一行

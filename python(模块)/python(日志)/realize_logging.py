@@ -12,7 +12,7 @@ import logging
 
 
 def handle():
-    # 1、定义logger对象：负责产生日志，然后交给Filter过滤，然后交给不同的Handler输出
+    # 1、定义logger对象：负责产生日志，然后交给Filter过滤，然后在交给不同的Handler输出
     logger = logging.getLogger()
     # logger.setLevel("DEBUG")
 

@@ -27,3 +27,9 @@ if a not in b，a是元素，b是列表或字典，这句话的意思是如果a�
 a = [3, 4, 5]
 if 7 not in a:
     print('执行')
+
+j = None
+if j is not None:
+    print('是')
+else:
+    print('不是')
