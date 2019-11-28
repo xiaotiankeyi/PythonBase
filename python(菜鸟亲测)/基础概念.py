@@ -77,3 +77,7 @@ def Foo(x):
         return x + Foo(x - 1)
 
 # print(Foo(4))
+
+a = [2, 5, -1,56,3, 2, -4, -23]
+b = [i for i in a if int(i) >=1 ]
+print('大于1的数有{}个'.format(len(b)))

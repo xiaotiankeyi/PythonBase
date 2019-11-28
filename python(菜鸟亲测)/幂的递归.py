@@ -13,3 +13,11 @@ def mi(x, n):
         return x * mi(x, n - 1)
 
 print(mi(2, 8))
+
+def A(x):
+    if x == 1:
+        return 1
+    else:
+        return x +  A(x - 1)
+
+print(A(20))

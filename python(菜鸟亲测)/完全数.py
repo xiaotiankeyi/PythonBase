@@ -5,14 +5,46 @@
 
 a = []
 for i in range(1, 1000):
-     s = 0
-     for j in range(1, i):
+    s = 0
+    for j in range(1, i):
         if i % j == 0 and j < i:
             s += j
-     if s == i:
-         print(i)
-         a.append(i)
+    if s == i:
+        # print(i)
+        a.append(i)
 print("1000 以内完全数：%s" % a)
 
-
 print(sum(range(1, 101)))
+
+"""自制range函数"""
+
+
+class Range:
+    def __init__(self, n, stop, step):
+        self.n = n
+        self.stop = stop
+        self.step = step
+
+    def __next__(self):
+        if self.n >= self.stop:
+            raise StopIteration
+        x = self.n
+        self.n += self.step
+        return x
+
+    def __iter__(self):
+        return self
+
+
+for i in Range(1, 10, 2):  #
+    print(i)
+
+r = ['s', 'd', 't', 'trt']
+a = ''.join(r)
+print(a)
+
+g = [2, 4, 56, 43, 66, 43, 2, 2]
+f = ''
+for i in g:
+    f = f + str(i)
+print(f)
