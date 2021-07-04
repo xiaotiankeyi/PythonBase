@@ -18,7 +18,18 @@ def create():
                 total.append(i * x)
     print(total)
     """列表推导式的表达式方式"""
-    count = [i * x for i in range(1, 10) for x in range(10, 20) if (i * x) % 2 == 0 and (i * x) > 100]
+    count = [
+        i *
+        x for i in range(
+            1,
+            10) for x in range(
+            10,
+            20) if (
+                i *
+                x) %
+        2 == 0 and (
+                i *
+                x) > 100]
     print(count)
 
 
