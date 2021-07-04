@@ -2,7 +2,6 @@
 1、内存的区分为"用户态","内核态",操作系统驱动流程为读取"内核态"的代码到内存
 2、应用收发消息时就是在操作自己的"缓存区"......
 """
-from socket import *
 import socket
 
 # socket.AF_INET基于网络，socket.SOCK_STREAM基于tcp/ip协议
@@ -15,7 +14,7 @@ while True:
 
     print("等待连接........")
     conn, addr = phone.accept()  # 三次握手,建立连接
-    print(addr,"连接成功")
+    print(addr, "连接成功")
     while True:
         try:
             data = input(">>>：").strip()

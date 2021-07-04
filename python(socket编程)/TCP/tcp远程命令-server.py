@@ -18,7 +18,8 @@ while True:
         # 收
         try:
             cmd = conn.recv(buffer_size)
-            if not cmd: break
+            if not cmd:
+                break
             print('收到客户端的命令', cmd)
 
             # 执行命令，得到命令的运行结果cmd_res

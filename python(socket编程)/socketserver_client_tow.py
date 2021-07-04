@@ -1,3 +1,4 @@
+
 from socket import *
 
 ip_port = ('127.0.0.1', 8080)
@@ -9,8 +10,10 @@ tcp_client.connect(ip_port)
 
 while True:
     cmd = input('>>: ').strip()
-    if not cmd: continue
-    if cmd == 'quit': break
+    if not cmd:
+        continue
+    if cmd == 'quit':
+        break
 
     tcp_client.send(cmd.encode('utf-8'))
 

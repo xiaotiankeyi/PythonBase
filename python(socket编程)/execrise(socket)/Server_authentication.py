@@ -1,6 +1,7 @@
 # _*_coding:utf-8_*_
 from socketserver import *
-import hmac, os
+import hmac
+import os
 
 secret_key = b'linhaifeng bang bang bang'
 
@@ -39,7 +40,8 @@ class Handler(BaseRequestHandler):
         while True:
             try:
                 data = self.request.recv(1024)
-                if not data: break
+                if not data:
+                    break
                 print('接收到客户端发来的消息是：', data.decode("utf8"))
 
                 self.request.sendall(data.upper())
