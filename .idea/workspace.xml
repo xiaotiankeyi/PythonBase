@@ -1,14 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="00086352-e296-4cae-a8b3-4c82cba595bb" name="Default Changelist" comment="更新">
-      <change afterPath="$PROJECT_DIR$/python(基础)/comprehension(推导式)/Walden.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/flask_class/create_mock.py" beforeDir="false" afterPath="$PROJECT_DIR$/Flask_class/create_mock.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/flask_class/hsahlib_pwd.py" beforeDir="false" afterPath="$PROJECT_DIR$/Flask_class/hsahlib_pwd.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/python(基础)/comprehension(推导式)/comprehension.py" beforeDir="false" afterPath="$PROJECT_DIR$/python(基础)/comprehension(推导式)/comprehension.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/python(基础)/comprehension(推导式)/exercise(词频统计).py" beforeDir="false" afterPath="$PROJECT_DIR$/python(基础)/comprehension(推导式)/exercise(词频统计).py" afterDir="false" />
-    </list>
+    <list default="true" id="00086352-e296-4cae-a8b3-4c82cba595bb" name="Default Changelist" comment="更新" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -191,7 +184,7 @@
       <workItem from="1625041036578" duration="12512000" />
       <workItem from="1625105215949" duration="3328000" />
       <workItem from="1625192578490" duration="4784000" />
-      <workItem from="1625380310458" duration="4437000" />
+      <workItem from="1625380310458" duration="5129000" />
     </task>
     <task id="LOCAL-00001" summary="更新">
       <created>1625229648410</created>
@@ -214,7 +207,14 @@
       <option name="project" value="LOCAL" />
       <updated>1625389061300</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="更新">
+      <created>1625391323544</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1625391323544</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

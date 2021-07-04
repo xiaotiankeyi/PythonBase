@@ -6,7 +6,7 @@ def handle():
         file = set(file)  # 转化为集合,进行去重操作
 
         """判断是否为可读文件"""
-        print(f.readable())     #可读为True or False
+        print(f.readable())  # 可读为True or False
 
         """读取第一行内容"""
         f.readline()
@@ -36,8 +36,8 @@ handle()
 读 	    + 	+ 		+ 		+
 写 		    + 	+ 	+ 	+ 	+
 创建 			+ 	+ 	+ 	+
-覆盖 			+ 	+ 		
-开始 	+ 	+ 	+ 	+ 		
+覆盖 			+ 	+
+开始 	+ 	+ 	+ 	+
 结尾 					+ 	+
 """
 

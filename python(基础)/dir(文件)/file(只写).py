@@ -5,7 +5,7 @@ with open("study_file.txt", 'w') as s:
     print(s.writable())
 
     """与列表形式写入文件......"""
-    s.writelines(["\nclass","\n","subjects"])
+    s.writelines(["\nclass", "\n", "subjects"])
 
     """在使用with时不需要手动关闭，，函数会自动关闭打开的文件....."""
 

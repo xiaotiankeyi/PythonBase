@@ -2,7 +2,8 @@
 概念：文件的数据是存放于硬盘上的，因而只存在覆盖、不存在修改这么一说，我们平时看到的修改文件，都是模拟出来的效果，
 实现：将硬盘存放的该文件的内容全部加载到内存，在内存中是可以修改的，修改完毕后，再由内存覆盖到硬盘（word，vim，nodpad++等编辑器）
 """
-import os, time
+import os
+import time
 
 
 def handle():
@@ -35,7 +36,8 @@ def handle_1(txt):
         # ret = max(len(e) for e in f)
         # ter = sum(len(o) for o in f)
         v = []
-        for i in f: v.append(i)
+        for i in f:
+            v.append(i)
         g = []
         for h in v:
             g.append(len(h))
