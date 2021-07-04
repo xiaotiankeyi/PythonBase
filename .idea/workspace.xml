@@ -1,17 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="00086352-e296-4cae-a8b3-4c82cba595bb" name="Default Changelist" comment="更新">
-      <change afterPath="$PROJECT_DIR$/flask_class/create_mock.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/flask_class/hsahlib_pwd.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Mysql/exercise(mysql).py" beforeDir="false" afterPath="$PROJECT_DIR$/Mysql/exercise(mysql).py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/python(socket编程)/UDP/udp客户端(1).py" beforeDir="false" afterPath="$PROJECT_DIR$/python(socket编程)/UDP/UDP_Client_one.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/python(socket编程)/UDP/udp客户端.py" beforeDir="false" afterPath="$PROJECT_DIR$/python(socket编程)/UDP/UDP_Client_tow.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/python(socket编程)/UDP/udp服务端.py" beforeDir="false" afterPath="$PROJECT_DIR$/python(socket编程)/UDP/UDP_Sever.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/python(socket编程)/module(socketserver).py" beforeDir="false" afterPath="$PROJECT_DIR$/python(socket编程)/module(socketserver).py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/python(socket编程)/socketserver_client(2).py" beforeDir="false" afterPath="$PROJECT_DIR$/python(socket编程)/socketserver_client(2).py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/python(socket编程)/socketserver_client.py" beforeDir="false" afterPath="$PROJECT_DIR$/python(socket编程)/socketserver_client.py" afterDir="false" />
-    </list>
+    <list default="true" id="00086352-e296-4cae-a8b3-4c82cba595bb" name="Default Changelist" comment="更新" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -79,7 +69,7 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="UDP_Sever" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+    <configuration name="UDP_Service" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="PythonBase" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -92,7 +82,7 @@
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/python(socket编程)/UDP/UDP_Sever.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/python(socket编程)/UDP/UDP_Service.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -170,7 +160,7 @@
     <recent_temporary>
       <list>
         <item itemvalue="Python.UDP_Client_tow" />
-        <item itemvalue="Python.UDP_Sever" />
+        <item itemvalue="Python.UDP_Service" />
         <item itemvalue="Python.factory" />
         <item itemvalue="Python.python(静态方法)" />
         <item itemvalue="Python.grant" />
@@ -194,7 +184,7 @@
       <workItem from="1625041036578" duration="12512000" />
       <workItem from="1625105215949" duration="3328000" />
       <workItem from="1625192578490" duration="4784000" />
-      <workItem from="1625380310458" duration="2095000" />
+      <workItem from="1625380310458" duration="2449000" />
     </task>
     <task id="LOCAL-00001" summary="更新">
       <created>1625229648410</created>
@@ -203,7 +193,14 @@
       <option name="project" value="LOCAL" />
       <updated>1625229648410</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="更新">
+      <created>1625389051845</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1625389051845</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
