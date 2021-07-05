@@ -128,11 +128,14 @@ def f1(a, a1, a2):
 # ret = f1(1,0,1)
 # print(ret)
 
+
 """将names=['egon','alex_sb','wupeiqi','yuanhao']中的名字全部变大写"""
 
-names=['egon','alex_sb','wupeiqi','yuanhao']
+names = ['egon', 'alex_sb', 'wupeiqi', 'yuanhao']
 li_1 = [i.upper() for i in names]
 # print(li_1)
+
+
 def handle(paras):
     user = []
     for i in paras:
@@ -144,15 +147,18 @@ def handle(paras):
 # v = handle(names)
 # print(v)
 
+
 """将names=['egon','alex_sb','wupeiqi','yuanhao']中以sb结尾的名字过滤掉，然后用字典保存剩下的名字和 长度"""
-name_1=['egon','alex_sb','wupeiqi','yuanhao']
+name_1 = ['egon', 'alex_sb', 'wupeiqi', 'yuanhao']
 li = [len(i) for i in name_1 if not i.endswith("sd")]
+
 
 def create(paras):
     quest = []
     for n in paras:
-        if not n.endswith("sb"):quest.append(n)
-        dic = {i:len(i) for i in quest}
+        if not n.endswith("sb"):
+            quest.append(n)
+        dic = {i: len(i) for i in quest}
         # if not n.endswith("sb"):
         #     quest.append(len(n))
     return dic
@@ -160,9 +166,10 @@ def create(paras):
 # f = create(name_1)
 # print(f)
 
+
 def handle_1():
     g = ['EGON', 'ALEX_SB', 'WUPEIQI', 'YUANHAO']
-    dic_1 = {i:len(i) for i in g}
+    dic_1 = {i: len(i) for i in g}
     h = {}
     for i in g:
         # print(i,count(i))

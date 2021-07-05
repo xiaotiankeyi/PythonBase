@@ -1,4 +1,5 @@
-import os, time
+import os
+import time
 import exercise  # 调用同级目录下的exercise来实现修改功能
 
 # 定一个列表，用来存储所有的学生信息(每个学生是一个字典)
@@ -82,7 +83,11 @@ def search_info():
     for temp_info in info_list:
         if temp_info['name'] == search_name:
             print("查询到的信息如下:")
-            print("name:%s, tel:%s, QQ:%s" % (temp_info['name'], temp_info['tel'], temp_info['qq']))
+            print(
+                "name:%s, tel:%s, QQ:%s" %
+                (temp_info['name'],
+                 temp_info['tel'],
+                    temp_info['qq']))
             break
     else:
         print("没有您要找的信息....")
@@ -94,7 +99,9 @@ def print_all_info():
     i = 0
     for temp in info_list:
         # temp是一个字典
-        print("%d\t%s\t\t%s\t\t%s" % (i, temp['name'], temp['tel'], temp['qq']))
+        print(
+            "%d\t%s\t\t%s\t\t%s" %
+            (i, temp['name'], temp['tel'], temp['qq']))
         i += 1
 
 

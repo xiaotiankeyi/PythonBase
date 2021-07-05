@@ -25,6 +25,7 @@
 
 # print(info_list)
 
+
 def modify_info(info_list):
     """修改学生信息"""
     tag = True
@@ -52,19 +53,19 @@ def modify_info(info_list):
                                         return new_user()
                                 else:
                                     info_list[modify_num]['name'] = new_name
-                                    print("修改成功>>>",info_list[modify_num])
+                                    print("修改成功>>>", info_list[modify_num])
                                     tag = False
 
                             return new_user()
 
                         elif altar == 1:
                             info_list[modify_num]['tel'] = input("请输入新的手机号： ")
-                            print("修改成功>>>",info_list[modify_num])
+                            print("修改成功>>>", info_list[modify_num])
                             tag = False
 
                         elif altar == 2:
                             info_list[modify_num]['qq'] = input("请输入新QQ： ")
-                            print("修改成功>>>",info_list[modify_num])
+                            print("修改成功>>>", info_list[modify_num])
                             tag = False
 
                         else:

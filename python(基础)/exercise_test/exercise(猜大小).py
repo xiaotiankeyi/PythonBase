@@ -1,7 +1,7 @@
 import random
 
 
-def call(count=0, ):
+def call(count=0):
     asset = 1000
     while count < 3:
         print("\t\t猜大小游戏")
@@ -10,10 +10,14 @@ def call(count=0, ):
         robot = random.randint(1, 100)
         if num > robot:
             asset = asset + 10
-            # print("robot出的是{}, 你出的是{}.....你赢了...资产为{}".format(robot, num,asset))
+            print(
+                "robot出的是{}, 你出的是{}.....你赢了...资产为{}".format(
+                    robot, num, asset))
         else:
             asset = asset - 10
-            # print("robot出的是{}, 你出的是{}.....你输了....资产为{}".format(robot, num,asset))
+            print(
+                "robot出的是{}, 你出的是{}.....你输了....资产为{}".format(
+                    robot, num, asset))
         count += 1
         if count >= 3:
             if asset >= 1000:
@@ -26,6 +30,7 @@ def call(count=0, ):
 
 call()
 
+
 def handle():
     asset = 1000
     count = 0
@@ -36,8 +41,12 @@ def handle():
         robot = random.randint(1, 100)
         if num > robot:
             asset = asset + 10
-            print("robot出的是{}, 你出的是{}.....你赢了...资产为{}".format(robot, num,asset))
+            print(
+                "robot出的是{}, 你出的是{}.....你赢了...资产为{}".format(
+                    robot, num, asset))
         else:
             asset = asset - 10
-            print("robot出的是{}, 你出的是{}.....你输了....资产为{}".format(robot, num,asset))
+            print(
+                "robot出的是{}, 你出的是{}.....你输了....资产为{}".format(
+                    robot, num, asset))
         count += 1

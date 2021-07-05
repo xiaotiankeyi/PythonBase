@@ -1,4 +1,4 @@
-with open("variables", 'r', ) as n:
+with open("variables.txt", 'r', ) as n:
     """返回当前指针所在文件的位置....."""
     print("当前指针位置为{}".format(n.tell()))
 

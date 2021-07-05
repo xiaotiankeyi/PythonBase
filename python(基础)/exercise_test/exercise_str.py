@@ -85,7 +85,14 @@ def tables():
 def group():
     paras = []
     for i in range(0, 301):
-        dictionary = {"name": "alex" + str(i), "email": "alex" + str(i) + "@163.com", "pad" + str(i): "123"}
+        dictionary = {
+            "name": "alex" +
+            str(i),
+            "email": "alex" +
+            str(i) +
+            "@163.com",
+            "pad" +
+            str(i): "123"}
         paras.append(dictionary)
     print(paras)
 

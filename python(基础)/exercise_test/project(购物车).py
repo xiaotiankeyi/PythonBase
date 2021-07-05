@@ -23,7 +23,7 @@ goods = [
 while True:
     q = 0
     money = []
-    shopping_cart = []      #购物车
+    shopping_cart = []  # 购物车
     for i, v in enumerate(goods, 1):
         money.append(v["price"])
 
@@ -40,11 +40,13 @@ while True:
             print("你的金额买不起任何一个东西\n")
         elif salary > money[0]:
             while True:
-                all_price = 0       #统计消费
+                all_price = 0  # 统计消费
                 print("\33[36;1m商品列表\33[1m".center(40, "="))
                 for i, v in enumerate(goods, 1):
-                    print("%d %s \33[34;1m%d\33[1m" % (i, v["name"].ljust(4, " "), v["price"]))
-                print("请输入产品\33[31;1m序号\33[1m添加到购物车、返回上一层请按 \33[31;1mP \33[1m、完全退出请按 \33[31;1mQ\33[1m")
+                    print("%d %s \33[34;1m%d\33[1m" %
+                          (i, v["name"].ljust(4, " "), v["price"]))
+                print(
+                    "请输入产品\33[31;1m序号\33[1m添加到购物车、返回上一层请按 \33[31;1mP \33[1m、完全退出请按 \33[31;1mQ\33[1m")
                 seq_num = input(">>> ")
                 if seq_num.lower() == "p":
                     # 退出这个循环,返回上个循环
@@ -56,21 +58,25 @@ while True:
                     seq_num = int(seq_num)
                     if seq_num > 0 and seq_num <= len(goods):
                         # 加入购物车
-                        shopping_cart.append(goods[seq_num - 1])    #减1的原因，因为商品序号是从1开始算起，而购车是从0开始算起
+                        # 减1的原因，因为商品序号是从1开始算起，而购车是从0开始算起
+                        shopping_cart.append(goods[seq_num - 1])
                         for y in shopping_cart:
                             all_price += y["price"]
-                        print("\33[33;1m%s\33[1m 已添加到购物车\n" % (goods[seq_num - 1]["name"]))
+                        print("\33[33;1m%s\33[1m 已添加到购物车\n" %
+                              (goods[seq_num - 1]["name"]))
                         while True:
                             print(
-                                "继续添加产品请按 \33[31;1mC\33[1m 、结算请按 \33[31;1mB\33[1m 、查看购物车请按 \33[31;1mS\33[1m 、完全退出请按 \33[31;1mQ\33[1m")
+                                "继续添加产品请按 \33[31;1mC\33[1m 、结算请按 \33[31;1mB\33[1m 、"
+                                "查看购物车请按 \33[31;1mS\33[1m 、完全退出请按 \33[31;1mQ\33[1m")
                             final_cho = input(">>> ")
                             if final_cho.lower() == "c":
                                 break
                             elif final_cho.lower() == "b":
                                 while True:
                                     print(
-                                        "您的余额为：\33[34;1m%d\33[1m 您购买的商品总价为：\33[34;1m%d\33[1m 确定购买吗? 确定 \33[31;1mY\33[1m 取消 \33[31;1mN\33[1m" % (
-                                        salary, all_price))
+                                        "您的余额为：\33[34;1m%d\33[1m 您购买的商品总价为：\33[34;1m%d\33[1m 确定购买吗? "
+                                        "确定 \33[31;1mY\33[1m 取消 \33[31;1mN\33[1m" %
+                                        (salary, all_price))
                                     confirm_bill = input(">>> ")
                                     if confirm_bill.lower() == "y":
                                         if shopping_cart != []:
@@ -98,11 +104,16 @@ while True:
                                         if y not in temp_cart:
                                             temp_cart.append(y)
                                     for m, z in enumerate(temp_cart, 1):
-                                        print("%d %s \33[34;1m%d\33[1m %d个" % (
-                                        m, z["name"].ljust(4, " "), z["price"], shopping_cart.count(z)))
-                                    print("\n购物车商品总金额为：\33[34;1m%d\33[1m" % all_price)
+                                        print(
+                                            "%d %s \33[34;1m%d\33[1m %d个" %
+                                            (m, z["name"].ljust(
+                                                4, " "), z["price"], shopping_cart.count(z)))
+                                    print(
+                                        "\n购物车商品总金额为：\33[34;1m%d\33[1m" %
+                                        all_price)
                                     print("您的余额为：\33[34;1m%d\33[1m" % salary)
-                                    print("按\33[31;1m序号\33[1m可删除商品 、继续请按 \33[31;1mC\33[1m 、清空购物车请按 \33[31;1mE\33[1m")
+                                    print(
+                                        "按\33[31;1m序号\33[1m可删除商品 、继续请按 \33[31;1mC\33[1m 、清空购物车请按 \33[31;1mE\33[1m")
                                     ctrl_shop_cart = input(">>> ")
                                     if ctrl_shop_cart.lower() == "c":
                                         break
@@ -113,10 +124,13 @@ while True:
                                         break
                                     elif ctrl_shop_cart.isdecimal():
                                         ctrl_shop_cart = int(ctrl_shop_cart)
-                                        if ctrl_shop_cart > 0 and ctrl_shop_cart <= len(temp_cart):
-                                            all_price = all_price - temp_cart[ctrl_shop_cart - 1]["price"]
+                                        if ctrl_shop_cart > 0 and ctrl_shop_cart <= len(
+                                                temp_cart):
+                                            all_price = all_price - \
+                                                temp_cart[ctrl_shop_cart - 1]["price"]
                                             shopping_cart.reverse()
-                                            shopping_cart.remove(temp_cart[ctrl_shop_cart - 1])
+                                            shopping_cart.remove(
+                                                temp_cart[ctrl_shop_cart - 1])
                                             shopping_cart.reverse()
                                             print("删除成功\n")
                                         else:

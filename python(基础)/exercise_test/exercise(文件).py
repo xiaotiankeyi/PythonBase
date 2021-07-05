@@ -24,7 +24,7 @@ def test_filter(word, censored_word='lan', changer='******', ):
 
 
 def collect(name, msg):
-    clean_msg = test_filter(msg)    #调用过滤条件,
+    clean_msg = test_filter(msg)  # 调用过滤条件,
     file_test(name, clean_msg)
 
 
@@ -75,8 +75,6 @@ def sum():
         dict[i] = collection.count(i)
     print(dict)
 
-    for k, y in dict.items():
-        pass
     """排序"""
     print('按照出现次数排序', sorted(zip(dict.values(), dict.keys(), ), reverse=True))
 
@@ -84,6 +82,5 @@ def sum():
 
     for word in sorted(dict, key=lambda x: dict[x], reverse=True):
         print("{} -- {} times".format(word, dict[word]))
-
 
 # sum()

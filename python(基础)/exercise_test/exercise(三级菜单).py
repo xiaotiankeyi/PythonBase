@@ -71,7 +71,8 @@ def handle():
 
                             # -----------------------------------------------------------------
                             def handle_4():
-                                county = input("请输入县区或...[a]...返回市区或者输入...[c]...返回省城>>>>>>>")
+                                county = input(
+                                    "请输入县区或...[a]...返回市区或者输入...[c]...返回省城>>>>>>>")
                                 if county in menu[province][city]:
                                     while True:
                                         for key_county in menu[province][city][county]:
@@ -80,12 +81,18 @@ def handle():
 
                                     """返回省城"""
                                 elif county == 'c':
-                                    print("\t\t\t", "....你选择了%s返回,请再次你选择需要查看的省城....." % county)
+                                    print(
+                                        "\t\t\t",
+                                        "....你选择了%s返回,请再次你选择需要查看的省城....." %
+                                        county)
                                     handle_2()
 
                                     """返回市区"""
                                 elif county == "a":
-                                    print("\t\t\t", "....你选择了%s返回,请再次你选择需要查看的市区........." % county)
+                                    print(
+                                        "\t\t\t",
+                                        "....你选择了%s返回,请再次你选择需要查看的市区........." %
+                                        county)
                                     handle_3()
                                     """退出"""
                                 elif county != "c" and county != "a":
@@ -95,7 +102,10 @@ def handle():
 
                         """返回省城"""
                     elif city == "q":
-                        print("\t\t\t", ".........你选择了%s返回,请再次选择需要查看的省城............." % city)
+                        print(
+                            "\t\t\t",
+                            ".........你选择了%s返回,请再次选择需要查看的省城............." %
+                            city)
                         handle_2()
                         """退出"""
                     elif city != "q" and city in menu[province]:

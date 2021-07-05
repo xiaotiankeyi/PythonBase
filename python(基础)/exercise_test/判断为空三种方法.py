@@ -10,14 +10,14 @@ a = []
 print(not a)
 
 c = not a
-print('c为：',c)
-print(None is not None)    #判断None is不等于None
+print('c为：', c)
+print(None is not None)  # 判断None is不等于None
 
 print(a is None)
 
 
 if not a:
-    print('为None')      #解释
+    print('为None')  # 解释
 else:
     print('不为None')
 

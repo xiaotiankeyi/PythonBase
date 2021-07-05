@@ -1,7 +1,7 @@
 """
 ........学生系统2.0版本......
 """
-print("=" * 40)
+print(" = " * 40)
 print("\t\t\t学生名片管理系统")
 print("1:添加学生")
 print("2:删除学生")
@@ -66,7 +66,9 @@ while True:
                 for n in student:
                     if n["name"] == seek_name:
                         print("姓名\t年龄\t性别")
-                        print("%s\t\t%s\t\t%s" % (n["name"], n["age"], n["sex"]))
+                        print(
+                            "%s\t\t%s\t\t%s" %
+                            (n["name"], n["age"], n["sex"]))
                         break
                     elif seek_name == "q":
                         sign = False
