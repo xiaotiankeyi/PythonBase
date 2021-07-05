@@ -9,6 +9,9 @@
 """直接调用本身"""
 
 
+
+
+from time import sleep
 def fi():
     print("from f1")
     fi()
@@ -33,7 +36,7 @@ def f2():
 
 """例一"""
 """
-实现：10 / 2 = 5 | 5 / 2 = 2 | 2 / 2 = 1 | 
+实现：10 / 2 = 5 | 5 / 2 = 2 | 2 / 2 = 1 |
 """
 
 
@@ -50,7 +53,6 @@ def salary(n):
 # print(res)
 
 """例二"""
-from time import sleep
 
 person_list = ['Tom', 'alex', 'lucy', 'jack', 'zsc']
 
@@ -89,7 +91,9 @@ m = num(8)
 print(m)
 """猴子吃桃案例"""
 s = 1
-func = lambda x: (x + 1) * 2
+def func(x): return (x + 1) * 2
+
+
 for i in range(9):
     s = func(s)
 

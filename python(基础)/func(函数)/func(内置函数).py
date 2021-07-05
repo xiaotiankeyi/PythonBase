@@ -1,7 +1,9 @@
 # _______abs()______返回数字的绝对值
+import math
 print(abs(23))
 
-# _______enumerate()函数用于将一个可遍历的数据对象(如列表、元组或字符串)组合为一个索引序列，同时列出数据和数据下标，一般用在 for 循环当中。
+# _______enumerate()函数用于将一个可遍历的数据对象(如列表、元组或字符串)组合为一个索引序列，同时列出数据和数据下标，一般用在
+# for 循环当中。
 seasons = ['Spring', 'Summer', 'Fall', 'Winter']
 for total, i in enumerate(seasons):
     print(total, i)
@@ -14,7 +16,6 @@ n = eval("3 * 4")
 print(n)
 
 # ______pow() 方法返回 xy（x的y次方） 的值。。。计算x值得平方
-import math
 
 print("math.pow(100, 2)", math.pow(100, 2))
 # 内置用法
@@ -57,7 +58,8 @@ print(new_list)
 print(chr(71))
 
 
-# ______callable() 函数用于检查一个对象是否是可调用的。如果返回 True，object 仍然可能调用失败；但如果返回 False，调用对象 object 绝对不会成功。
+# ______callable() 函数用于检查一个对象是否是可调用的。如果返回 True，object 仍然可能调用失败；但如果返回
+# False，调用对象 object 绝对不会成功。
 def sum(a, b):
     return a + b
 

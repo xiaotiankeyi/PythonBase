@@ -20,7 +20,8 @@ print((max(dict.values())))
 g = [item for item in zip(dict.keys(), dict.values())]
 print('形成元祖:', g)
 
-print('按照values最大值排序,values在前', sorted(zip(dict.values(), dict.keys(), ), reverse=True))
+print('按照values最大值排序,values在前', sorted(
+    zip(dict.values(), dict.keys(), ), reverse=True))
 
 print('年龄最大的人:', list(max(zip(dict.values(), dict.keys()))))
 

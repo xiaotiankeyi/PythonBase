@@ -27,11 +27,15 @@ def accept():
 # next(all)
 
 """使用生成器创建新的迭代模式"""
+
+
 def frange(i, v, b):
     s = i
     while s < v:
         yield s
         s += b
+
+
 d = []
 for j in frange(1, 10, 0.5):
     d.append(j)
