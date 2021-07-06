@@ -1,6 +1,7 @@
 from tkinter import *
 from tkinter import messagebox
 
+
 class Application(Frame):
     """GUI程序面向对象的经典写法"""
 
@@ -24,9 +25,12 @@ class Application(Frame):
 
     def Popup_window(self):
         messagebox.showinfo("alert show", "这个是弹出的警告弹窗！！！！")
+
+
 if __name__ == "__main__":
     root = Tk()
     root.geometry("400x100+200+300")
     root.title("一个经典的GUI程序的测试运行")
     app = Application(master=root)
+    # 进入消息循环
     root.mainloop()
