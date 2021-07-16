@@ -38,7 +38,7 @@ class MyThread(threading.Thread):
 if __name__ == '__main__':
 
     R_Lock = threading.RLock()  # 创建递归锁#一个线程拿到锁,counter加1,该线程内又碰到加锁的情况，
-        # 则counter继续加1,这期间所有其他线程都只能等待，等待该线程释放所有锁，即counter递减到0为止
+                                # 则counter继续加1,这期间所有其他线程都只能等待，等待该线程释放所有锁，即counter递减到0为止
     L = []
 
     for i in range(5):

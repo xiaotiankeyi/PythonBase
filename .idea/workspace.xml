@@ -2,28 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="00086352-e296-4cae-a8b3-4c82cba595bb" name="Default Changelist" comment="更新">
-      <change afterPath="$PROJECT_DIR$/python(并发编程)/threading(线程)/threading(批量开启).py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/python(并发编程)/threading(线程)/threading(线程_方法实现).py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/python(并发编程)/threading(线程)/threading(线程_类实现).py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/python(线程)/process(进程)/基础理论知识.txt" beforeDir="false" afterPath="$PROJECT_DIR$/python(并发编程)/process(进程)/基础理论知识.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/python(线程)/process(进程)/进程(createProcess)_1.py" beforeDir="false" afterPath="$PROJECT_DIR$/python(并发编程)/process(进程)/进程(createProcess)_1.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/python(线程)/process(进程)/进程(createProcess)_2.py" beforeDir="false" afterPath="$PROJECT_DIR$/python(并发编程)/process(进程)/进程(createProcess)_2.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/python(线程)/process(进程)/进程同步.py" beforeDir="false" afterPath="$PROJECT_DIR$/python(并发编程)/process(进程)/进程同步.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/python(线程)/process(进程)/进程池.py" beforeDir="false" afterPath="$PROJECT_DIR$/python(并发编程)/process(进程)/进程池.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/python(线程)/process(进程)/进程通信.py" beforeDir="false" afterPath="$PROJECT_DIR$/python(并发编程)/process(进程)/进程通信.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/python(线程)/threading(线程)/Recursive_locking(递归锁).py" beforeDir="false" afterPath="$PROJECT_DIR$/python(并发编程)/threading(线程)/Recursive_locking(递归锁).py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/python(线程)/threading(线程)/data.dat" beforeDir="false" afterPath="$PROJECT_DIR$/python(并发编程)/threading(线程)/data.dat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/python(线程)/threading(线程)/module(threading).py" beforeDir="false" afterPath="$PROJECT_DIR$/python(并发编程)/threading(线程)/module(threading).py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/python(线程)/threading(线程)/objects(同步对象).py" beforeDir="false" afterPath="$PROJECT_DIR$/python(并发编程)/threading(线程)/objects(同步对象).py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/python(线程)/threading(线程)/queue(队列).py" beforeDir="false" afterPath="$PROJECT_DIR$/python(并发编程)/threading(线程)/queue(队列).py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/python(线程)/threading(线程)/synchrolock(同步锁).py" beforeDir="false" afterPath="$PROJECT_DIR$/python(并发编程)/threading(线程)/synchrolock(同步锁).py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/python(线程)/threading(线程)/threading(信号量).py" beforeDir="false" afterPath="$PROJECT_DIR$/python(并发编程)/threading(线程)/threading(信号量).py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/python(线程)/threading(线程)/threading(守护线程).py" beforeDir="false" afterPath="$PROJECT_DIR$/python(并发编程)/threading(线程)/threading(守护线程).py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/python(线程)/threading(线程)/threading(实例).py" beforeDir="false" afterPath="$PROJECT_DIR$/python(并发编程)/threading(线程)/threading(实例).py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/python(线程)/threading(线程)/threading(数据共享).py" beforeDir="false" afterPath="$PROJECT_DIR$/python(并发编程)/threading(线程)/threading(数据共享).py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/python(线程)/threading(线程)/threading(线程开启).py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/python(线程)/threading(线程)/threading(自定义线程).py" beforeDir="false" afterPath="$PROJECT_DIR$/python(并发编程)/threading(线程)/threading(join使用).py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/python(并发编程)/threading(线程)/Recursive_locking(递归锁).py" beforeDir="false" afterPath="$PROJECT_DIR$/python(并发编程)/threading(线程)/Recursive_locking(递归锁).py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/python(并发编程)/threading(线程)/objects(同步对象).py" beforeDir="false" afterPath="$PROJECT_DIR$/python(并发编程)/threading(线程)/objects(Event事件).py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/python(并发编程)/threading(线程)/synchrolock(同步锁).py" beforeDir="false" afterPath="$PROJECT_DIR$/python(并发编程)/threading(线程)/synchrolock(同步锁).py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/python(并发编程)/threading(线程)/threading(信号量).py" beforeDir="false" afterPath="$PROJECT_DIR$/python(并发编程)/threading(线程)/threading(信号量).py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/python(并发编程)/threading(线程)/threading(实例).py" beforeDir="false" afterPath="$PROJECT_DIR$/python(并发编程)/threading(线程)/threading(实例).py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/python(并发编程)/threading(线程)/threading(批量开启).py" beforeDir="false" afterPath="$PROJECT_DIR$/python(并发编程)/threading(线程)/threading(批量开启线程).py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -73,6 +58,7 @@
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
+    <property name="run.code.analysis.last.selected.profile" value="aDefault" />
     <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyIntegratedToolsModulesConfigurable" />
   </component>
   <component name="RecentsManager">
@@ -83,7 +69,29 @@
       <recent name="$PROJECT_DIR$" />
     </key>
   </component>
-  <component name="RunManager" selected="Python.threading(守护线程)">
+  <component name="RunManager" selected="Python.objects(Event事件)">
+    <configuration name="Recursive_locking(递归锁)" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="PythonBase" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/python(并发编程)/threading(线程)" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/python(并发编程)/threading(线程)/Recursive_locking(递归锁).py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
     <configuration name="exercise(文件)" type="PythonConfigurationType" factoryName="Python" nameIsGenerated="true">
       <module name="PythonBase" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -128,7 +136,7 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="threading(批量开启)" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+    <configuration name="objects(Event事件)" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="PythonBase" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -141,7 +149,51 @@
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/python(并发编程)/threading(线程)/threading(批量开启).py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/python(并发编程)/threading(线程)/objects(Event事件).py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="synchrolock(同步锁)" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="PythonBase" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/python(并发编程)/threading(线程)" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/python(并发编程)/threading(线程)/synchrolock(同步锁).py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="threading(信号量)" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="PythonBase" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/python(并发编程)/threading(线程)" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/python(并发编程)/threading(线程)/threading(信号量).py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -164,28 +216,6 @@
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
       <option name="SCRIPT_NAME" value="$PROJECT_DIR$/python(并发编程)/threading(线程)/threading(守护线程).py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
-    <configuration name="threading(线程_方法实现)" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
-      <module name="PythonBase" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/python(线程)/threading(线程)" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/python(线程)/threading(线程)/threading(线程_方法实现).py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -240,19 +270,19 @@
     </configuration>
     <list>
       <item itemvalue="Python.exercise(文件)" />
-      <item itemvalue="Python.threading(线程_方法实现)" />
-      <item itemvalue="Python.threading(线程_类实现)" />
       <item itemvalue="Python.threading(join使用)" />
-      <item itemvalue="Python.threading(批量开启)" />
-      <item itemvalue="Python.threading(守护线程)" />
+      <item itemvalue="Python.synchrolock(同步锁)" />
+      <item itemvalue="Python.Recursive_locking(递归锁)" />
+      <item itemvalue="Python.threading(信号量)" />
+      <item itemvalue="Python.objects(Event事件)" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Python.threading(守护线程)" />
-        <item itemvalue="Python.threading(批量开启)" />
+        <item itemvalue="Python.objects(Event事件)" />
+        <item itemvalue="Python.threading(信号量)" />
+        <item itemvalue="Python.Recursive_locking(递归锁)" />
+        <item itemvalue="Python.synchrolock(同步锁)" />
         <item itemvalue="Python.threading(join使用)" />
-        <item itemvalue="Python.threading(线程_类实现)" />
-        <item itemvalue="Python.threading(线程_方法实现)" />
       </list>
     </recent_temporary>
   </component>
@@ -280,6 +310,8 @@
       <workItem from="1625632419296" duration="2057000" />
       <workItem from="1625657109321" duration="606000" />
       <workItem from="1625743925082" duration="4000000" />
+      <workItem from="1626341705957" duration="408000" />
+      <workItem from="1626405183898" duration="2590000" />
     </task>
     <task id="LOCAL-00001" summary="更新">
       <created>1625229648410</created>
@@ -351,7 +383,14 @@
       <option name="project" value="LOCAL" />
       <updated>1625657179703</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="更新">
+      <created>1626341710856</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1626341710856</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -386,28 +425,32 @@
     <option name="LAST_COMMIT_MESSAGE" value="更新" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/PythonBase$python__.coverage" NAME="python(静态方法) Coverage Results" MODIFIED="1625226453846" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/python(面向对象)" />
     <SUITE FILE_PATH="coverage/PythonBase$pack_tag.coverage" NAME="pack_tag Coverage Results" MODIFIED="1625577166092" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/GUI_study" />
-    <SUITE FILE_PATH="coverage/PythonBase$calculator_page.coverage" NAME="calculator_page Coverage Results" MODIFIED="1625628414397" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/GUI_study/calculator" />
-    <SUITE FILE_PATH="coverage/PythonBase$run.coverage" NAME="run Coverage Results" MODIFIED="1625481163730" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/python_project/bin" />
-    <SUITE FILE_PATH="coverage/PythonBase$file__.coverage" NAME="file(定位) Coverage Results" MODIFIED="1625393469430" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/python(基础)/dir(文件)" />
     <SUITE FILE_PATH="coverage/PythonBase$Entry_tag.coverage" NAME="entry_tag Coverage Results" MODIFIED="1625570851195" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/GUI_study" />
     <SUITE FILE_PATH="coverage/PythonBase$checkbutton_tag.coverage" NAME="checkbutton_tag Coverage Results" MODIFIED="1625573113015" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/GUI_study" />
     <SUITE FILE_PATH="coverage/PythonBase$create_application.coverage" NAME="create_application Coverage Results" MODIFIED="1625575503297" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/GUI_study" />
     <SUITE FILE_PATH="coverage/PythonBase$result__.coverage" NAME="result(三元运算) Coverage Results" MODIFIED="1625479579854" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/python(基础)/exercise_test" />
-    <SUITE FILE_PATH="coverage/PythonBase$grid_tag.coverage" NAME="grid_tag Coverage Results" MODIFIED="1625575507692" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/GUI_study" />
-    <SUITE FILE_PATH="coverage/PythonBase$project__.coverage" NAME="project(购物车) Coverage Results" MODIFIED="1625479474717" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/python(基础)/exercise_test" />
     <SUITE FILE_PATH="coverage/PythonBase$pytest_in_exercise___py.coverage" NAME="pytest in exercise(文件).py Coverage Results" MODIFIED="1625394796468" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/python(基础)/exercise_test" />
-    <SUITE FILE_PATH="coverage/PythonBase$func_reduce_.coverage" NAME="func(reduce) Coverage Results" MODIFIED="1625479820224" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/python(基础)/func(函数)" />
-    <SUITE FILE_PATH="coverage/PythonBase$threading__.coverage" NAME="threading(守护线程) Coverage Results" MODIFIED="1625750013090" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/python(并发编程)/threading(线程)" />
+    <SUITE FILE_PATH="coverage/PythonBase$objects__.coverage" NAME="objects(同步对象) Coverage Results" MODIFIED="1626407096347" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/python(并发编程)/threading(线程)" />
     <SUITE FILE_PATH="coverage/PythonBase$udp.coverage" NAME="udp客户端 Coverage Results" MODIFIED="1625388323484" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/python(socket编程)/UDP" />
     <SUITE FILE_PATH="coverage/PythonBase$radiobutton_checkbutton.coverage" NAME="radiobutton_checkbutton Coverage Results" MODIFIED="1625571810200" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/GUI_study" />
     <SUITE FILE_PATH="coverage/PythonBase$factory.coverage" NAME="factory Coverage Results" MODIFIED="1625229387968" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/python(面向对象)" />
     <SUITE FILE_PATH="coverage/PythonBase$exercise__.coverage" NAME="exercise(练手) Coverage Results" MODIFIED="1625478812828" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/python(基础)/exercise_test" />
-    <SUITE FILE_PATH="coverage/PythonBase$exercise_calculate.coverage" NAME="exercise_calculate Coverage Results" MODIFIED="1625479098074" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/python(基础)/exercise_test" />
-    <SUITE FILE_PATH="coverage/PythonBase$Label_tag.coverage" NAME="Label_tag Coverage Results" MODIFIED="1625537672408" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/GUI_study" />
     <SUITE FILE_PATH="coverage/PythonBase$.coverage" NAME="判断为空三种方法 Coverage Results" MODIFIED="1625479609402" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/python(基础)/exercise_test" />
     <SUITE FILE_PATH="coverage/PythonBase$threading___.coverage" NAME="threading(线程_类实现) Coverage Results" MODIFIED="1625746517115" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/python(线程)/threading(线程)" />
+    <SUITE FILE_PATH="coverage/PythonBase$synchrolock__.coverage" NAME="synchrolock(同步锁) Coverage Results" MODIFIED="1626405332999" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/python(并发编程)/threading(线程)" />
     <SUITE FILE_PATH="coverage/PythonBase$grant.coverage" NAME="grant Coverage Results" MODIFIED="1625222685823" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/PythonBase$python__.coverage" NAME="python(静态方法) Coverage Results" MODIFIED="1625226453846" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/python(面向对象)" />
+    <SUITE FILE_PATH="coverage/PythonBase$calculator_page.coverage" NAME="calculator_page Coverage Results" MODIFIED="1625628414397" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/GUI_study/calculator" />
+    <SUITE FILE_PATH="coverage/PythonBase$run.coverage" NAME="run Coverage Results" MODIFIED="1625481163730" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/python_project/bin" />
+    <SUITE FILE_PATH="coverage/PythonBase$file__.coverage" NAME="file(定位) Coverage Results" MODIFIED="1625393469430" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/python(基础)/dir(文件)" />
+    <SUITE FILE_PATH="coverage/PythonBase$grid_tag.coverage" NAME="grid_tag Coverage Results" MODIFIED="1625575507692" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/GUI_study" />
+    <SUITE FILE_PATH="coverage/PythonBase$project__.coverage" NAME="project(购物车) Coverage Results" MODIFIED="1625479474717" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/python(基础)/exercise_test" />
+    <SUITE FILE_PATH="coverage/PythonBase$threading_join_.coverage" NAME="threading(join使用) Coverage Results" MODIFIED="1626405291578" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/python(并发编程)/threading(线程)" />
+    <SUITE FILE_PATH="coverage/PythonBase$func_reduce_.coverage" NAME="func(reduce) Coverage Results" MODIFIED="1625479820224" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/python(基础)/func(函数)" />
+    <SUITE FILE_PATH="coverage/PythonBase$threading__.coverage" NAME="threading(信号量) Coverage Results" MODIFIED="1626406238261" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/python(并发编程)/threading(线程)" />
+    <SUITE FILE_PATH="coverage/PythonBase$Recursive_locking__.coverage" NAME="Recursive_locking(递归锁) Coverage Results" MODIFIED="1626405414488" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/python(并发编程)/threading(线程)" />
+    <SUITE FILE_PATH="coverage/PythonBase$exercise_calculate.coverage" NAME="exercise_calculate Coverage Results" MODIFIED="1625479098074" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/python(基础)/exercise_test" />
+    <SUITE FILE_PATH="coverage/PythonBase$Label_tag.coverage" NAME="Label_tag Coverage Results" MODIFIED="1625537672408" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/GUI_study" />
   </component>
 </project>
