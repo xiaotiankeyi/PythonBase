@@ -11,6 +11,7 @@ def f(d, l, lock):
         print(os.getppid(), "{1}子线程{0}".format(d, os.getpid()))
         l.append(d['count'])
 
+
 if __name__ == '__main__':
     print("编辑器主进程{}".format(os.getppid()))
     print('函数进程{}'.format(os.getpid()))
@@ -30,4 +31,4 @@ if __name__ == '__main__':
         for res in p_list:
             res.join()
 
-        print('函数进程{}获取{}'.format(os.getpid(),l))
+        print('函数进程{}获取{}'.format(os.getpid(), l))
