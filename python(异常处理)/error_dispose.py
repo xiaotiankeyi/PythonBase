@@ -25,6 +25,6 @@ except Exception as s:
 """断言"""
 i = 1
 assert i != 1
-#类似于
+# 类似于
 # if i == 1:
 #     raise AssertionError

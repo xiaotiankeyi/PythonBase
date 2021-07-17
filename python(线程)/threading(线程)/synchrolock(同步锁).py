@@ -1,15 +1,18 @@
-"""同步锁，指定一个线程"""
+"""同步锁，先指定一个线程运行完,在运行下一个进程。实现一个一个的运行，保证数据安全"""
 import threading
-import time
 import time
 
 def sub():
     global num
     print("当前执行的是:",threading.current_thread().getName())
+    # 获得一个锁
     lock.acquire()
+
     temp = num
-    time.sleep(0.01)  # 只有这三部分是单线程执行,对公共数据的操作
+    time.sleep(0.01)  # 只有这三部分是单线程执行,对公共数据的操作，这是需要保护数据安全的部分
     num = temp - 1
+
+    # 释放锁
     lock.release()
 
 
@@ -20,7 +23,7 @@ if __name__ == "__main__":
 
     start_date = time.time()
     for i in range(100):
-        t = threading.Thread(target=sub)
+        t = threading.Thread(target=sub, args="",)
         l.append(t)
         t.start()
 
