@@ -1,8 +1,9 @@
 """
 概念：
-    信息量用来控制线程并发数，可以指定若干个线程来处理数据，信号量也是同步的，也是锁得一种
+    不需要保证数据安全的情况下信息量用来控制线程并发数，可以指定若干个线程来处理数据，信号量也是同步的，也是锁得一种
 """
-import threading, time
+import threading
+import time
 
 
 class myThread(threading.Thread):
@@ -14,7 +15,7 @@ class myThread(threading.Thread):
 
 
 if __name__ == "__main__":
-    semaphore = threading.Semaphore(2)      #最大连接数为2
+    semaphore = threading.Semaphore(2)  # 最大连接数为2
 
     th = []
     for i in range(10):

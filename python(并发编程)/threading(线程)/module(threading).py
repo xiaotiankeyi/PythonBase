@@ -6,17 +6,18 @@
     线程是最小的执行单位
     线程与线程之间可以共用进程数据，共享的
 """
-import threading #线程
+import threading  # 线程
 import time
 
+
 def Hi(num):
-    print("hello %d"%num)
+    print("hello %d" % num)
     time.sleep(3)
 
 
 if __name__ == '__main__':
 
-    t1=threading.Thread(target=Hi,args=(10,))#创建了一个线程对象t1
+    t1 = threading.Thread(target=Hi, args=(10,))  # 创建了一个线程对象t1
     t1.start()
 
     # t1.join()   #t1没完成就不运行主线程，
@@ -25,7 +26,6 @@ if __name__ == '__main__':
     t2.start()
 
     print("\nending..........")
-
 
     def record():
         """threading way threading 对象方法"""
