@@ -1,20 +1,14 @@
-<<<<<<< HEAD:python(线程)/threading(线程)/synchrolock(同步锁).py
 """同步锁，先指定一个线程运行完,在运行下一个进程。实现一个一个的运行，保证数据安全"""
-=======
 """同步锁，互斥锁，指定线程串新运行，单线程运行"""
->>>>>>> 187e17d4165ca38917f3d395f9401a4f86e328a6:python(并发编程)/threading(线程)/synchrolock(同步锁).py
 import threading
 import time
 
 
 def sub():
     global num
-<<<<<<< HEAD:python(线程)/threading(线程)/synchrolock(同步锁).py
     print("当前执行的是:",threading.current_thread().getName())
     # 获得一个锁
-=======
     print("当前执行的是:", threading.current_thread().getName())
->>>>>>> 187e17d4165ca38917f3d395f9401a4f86e328a6:python(并发编程)/threading(线程)/synchrolock(同步锁).py
     lock.acquire()
 
     temp = num
