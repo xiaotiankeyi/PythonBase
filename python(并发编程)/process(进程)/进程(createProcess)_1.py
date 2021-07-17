@@ -19,11 +19,6 @@ if __name__ == "__main__":
     p1.start()
     print(p1.name, p1.pid)
 
-    # p2 = Process(target=func, args=("tom",))
-    # p2.start()
-    # print(p2.name, p2.pid)
-
     p1.join()
-    # p2.join()
 
     print("解释器进程", os.getppid())
