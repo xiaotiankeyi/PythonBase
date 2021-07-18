@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>CSS内外边距</title>
+    <style>
+        body{
+            height: 800px;
+            border: 1px red solid;
+            background-color: darkorchid;
+            margin: 0;
+        }
+        .remove{
+            height: 600px;
+            border-style: solid;
+            border-color: blue;
+            border-width: 1px;
+            background-color: aqua;
+            margin-top: 10px;
+        }
+        div .start{
+            height: 200px;
+            width: 500px;
+            border: 1px yellow solid;
+            background-color: green;
+            /*margin: 20px;*/
+            /*margin-bottom: 20px;*/
+            /*margin-left: 20px;*/
+            margin-top: 20px;
+            /*margin-right: 20px;*/
+            /*padding: 20px;*/
+        }
+        div .end{
+            height: 200px;
+            width: 500px;
+            border: 1px fuchsia solid;
+            background-color: orchid;
+            margin: 20px 30px;
+            padding-top: 20px;
+            padding-left: 20px;
+        }
+
+    </style>
+</head>
+<body>
+<div class="remove">
+    <div class="start">
+    <p>1、margin用于控制元素于元素之间的边距</p>
+    <p>2、padding用于控制内容与边框的边距</p>
+    <p>3、border[边框]围绕在内边距和内容为的边框</p>
+    <p>4content[内容]盒子的内容,显示文本和图像</p>
+    </div>
+    <div class="end">hello world</div>
+</div>
+
+</body>
+</html>

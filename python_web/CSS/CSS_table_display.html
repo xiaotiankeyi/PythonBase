@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>CSS表格及显示属性</title>
+    <style>
+        div ol,ul{
+            /*list-style: circle;*/
+            /*list-style: decimal-leading-zero;*/
+            /*list-style: disc;*/
+            list-style: upper-alpha;
+            /*list-style: none;*/
+        }
+        .one{
+            background-color: blue;
+            width: 130px;
+            height: 100px;
+            /*display: block;*/
+            display: inline-block;
+        }
+        .two{
+            background-color: darkorchid;
+            width: 130px;
+            height: 100px;
+            /*display: inline;*/
+            display: inline-block;
+        }
+        .zero{
+            word-spacing: -7px;     /*消除边距*/
+            /*display: none;*/
+        }
+    </style>
+</head>
+<body>
+
+<div>无序列表
+    <ul>
+        <li>222222</li>
+        <li>333333</li>
+        <li>444444</li>
+    </ul>
+</div>
+
+<div>有序列表
+    <ol>
+        <li>一一一一一</li>
+        <li>二二二二二</li>
+        <li>三三三三三</li>
+        <li>四四四四四</li>
+    </ol>
+</div>
+<div class="zero">
+    <a class="one">&lt;a&gt;为内联标签,display:block使其改为块级标签</a>
+    <div class="two">使块级标签转化为内联标签display:inline</div>
+</div>
+
+</body>
+</html>

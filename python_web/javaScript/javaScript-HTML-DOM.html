@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>HTML DOM增删改查演示</title>
+    <style>
+        .character{
+            width: 80px;
+            overflow:hidden;        /*溢出隐藏*/
+            border: 1px red solid;
+        }
+    </style>
+</head>
+<body>
+
+<div class="character">
+    <p>增加</p>
+</div>
+
+<div class="drop">
+    <p>删除</p>
+    <a href="www.jjdong13.com" id="commit">鸡鸡动</a>
+</div>
+
+<div class="desc">
+    <p>修改</p>
+    <p class="alter" style="color: blue">所改位置</p>
+</div>
+
+<div class="insert">
+    <p>修改元素内容</p>
+    <a href="http://www.goolge.com" class="group">网易</a>
+</div>
+
+<script type="text/javascript">
+    //增加标签操作
+     var self=document.getElementsByClassName("character")[0];
+     self.onclick=function () {
+         var a=document.createElement("a");      //创建"a"标签
+
+         a.setAttribute("href","http://www.baidu.com");      //为a标签添加属性
+         a.innerHTML="百度";       //为a标签添加内容
+
+         self.appendChild(a);       //把新建的标签a添加到div标签中
+     };
+
+     //删除标签操作
+     var rename=document.getElementsByClassName("drop")[0];
+     rename.onclick=function () {
+        var d=document.getElementById("commit");    //获得要删除的标签
+        var f=d.parentNode;         //获得要删除标签的父标签
+        f.removeChild(d);
+     };
+
+     //修改替换操作
+    var change=document.getElementsByClassName("desc")[0];
+    change.onclick=function () {
+        var modify=document.getElementsByClassName("alter")[0];
+
+        var img=document.createElement('img');
+        img.setAttribute('src','193.jpg');
+
+        r=modify.parentNode;    //获取父标签
+        r.replaceChild(img, modify);        //进行替换
+
+    };
+
+    //通过innerHTML修改元素内容
+    var order=document.getElementsByClassName("insert")[0];
+    order.onclick=function () {
+        var g=document.getElementsByClassName("group")[0];
+        g.innerHTML="谷歌";   //改变元素内容
+    }
+</script>
+</body>
+</html>

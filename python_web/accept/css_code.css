@@ -1,0 +1,126 @@
+*{
+    margin: 0;
+    box-sizing: border-box;
+    -webkit-font-smoothing: antialiased;
+}
+body{
+    font-family: "Roboto", "Lucida Grande", "DejaVu Sans", "Bitstream Vera Sans", Verdana, Arial, sans-serif;
+    font-size: 14px;
+}
+
+a{
+    text-decoration: none;
+}
+
+/*head_box头部开始*/
+div.head_box{
+    background-color: #2459a2;
+    width: 100%;
+    height: 56px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    /*border: 1px solid red;*/
+
+}
+div.header{
+    width: 1194px;
+    height: 56px;
+    line-height: 56px;      /*行高line-height*/
+    margin: 0 auto;         /*意思是这个元素处于其父元素的居中位置，并且这个元素的上下外边距为0*/
+    /*border: 1px solid black;*/
+    position: relative;
+}
+.header .logo-con{
+    display: inline-block;
+    text-decoration: none;
+    height: 56px;
+    /*border: 1px solid yellow;*/
+}
+.header .left{
+    float: left;
+}
+div .header a img{
+    border-style: none;
+}
+.header .logo-con .logo-icon{
+    margin-top: 10px;
+    display: inline-block;
+    height: 36px;
+    width: 36px;
+}
+.header .logo-con .logo-txt {
+    margin-top: 17px;
+    margin-left: 12px;
+    width: 112px;
+    height: 22px;
+    position: relative;
+    top: -7px;
+}
+.header .action-menu{
+    float: left;
+    margin-left: 8px;
+}
+.header .action-menu a.active, .header .action-menu a.active:hover{
+    color: white;
+    background-color: #204982;
+}
+
+.header .action-menu .tb{
+    display: inline-block;
+    margin-left: -3px;
+    padding: 0 16px 0 13px;     /*上右下左*/
+    color: darkgrey;
+}
+.header .action-menu .tb:hover{
+    color: white;
+    background-color: #396bb3;
+}
+.header .right{
+    float: right;
+}
+.header .search {
+    width: 208px;
+    height: 36px;
+    line-height: 36px;
+    margin-top: 10px;
+    background-color: #f5f5f5;
+    margin-right: 25px;
+    position: relative;
+    border-radius: 2px;         /* 这个属性允许你为元素添加圆角边框！*/
+}
+.header .search .search-input {
+    margin-left: 10px;
+    background-color: #f5f5f5;
+    border: none;
+    outline: 0;     /*outline （轮廓）是绘制于元素周围的一条线*/
+    font-size: 14px;
+}
+.header .search .search-icon {
+    display: inline-block;
+    width: 18px;
+    height: 18px;
+    position: absolute;
+    top: 8px;
+    right: 12px;
+    cursor: pointer;
+    background-size: 100%;
+    background-image: url("images/search-7acb7b9349.png");
+}
+.header .action-nav{
+    position: absolute;
+    right: 250px;
+}
+.header .action-nav a{
+    color: white;
+    display: inline-block;
+    line-height: 56px;
+    margin: 0 5px;      /*上外边距和下外边距是0px,右外边距和左外边距是 5px*/
+    padding: 0 20px;
+}
+
+main{
+    display: block;
+    background-color: #f5f5f5;
+}
+

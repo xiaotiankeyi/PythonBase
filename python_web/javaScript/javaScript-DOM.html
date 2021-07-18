@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>javaScript-DOM节点查找定位</title>
+</head>
+<body>
+
+<div class="alert">
+    <p class="delete">javaScriptDom节点介绍</p>
+    <div class="submit">文档节点document对象,元素节点element对象</div>
+    <div id="char" class="status">
+        <a class="create" href="http://www.baidu.com">百度以下</a>
+        <div class="update">局部查找</div>
+    </div>
+</div>
+
+<script>
+    var p=document.getElementById("char");
+    //节点自身属性
+    console.log(p.nodeType);    //节点类型
+    console.log(p.nodeName);    //节点名称
+    console.log(p.nodeValue);   //节点值
+    console.log(p.innerHTML);   //节点(元素)的文本值
+    console.log(p.innerText);   //节点文本
+    console.log(p.children);    //所有子标签
+    console.log(p.firstElementChild);      //第一个子标签元素
+    console.log(p.lastElementChild);        //最后一个子标签元素
+
+
+    //节点导航属性,主要查找相邻的元素
+    var nex=document.getElementsByClassName("submit")[0];       //getElementsByClassName方法取出来的集合
+
+    var on=nex.nextElementSibling;      //nextElementSibling下一个兄弟标签元素
+    console.log(on.nodeName);
+    var sibling=nex.previousElementSibling;     //previousElementSibling上一个兄弟标签元素
+    console.log(sibling.nodeName);
+
+    console.log(nex.parentElement.nodeName);    //父节点标签元素
+
+    var are=document.getElementsByTagName("div");
+    console.log(are.item(2));
+
+</script>
+</body>
+</html>

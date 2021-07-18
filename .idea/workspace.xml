@@ -1,15 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="00086352-e296-4cae-a8b3-4c82cba595bb" name="Default Changelist" comment="更新">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/python(并发编程)/threading(线程)/Recursive_locking(递归锁).py" beforeDir="false" afterPath="$PROJECT_DIR$/python(并发编程)/threading(线程)/Recursive_locking(递归锁).py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/python(并发编程)/threading(线程)/objects(同步对象).py" beforeDir="false" afterPath="$PROJECT_DIR$/python(并发编程)/threading(线程)/objects(Event事件).py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/python(并发编程)/threading(线程)/synchrolock(同步锁).py" beforeDir="false" afterPath="$PROJECT_DIR$/python(并发编程)/threading(线程)/synchrolock(同步锁).py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/python(并发编程)/threading(线程)/threading(信号量).py" beforeDir="false" afterPath="$PROJECT_DIR$/python(并发编程)/threading(线程)/threading(信号量).py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/python(并发编程)/threading(线程)/threading(实例).py" beforeDir="false" afterPath="$PROJECT_DIR$/python(并发编程)/threading(线程)/threading(实例).py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/python(并发编程)/threading(线程)/threading(批量开启).py" beforeDir="false" afterPath="$PROJECT_DIR$/python(并发编程)/threading(线程)/threading(批量开启线程).py" afterDir="false" />
-    </list>
+    <list default="true" id="00086352-e296-4cae-a8b3-4c82cba595bb" name="Default Changelist" comment="更新" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -311,7 +303,7 @@
       <workItem from="1625657109321" duration="606000" />
       <workItem from="1625743925082" duration="4000000" />
       <workItem from="1626341705957" duration="408000" />
-      <workItem from="1626405183898" duration="2590000" />
+      <workItem from="1626405183898" duration="2998000" />
     </task>
     <task id="LOCAL-00001" summary="更新">
       <created>1625229648410</created>
@@ -390,7 +382,14 @@
       <option name="project" value="LOCAL" />
       <updated>1626341710856</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="更新">
+      <created>1626434938710</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1626434938711</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

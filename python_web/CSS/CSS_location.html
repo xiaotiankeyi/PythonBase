@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>CSS元素定位及元素选择器和优先级</title>
+</head>
+<style>
+    * {
+        font-size: 30px;
+        color: red;
+    }
+
+    p {
+        background-color: green;
+    }
+
+    #location {
+        background-color: red;
+        color: black;
+    }
+
+    .element {
+        background-color: blue;
+    }
+
+    div.type {
+        color: yellow;
+        background-color: black;
+    }
+
+    #one, div.two {
+        font-size: 40px;
+        color: blueviolet;
+    }
+
+    .grandfather #grandson {
+        background-color: blue;
+    }
+
+    .grandfather > .son {
+        color: black;
+    }
+
+    .grandfather + p {
+
+    }
+
+    [property] {
+        background-color: aqua;
+        color: blue;
+    }
+
+    p[property="girl"] {
+        color: red;
+        background-color: cadetblue;
+    }
+
+    div.top {
+        width: 300px;
+    }
+
+    .start, .status {
+        width: 300px;
+        height: 350px;
+        background-color: red;
+    }
+
+    /*.start:hover{*/
+    /*    background-color: green;*/
+    /*}*/
+    .top:hover .status {
+        background-color: blue;
+    }
+    .succeed:after{
+        content: "CSS前端学习";
+        color: darkorchid;
+    }
+    #delete{
+        background-color: aqua;
+        width: 700px;
+    }
+    #delete .update{
+        color: black!important;
+    }
+</style>
+<body>
+
+<div>*通配符</div>
+<p>通过标签名</p>
+<div id="location">id选择器,通过(#)符定位</div>
+<br>
+<div class="element">class选择器,通过(.)符号定位</div>
+<br>
+<div class="type">组合选择器之标签名加class属性</div>
+<br>
+<div id="one">组合选择两个标签做一样操作,用(,)号分隔</div>
+<div class="two">组合选择两个标签做一样操作,用(,)号分隔</div>
+
+<div class="grandfather">
+    <div class="father">
+        <p id="grandson">后代元素选择器每层都查找,用(空格)分隔</p>
+    </div>
+    <div class="son">子代元素选择器,只查找一层,用(>)符号分隔</div>
+</div>
+<p>毗邻选择器,往下查找,用(+)符号分隔</p>
+<div property="box">属性选择器,当属性名不唯一时,需要指定属性值,用[]符号包裹</div>
+<p property="girl">属性选择器,当属性名不唯一时,需要指定属性值,用[]符号包裹</p>
+
+<div class="top">
+    <div class="start"></div>
+    <div class="status"></div>CSS伪类
+</div>
+<div style="color: darkorchid" class="succeed">欢迎加入</div>
+
+<div id="delete">
+    <div class="create">
+        <div class="update">
+            内联样式表优先级最高 style=""---1000<br>
+            ID属性个数 #id ---100<br>
+            class属性个数 .class ---10<br>
+            html标签名 p ---1
+        </div>
+    </div>
+</div>
+
+</body>
+</html>

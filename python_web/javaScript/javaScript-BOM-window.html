@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>javaScript-window对象</title>
+</head>
+<body>
+<!--<p>-->
+<!--alert()            显示带有一段消息和一个确认按钮的警告框。-->
+<!--confirm()          显示带有一段消息以及确认按钮和取消按钮的对话框。-->
+<!--prompt()           显示可提示用户输入的对话框。-->
+<!--open()             打开一个新的浏览器窗口或查找一个已命名的窗口。-->
+<!--close()            关闭浏览器窗口。-->
+<!--setInterval()      按照指定的周期（以毫秒计）来调用函数或计算表达式。-->
+<!--clearInterval()    取消由 setInterval() 设置的 timeout。-->
+<!--setTimeout()       在指定的毫秒数后调用函数或计算表达式。-->
+<!--clearTimeout()     取消由 setTimeout() 方法设置的 timeout。-->
+<!--scrollTo()         把内容滚动到指定的坐标。-->
+<!--</p>-->
+<script>
+    var result = confirm("您确定要删除吗?");
+    alert(result);
+
+    // prompt 参数1 : 提示信息.   参数2:输入框的默认值. 返回值是用户输入的内容.
+
+    var results = prompt("请输入一个数字!","haha");
+    alert(results);
+    open('https://www.baidu.com',);  //打开新的窗口
+    close();     //将当前窗口关闭
+</script>
+
+</body>
+</html>
