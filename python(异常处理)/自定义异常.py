@@ -11,7 +11,7 @@ if __name__ == "__main__":
         if len(accept) < 5:
             raise Error(len(accept), 5)
     except Error as obj:
-        print("输入的长度是%s,长度最少是%s" % (obj.massage,obj.parameter))
+        print("输入的长度是%s,长度最少是%s" % (obj.massage, obj.parameter))
 
     else:
         print("The end of the")
@@ -19,7 +19,7 @@ if __name__ == "__main__":
     try:
         # 知识点：主动抛出异常，就是实例化一个异常类
         accept = input("please input: ")
-        if type(accept) is not str:
+        if not isinstance(accept, str):
             raise Error(type(accept), str)
     except Error as obj:
         print("输入的类型是%s,要输入的类型是%s" % (obj.massage, obj.parameter))
