@@ -8,10 +8,9 @@
 
 """直接调用本身"""
 
-
-
-
 from time import sleep
+
+
 def fi():
     print("from f1")
     fi()
@@ -91,6 +90,8 @@ m = num(8)
 print(m)
 """猴子吃桃案例"""
 s = 1
+
+
 def func(x): return (x + 1) * 2
 
 

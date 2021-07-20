@@ -6,7 +6,7 @@ from time import sleep
 
 def service():
     num = 1
-    while True:
+    while Queue(maxsize=10):
         print('生产了{}杯奶茶'.format(num))
         data.put(f'第{num}杯奶茶')
         num += 1
