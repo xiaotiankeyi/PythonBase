@@ -4,6 +4,7 @@ from threading import Thread
 from queue import Queue
 from time import sleep
 
+
 def service():
     num = 1
     while Queue(maxsize=10):
@@ -12,9 +13,11 @@ def service():
         num += 1
         sleep(1)
 
+
 def client():
     print('购买了{}.....'.format(data.get()))
     sleep(2)
+
 
 if __name__ == "__main__":
     data = Queue(maxsize=10)

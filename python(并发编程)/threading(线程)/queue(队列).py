@@ -12,7 +12,7 @@ def one():
     # print(q.full())  # 是否满
 
     # 存放数据
-    q.put(12)
+    q.put('12')
     q.put("hello")
     q.put({"name": "yuan"})
 

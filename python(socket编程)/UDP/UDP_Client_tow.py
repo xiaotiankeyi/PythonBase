@@ -8,9 +8,19 @@ client = socket(AF_INET, SOCK_DGRAM)
 
 # 输入一个"string"，发送给服务端
 
-while True:
-    msg = input(">>>:").strip()
-    client.sendto(msg.encode('utf8'), ip_addr)
 
-    data, addr = client.recvfrom(accept_size)
-    print(data.decode("utf8"))
+def echo():
+    while True:
+        msg = input(">>>:").strip()
+        if msg == 'q':
+            client.close()
+            break
+        else:
+            client.sendto(msg.encode('utf8'), ip_addr)
+
+            data, addr = client.recvfrom(accept_size)
+            print(data.decode("utf8"))
+
+
+if __name__ == "__main__":
+    echo()

@@ -10,7 +10,7 @@ def handle(parameter):
 
 
 if __name__ == "__main__":
-    print('当前进程是{}'.format(threading.currentThread()))
+    print('当前线程是{}'.format(threading.currentThread()))
 
     date_start = time()
 

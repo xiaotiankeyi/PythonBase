@@ -1,12 +1,14 @@
-"""同步锁，先指定一个线程运行完,在运行下一个进程。实现一个一个的运行，保证数据安全"""
-"""同步锁，互斥锁，指定线程串新运行，单线程运行"""
+# 同步锁，先指定一个线程运行完,在运行下一个进程。实现一个一个的运行，保证数据安全"""
+# 同步锁，互斥锁，指定线程串新运行，单线程运行"""
+
+
 import threading
 import time
 
 
 def sub():
     global num
-    print("当前执行的是:",threading.current_thread().getName())
+    print("当前执行的是:", threading.current_thread().getName())
     # 获得一个锁
     print("当前执行的是:", threading.current_thread().getName())
     lock.acquire()
@@ -26,7 +28,7 @@ if __name__ == "__main__":
 
     start_date = time.time()
     for i in range(100):
-        t = threading.Thread(target=sub, args="",)
+        t = threading.Thread(target=sub, args="", )
         l.append(t)
         t.start()
 

@@ -5,12 +5,12 @@ import os
 
 def handle(parameter):
     sleep(1)
-    print('hello, hao are yuo {}'.format(parameter), os.getpid())
+    print('hello, hao are yuo {}'.format(parameter), t.ident)
 
 
 def crray(parameter):
     sleep(1)
-    print('hello, hao are yuo {}'.format(parameter), os.getpid())
+    print('hello, hao are yuo {}'.format(parameter), t.ident)
 
 
 if __name__ == "__main__":
