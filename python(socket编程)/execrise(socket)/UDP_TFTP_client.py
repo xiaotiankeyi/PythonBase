@@ -9,7 +9,7 @@ import struct
 
 
 def UDP_client():
-    server_ip_port = ('', 69)        # 服务端IP地址
+    server_ip_port = ('127.0.0.1', 69)        # 服务端IP地址
     buffer_size = 1024
 
     udp_client = socket(AF_INET, SOCK_DGRAM)

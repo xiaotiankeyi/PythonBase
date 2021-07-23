@@ -5,7 +5,7 @@ from socket import *
 def UDP_server():
     global f
     global filename
-    ip_port = ('', 69)
+    ip_port = ('127.0.0.1', 69)
     buffer_size = 1024
 
     udp_server = socket(AF_INET, SOCK_DGRAM)
