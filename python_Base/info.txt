@@ -1,0 +1,11 @@
+python基础知识记录:
+    comprehension 推导式
+    dic 字典
+    exercise 练习题
+    file 文件
+    func 函数
+    gather 集合
+    int 数字
+    list 列表
+    string 字符串
+    tuple 元组
