@@ -52,15 +52,15 @@ y = os.path.join(f, h)
 print(y)
 
 """获取文件或目录最后一次的存取时间"""
-t = os.path.getatime("python(os模块).py")
+t = os.path.getatime("os_base.py")
 print(t)
 
 """获取文件或目录最后一次的修改时间"""
-r = os.path.getmtime("python(os模块).py")
+r = os.path.getmtime("os_base.py")
 print(r)
 
 """返回文件或目录的大小"""
-c = os.path.getsize("python(os模块).py")
+c = os.path.getsize("os_base.py")
 print(c)
 
 """判断路径下的文件是否存在"""

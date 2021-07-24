@@ -1,8 +1,10 @@
+# format方式格式化
+
 tpl = "i am {} age {}".format("alex", 23)
 
-tpl = "i am {2} age {0}".format("alex", 23, 45)
+tpl1 = "i am {2} age {0}".format("alex", 23, 45)
 
-tpl = "i am {name} age {age}".format(name="alex", age="23")
+tpl2 = "i am {name} age {age}".format(name="alex", age="23")
 
 """______format()字符串格式化、基本语法是通过 {} 和 : 来代替以前的 % 。"""
 print("{} {}".format("hello", "world"))  # 不指定位置，默认顺序

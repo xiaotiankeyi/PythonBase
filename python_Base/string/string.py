@@ -49,7 +49,7 @@ b = '23342423'
 print(a.join(b))
 
 # ___expandtabs___断句。。当字符串中有'\t'时，不够时'\t'补齐，
-message = 'username\temail\tpassword\njack\tasdns@163.com\t123456\ntom\tasdns@163.com\t123456'
+message = 'username\te_mail\tpassword\njack\tasdns@163.com\t123456\ntom\tasdns@163.com\t123456'
 print(message.expandtabs(10))
 
 msg = 'NET'

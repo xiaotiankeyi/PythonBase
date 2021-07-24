@@ -1,11 +1,11 @@
 """同级目录下的调用"""
 
-import Mathematical
+from python_module.import_module import Mathematical
 
 w = Mathematical.count(3, 9)
 print(w)
 
-from Mathematical import count, subtraction
+from python_module.import_module.Mathematical import count, subtraction
 
 t = count(3, 9)
 print(t)

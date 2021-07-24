@@ -59,3 +59,14 @@ def dictionary():
 
 
 dictionary()
+
+a = [1, 2, 3, 4, 5]
+c = "hello"
+li = [(num, s) for num in a for s in c]
+# print(li)
+
+English = ['Habit', 'Healthy', 'egt', 'really', 'Question', 'star', 'rice', 'lunch']
+big_english = [eng for eng in English if eng.startswith('H')]
+print(big_english)
+
+dictionary = {'name': 'jack', 'age': 20}

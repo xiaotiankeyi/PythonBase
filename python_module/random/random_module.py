@@ -1,3 +1,4 @@
+from random import randint
 import random
 
 # v = random.random()
@@ -36,7 +37,6 @@ def check_code():
 # b = check_code()
 # print(b)
 
-from random import randint
 
 def make_code(n):
     res = ''
@@ -50,13 +50,16 @@ def make_code(n):
 
 # print(chr(90))
 
+
 '''指定随机生成11位数'''
 j = 10
-id = ''.join(str(i) for i in random.sample(range(0,11),j))
+id = ''.join(str(i) for i in random.sample(range(0, 11), j))
 
 """随机生成字符串"""
-string = ''.join(i for i in random.sample('zyxwvutsrqponmlkjihgfedcbaABCDEFGHIJKLMNOPQRSTUVWX',5))
+string = ''.join(i for i in random.sample(
+    'zyxwvutsrqponmlkjihgfedcbaABCDEFGHIJKLMNOPQRSTUVWX', 5))
 print(string)
 
-parameter = ''.join(str(i) for i in random.sample(range(0, 11), 10)) + '@qq.com'
+parameter = ''.join(str(i)
+                    for i in random.sample(range(0, 11), 10)) + '@qq.com'
 print(parameter)

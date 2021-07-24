@@ -88,7 +88,7 @@ def group():
         dictionary = {
             "name": "alex" +
             str(i),
-            "email": "alex" +
+            "e_mail": "alex" +
             str(i) +
             "@163.com",
             "pad" +

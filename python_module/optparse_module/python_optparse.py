@@ -1,21 +1,6 @@
 # optparse模块处理命令行参数
 
-import optparse
 from optparse import OptionParser
-
-
-class handle():
-    def __init__(self):
-        self.op = optparse.OptionParser()
-
-        self.op.add_option("-s", '--server', dest="server")
-
-        self.accept, self.args = self.op.parse_args(self)
-
-        self.verify_args(self.accept, self.args)
-
-    def verify_args(self, accept, args):
-        pass
 
 
 def func_main():
@@ -38,5 +23,4 @@ def func_main():
 
 
 if __name__ == "__main__":
-    # handle()
     func_main()

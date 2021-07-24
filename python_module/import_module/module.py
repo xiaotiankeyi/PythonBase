@@ -3,13 +3,13 @@
 """调用web目录下的division模块"""
 
 """第一种把整个division调用过来,动态导入模块"""
-# from web import division
+# from import import division
 import importlib, sys, os
 
 # base_dir = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))  # 把绝对路径写入系统变量
 # sys.path.append(base_dir)
 
-accept = importlib.import_module("web.division")
+accept = importlib.import_module("import.division")
 
 v = accept.accept(3, 6)
 print(v)

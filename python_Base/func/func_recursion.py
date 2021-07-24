@@ -8,9 +8,10 @@
 
 """直接调用本身"""
 
+
+
+
 from time import sleep
-
-
 def fi():
     print("from f1")
     fi()

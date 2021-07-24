@@ -1,15 +1,12 @@
 """写函数，计算传入字符串中【数字】、【字母】、【空格] 以及 【其他】的个数"""
 
-
 def count(accept):
     num = list(accept)
+    sum = 0
     for total in range(len(num)):
-        sum = 0
         sum += total
     return sum
 
-
-# print(count("12132121"))
 
 """写函数，判断用户传入的对象（字符串、列表、元组）长度是否大于10。。。并计算出个数"""
 
@@ -17,8 +14,8 @@ def count(accept):
 def extent(accept):
     string = accept
     if len(string) > 10:
+        sum = 0
         for total in range(len(string)):
-            sum = 0
             sum += total
         return "succeed", sum
     else:
@@ -175,3 +172,6 @@ def handle_1():
         # print(i,count(i))
         h[i] = len(i)
     return h
+
+if __name__ == "__main__":
+    print(count("12132121"))

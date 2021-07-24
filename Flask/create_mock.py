@@ -3,7 +3,7 @@ import random
 import flask
 import pymysql
 
-from Flask_class.hsahlib_password import encryption
+from Flask.hashlib_password import encryption
 
 server = flask.Flask(__name__)  # 把当前这个python文件，当做一个服务，定义Server(启动服务)
 

@@ -1,6 +1,6 @@
 """高级的文件夹,文件,压缩包处理模块"""
 
-import shutil,time
+import shutil
 
 """将文件内容拷贝到例外一个文件夹中"""
 shutil.copyfileobj(open('a.txt', 'r'), open('s.txt', 'w'))
@@ -18,8 +18,8 @@ shutil.copyfile('s.txt', 's2.txt')
 """递归的去移动文件"""
 # shutil.move("",'')
 
-#==================================================
-shutil.make_archive(base_name='压缩文件',format='zip',
-                    root_dir="C:/Users/admin/PycharmProjects/python/python_module/shutil_file")
-
-
+# ==================================================
+shutil.make_archive(
+    base_name='压缩文件',
+    format='zip',
+    root_dir="C:/Users/admin/PycharmProjects/python/python_module/shutil_file")

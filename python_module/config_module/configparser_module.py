@@ -54,7 +54,7 @@ def alter():
 
     """增加key及values"""
     # config['bitbucket.org']['password'] = '123456'
-    config['bitbucket.org']['path'] = 'C:/Users/admin/PycharmProjects/python/python_module/ptython(配置文件)'
+    config['bitbucket.org']['path'] = 'C:/Users/admin/PycharmProjects/python/python_module/config_module'
     config['bitbucket.org']['ip'] = '127.0.0.1'
     config.add_section('response')
 

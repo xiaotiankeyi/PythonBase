@@ -1,4 +1,4 @@
-# 内置函数
+# 内置函数built-in function
 # _______abs()______返回数字的绝对值
 import math
 print(abs(23))

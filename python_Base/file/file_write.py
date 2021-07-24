@@ -1,3 +1,4 @@
+# 只写
 with open("study_file.txt", 'w') as s:
     s.write("student\nteachers")
 

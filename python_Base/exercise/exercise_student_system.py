@@ -1,5 +1,6 @@
+# 实现学生管理系统
 import os
-import time
+
 from python_Base.exercise import exercise_student_modify  # 调用同级目录下的exercise来实现修改功能
 
 # 定一个列表，用来存储所有的学生信息(每个学生是一个字典)
@@ -87,7 +88,7 @@ def search_info():
                 "name:%s, tel:%s, QQ:%s" %
                 (temp_info['name'],
                  temp_info['tel'],
-                    temp_info['qq']))
+                 temp_info['qq']))
             break
     else:
         print("没有您要找的信息....")

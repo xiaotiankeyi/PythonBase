@@ -1,3 +1,5 @@
+# 装饰器和生成器
+
 def init(func):
     def wrapper(*args, **kwargs):
         g = func(*args, **kwargs)

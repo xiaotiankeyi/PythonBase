@@ -1,3 +1,5 @@
+# 实现装饰器功能
+
 """
 一：编写函数，（函数执行的时间是随机的）
 """
@@ -40,7 +42,7 @@ def welcome(func):  # func现在是index
         while tag:
             username = input("用户名>>>>>> ").strip()
             password = input("密码>>>>>>> ").strip()
-            filepath = "C:/Users/admin/PycharmProjects/python/python_Base/func/func(装饰器)/ID.dat"
+            filepath = "C:/Users/admin/PycharmProjects/python/python_Base/func/func_trimmer/ID.dat"
             with open(filepath, 'r', encoding='utf8') as file_c:
                 for paras in file_c:
                     paras = eval(paras)

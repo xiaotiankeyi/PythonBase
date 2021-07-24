@@ -1,3 +1,5 @@
+# yagmail模块实现简单的邮件发送
+
 import yagmail
 import os
 

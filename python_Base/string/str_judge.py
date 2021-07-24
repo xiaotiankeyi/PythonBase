@@ -1,5 +1,5 @@
 '''
-字符串的判断操作。。。。(judge)
+字符串的判断操作。。。。judge
 '''
 
 seek = 'response'

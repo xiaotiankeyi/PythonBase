@@ -2,14 +2,16 @@
 
 """调用py_module目录下的Mathematical模块......."""
 
-import sys, os,importlib
+import sys
+import os
+import importlib
 
 
 """推荐这种方法....os和sys的结合,在终端上也能执行"""
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 sys.path.append(BASE_DIR)
 
-from Mathematical import count, subtraction
+from python_module.import_module.Mathematical import count, subtraction
 
 t = count(3, 43)
 print(t)
