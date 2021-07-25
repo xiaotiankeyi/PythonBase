@@ -1,3 +1,4 @@
+# 接口的继承
 """
     概念：
         1、在父类中定义的功能，子类在继承时必须实现，，例如父类中有read,write两个功能，在子类中必须实现这两个功能
@@ -8,7 +9,8 @@
 """
 import abc
 
-class All_file(metaclass= abc.ABCMeta):     #调用该方法后，子类必须实现父类所申明的功能，起限定功能
+
+class All_file(metaclass=abc.ABCMeta):  # 调用该方法后，子类必须实现父类所申明的功能，起限定功能
     @abc.abstractmethod
     def read(self):
         pass
@@ -16,6 +18,7 @@ class All_file(metaclass= abc.ABCMeta):     #调用该方法后，子类必须�
     @abc.abstractmethod
     def write(self):
         pass
+
 
 class Men(All_file):
     def read(self):
@@ -24,12 +27,14 @@ class Men(All_file):
     def write(self):
         return 'man write'
 
+
 class Disk(All_file):
     def read(self):
         return "disk read"
 
     def write(self):
         return 'disk write'
+
 
 mode = Disk()
 print(mode.write())

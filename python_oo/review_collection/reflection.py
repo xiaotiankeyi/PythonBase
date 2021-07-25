@@ -1,3 +1,4 @@
+# 反射
 class BlackMedium():
     feature='Ugly'
     def __init__(self,name,addr):

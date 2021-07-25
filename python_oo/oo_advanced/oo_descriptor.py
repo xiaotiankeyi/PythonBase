@@ -1,3 +1,4 @@
+# 描述符应用
 """ 数据描述符的运用
     概念：数据描述符的组成包含
             def __get__(self)
@@ -25,7 +26,7 @@ class Type():
         print("set方法")
         # print(instance)
         # print(value)
-        if type(value) is self.Expect_type:
+        if isinstance(value, self.Expect_type):
             instance.__dict__[self.key] = value
         else:
             raise TypeError("%s只允许输入%s" % (self.key, self.Expect_type))
@@ -50,18 +51,18 @@ class People():
 human = People("jack", 22)  # 赋值触发set的方法
 print(human.__dict__)
 
-print("=======================" * 5 )
+print("=======================" * 5)
 
-print(human.name)   #调用时触发get的方法
+print(human.name)  # 调用时触发get的方法
 
-print("=======================" * 5 )
-
-print(human.__dict__)
-human.name = 'Tom'      #修改触发set方法
-print(human.__dict__)
-
-print("=======================" * 5 )
+print("=======================" * 5)
 
 print(human.__dict__)
-del human.name      #删除触发delete方法
+human.name = 'Tom'  # 修改触发set方法
+print(human.__dict__)
+
+print("=======================" * 5)
+
+print(human.__dict__)
+del human.name  # 删除触发delete方法
 print(human.__dict__)

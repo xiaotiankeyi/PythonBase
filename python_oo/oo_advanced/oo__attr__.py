@@ -1,3 +1,4 @@
+# getattr/setattr应用
 """
     概念：
         1、python内置的方法
@@ -17,6 +18,7 @@ class Chinese:
         return '没有找到%s相应的属性,就触发' % item
 
     def __setattr__(self, key, value):      #设定属性
+        print('触发.....', key, value)
         pass
 
 people = Chinese(1.65, 62)      #触发setattr

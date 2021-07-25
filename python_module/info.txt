@@ -1,0 +1,17 @@
+python module学习记录:
+    目录详解:
+        config_module   配置文件模块
+        date_time   时间模块
+        e_mail  邮箱模块
+        import_module   模块导入
+        logger_module   日志模块
+        mock    mock接口模拟
+        optparse_module  命令行模块
+        os  os模块
+        pickle_json     序列化和json模块
+        random  随机数模块
+        re_module   re正则表达式模块
+        request  request请求模块
+        shutil_file     文件处理
+        subprocess_struct_platform  获取系统信息
+        sys_xml   sys,xml模块

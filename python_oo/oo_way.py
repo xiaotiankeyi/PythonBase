@@ -4,10 +4,12 @@
     就只执行类的数据属性和类的函数属性就是类方法，就是类本身调用自身的数据及函数属性，跟实例没有任何关系,
 """
 
+
 class People:
     """类说明定义一个中国人的类"""
     area = 9600000
     # ==========起始位置,初始化
+
     def __init__(self, name, age, sex, height, weight):
         self.user = name
         self.height = height
@@ -22,10 +24,10 @@ class People:
     def borrow(self):
         print('该函数属性需要获取class数据属性的值时，必须通过对(实例)对象来完成对数据属性的调用%s' % self.area)
 
-
-    @classmethod    #给类用的
+    @classmethod  # 给类用的
     def seek(cls):
-        print('调用类的函数属性,不通过对象来捆绑调用%s'% cls.area)
+        print('调用类的函数属性,不通过对象来捆绑调用%s' % cls.area)
+
 
 r = People('tom', 22, '男', '165cm', '60kg')
 

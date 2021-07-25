@@ -1,3 +1,4 @@
+# 类的装饰器
 """使用类的装饰器功能与描述符项结合来为class所传参数做判断"""
 
 
@@ -18,7 +19,7 @@ class Type():
         print("set方法")
         # print(instance)
         # print(value)
-        if type(value) is self.Expect_type:
+        if isinstance(value, self.Expect_type):
             instance.__dict__[self.key] = value
         else:
             raise TypeError("%s只允许输入%s" % (self.key, self.Expect_type))
