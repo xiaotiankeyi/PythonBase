@@ -1,3 +1,4 @@
+# 数据共享
 from threading import Thread
 import os
 
@@ -5,7 +6,7 @@ import os
 def work():
     global n
     n = 10
-    print('子线程的n是:', n)
+    print(f'子线程{t.ident}的n是:', n)
 
 
 if __name__ == "__main__":

@@ -1,3 +1,4 @@
+# 自定义创建异常
 class Error(BaseException):
     def __init__(self, massage, parameter):
         self.massage = massage

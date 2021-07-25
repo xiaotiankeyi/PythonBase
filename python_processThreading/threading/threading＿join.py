@@ -1,3 +1,4 @@
+# join
 # 主线程不等子线程，会先提前结束运行，可以通过join等待子进程
 import threading
 from threading import Thread

@@ -1,3 +1,4 @@
+# Lock同步锁
 from multiprocessing import Process, Lock
 import time
 
