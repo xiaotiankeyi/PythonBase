@@ -51,10 +51,10 @@ def welcome(func):  # func现在是index
                         current_dic['login'] = True
                         res = func(*args, **kwargs)  # 运行index并返回值给res
                         return res
-                        tag = False
-                else:
-                    print('用户名或密码错误')
-                    # continue
+                        # tag = False
+                    else:
+                        print('用户名或密码错误')
+                        continue
     return login
 
 

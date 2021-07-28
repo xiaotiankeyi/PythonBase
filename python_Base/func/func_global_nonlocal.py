@@ -48,6 +48,7 @@ def collection():
     name = "陈卓"
 
     def accept():
+        """内部函数修改外部函数的变量"""
         nonlocal name
         name = "冷静"
 

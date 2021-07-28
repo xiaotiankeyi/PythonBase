@@ -9,10 +9,10 @@ buffer_size = 1024
 tcp_server = socket(AF_INET, SOCK_STREAM)
 tcp_server.setsockopt(SOL_SOCKET, SO_REUSEADDR, 1)
 tcp_server.bind(ip_port)
-tcp_server.listen(back_log)
+tcp_server.listen(back_log)     # 设置最大链接数
 
 while True:
-    conn, addr = tcp_server.accept()
+    conn, addr = tcp_server.accept()    # 等待接收socket连接，conn新的套节字用于数据的收发
     print('新的客户端链接', addr)
     while True:
         # 收
@@ -35,14 +35,15 @@ while True:
 
             # 发
             if not cmd_res:
-                cmd_res = '执行成功'.encode('gbk')
+                cmd_res = '执行成功'.encode('utf-8')
 
             length = len(cmd_res)
-
+            # print('输出:', length)
             data_length = struct.pack('i', length)
             conn.send(data_length)
             conn.send(cmd_res)
         except Exception as e:
             print(e)
+            conn.close()
             break
     pass
