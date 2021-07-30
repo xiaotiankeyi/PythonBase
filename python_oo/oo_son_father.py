@@ -28,7 +28,7 @@ class Countries(Chinese):
         return '%s所在的国家是%s，这个国家的面积是%s，' % (self.name, self.state, self.area,)
 
     def run(self):
-        Chinese.run(self)  # 当子类和父类方法重名时，就像要调用父类的方法的操作
+        Chinese.run(self)
         return '子类的方法'
 
 

@@ -1,11 +1,11 @@
-# class组合
+# class的组合
 """
 概念：大类中包含小类
     使用场景：当类之间有显著的不同，并且较小的类是较大的类所需要的组件时，用组合
 """
 
 
-class School:
+class School(object):
     def __init__(self, name, addr):
         self.name = name
         self.addr = addr

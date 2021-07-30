@@ -3,7 +3,7 @@
 
 
 # 描述符
-class Type():
+class Type(object):
     def __init__(self, key, Expect_type):
         self.key = key
         self.Expect_type = Expect_type

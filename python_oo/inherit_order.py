@@ -7,7 +7,7 @@
 """
 
 
-class A():
+class A(object):
     def output(self):
         return 'A'
 

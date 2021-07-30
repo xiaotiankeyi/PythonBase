@@ -1,11 +1,11 @@
 # 继承
 """
-    python三大特性：继承\多态\封装
+    python三大特性：继承\\多态\\封装
     概念：
         1、单继承、多继承
         2、子类可以继承父类的函数属性及数据属性
         3、当子类中的数据属性和父类出现重名时,在调用时先在自身寻找
-        4、两个概念 派生\继承
+        4、两个概念 派生\\继承
     使用场景：当类之间有很多相同的功能，提取这些公共的功能做成基类，用继承较好
 """
 
@@ -27,9 +27,11 @@ class Countries(Chinese):
         self.state = state
 
     def update(self):
-        return '%s所在的国家是%s，他的身高是%s,体重为%s,' % (self.name, self.state,self.height, self.weight)
+        return '%s所在的国家是%s，他的身高是%s,体重为%s,' % (
+            self.name, self.state, self.height, self.weight)
 
-print(issubclass(Countries, Chinese))   #判断是否是子类
+
+print(issubclass(Countries, Chinese))  # 判断是否是子类
 
 accept = Countries('jack', 'chinese')
 # print(accept.update(), accept.Features())
@@ -38,7 +40,7 @@ accept = Countries('jack', 'chinese')
 # print(accept.area)
 
 
-class Animal:
+class Animal(object):
 
     def eat(self):
         # print("%s 吃 " %self.name)
@@ -56,6 +58,7 @@ class Animal:
         # print ("%s 撒 " %self.name)
         return '会撒'
 
+
 class Cat(Animal):
 
     def __init__(self, name):
@@ -66,15 +69,16 @@ class Cat(Animal):
         # print('喵喵叫')
         return '会喵喵叫'
 
-object = Cat('波斯猫')
+
+obj = Cat('波斯猫')
 
 print(
-    object.name,'\n','\t',
-    object.eat(),'\n','\t',
-    object.drink(),'\n','\t',
-    object.shit(),'\n','\t',
-    object.pee(),'\n','\t',
-    object.cry()
+    obj.name, '\n', '\t',
+    obj.eat(), '\n', '\t',
+    obj.drink(), '\n', '\t',
+    obj.shit(), '\n', '\t',
+    obj.pee(), '\n', '\t',
+    obj.cry()
 )
 
-print(isinstance(object, Cat))      #判断object是不是Cat实例化而来的
+print(isinstance(obj, Cat))  # 判断obj是不是Cat实例化而来的

@@ -1,7 +1,7 @@
 """面向对象思路设计对战小游戏"""
 
 
-class Riven:  # 角色瑞雯
+class Riven(object):  # 角色瑞雯
     camp = 'Noxus'
 
     def __init__(self, nickname,
@@ -20,7 +20,7 @@ class Riven:  # 角色瑞雯
         enemy.life_value -= damage_value
 
 
-class Garen:  # 角色盖伦
+class Garen(object):  # 角色盖伦
     camp = 'Demacia'
 
     def __init__(self, nickname,

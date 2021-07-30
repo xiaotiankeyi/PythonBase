@@ -1,7 +1,7 @@
 '''
 字符串移除空白操作....(strip)
 '''
-response = '   review_collection   '
+response = '   reflection   '
 # ___strip___移除空白
 print(response.strip())
 
