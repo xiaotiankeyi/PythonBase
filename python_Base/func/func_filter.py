@@ -1,3 +1,4 @@
+# filter实现过滤筛选功能
 people = ['sb_jack', 'sb_tom', 'sb_lucy', 'lucia', 'sb_birth']
 
 """显示判断开头字母功能"""

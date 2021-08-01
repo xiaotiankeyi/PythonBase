@@ -25,6 +25,7 @@ for y in goods:
 all_price = 10000
 for m, z in enumerate(temp_cart, 1):
     print(m, z["name"], z["price"])
+
 num = int(input("序号>>>> "))
 all_price = all_price - temp_cart[num - 1]["price"]
 print(temp_cart[num - 1]["price"])

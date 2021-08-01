@@ -28,11 +28,14 @@ print(accept)
 
 """....第三种.....系统提供的内置函数map"""
 use = map(lambda i: i + 1, li)
+
 print(list(use))
 update = map(addition, li)
 print(list(update))
-"""
-解释：
-    当逻辑复杂时不建议用lambda
-    传入的必须是可for循环的对象、如列表、字符串、字典
-"""
+
+value = map(lambda x,y: x+y, li, li)
+print(list(value))
+
+# 当逻辑复杂时不建议用lambda
+# 传入的必须是可for循环的对象、如列表、字符串、字典
+
