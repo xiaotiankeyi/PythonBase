@@ -17,3 +17,11 @@ print(dir(re_vales))
 print(re)
 print('获取匹配信息:', re_vales.group())
 print('获取匹配信息索引:', re_vales.span())
+
+# 贪婪模式
+
+f = re.match(r'abc(\d+)', 'abc12344')
+print('贪婪模式:', f)
+
+f = re.match(r'abc(\d+?)', 'abc12344')
+print('非贪婪模式:', f)
