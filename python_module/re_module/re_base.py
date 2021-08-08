@@ -10,21 +10,22 @@ import re
 r"""元字符 . ^ $ * + ? {} [] | () \ 匹配出来的数据可通过for循环取值"""
 
 h = re.findall(
-    'formhash=(.*)\'>',
+    r'formhash=(.*)>',
     "[<a href='member.php?mod=logging&amp;action=logout&amp;formhash=dc66d9c9'>退出</a>]")
-print(h, type(h))
-for i in h:
-    print(str(i), type(i))
+# print(h, type(h))
+
+# for i in h:
+#     print(str(i), type(i))
 
 
 def letter():
     '''cnzz_eid%3D2145852493-1565144951-https%253A%252F%252Fwww.baidu.com%252F%26ntime%3D1565144951'''
 
-    z = re.findall(
+    w = re.findall(
         r'\W',
         'cnzz_eid%3D2145852493-1565144951-https%253A%252F%252Fwww.baidu.com%252F%26ntime%3D1565144951')
     # \w数字字母下划线  \W非数字母下划线
-    print(z)
+    print(w)
 
     d = re.findall(
         r'\d+',
@@ -32,35 +33,35 @@ def letter():
     # \d匹配任意数字   \D匹配数字之外的值
     print(d)
 
-    f = re.findall(
+    s = re.findall(
         r'\s',
         'cnzz_eid%3D2145852493-1565144951-https%253A%252F%252Fwww.baidu.com%252F%26ntime%3D1565144951')
     # \s匹配任何空白字符    \S匹配任意非空白字符
-    # print(f)
+    print(s)
 
-    g = re.findall(
+    end = re.findall(
         '1$',
         'cnzz_eid%3D2145852493-1565144951-https%253A%252F%252Fwww.baidu.com%252F%26ntime%3D1565144951')
     # 1$匹配字符串结尾
-    print(g)
+    print(end)
 
-    t = re.findall(
+    start = re.findall(
         '^c',
         'cnzz_eid%3D2145852493-1565144951-https%253A%252F%252Fwww.baidu.com%252F%26ntime%3D1565144951')
     # ^c匹配字符串开头
-    print(t)
+    print(start)
 
-    s = re.findall(
+    all = re.findall(
         '.+',
         'cnzz_eid%3D2145852493-1565144951-https%253A%252F%252Fwww.baidu.com%252F%26ntime%3D1565144951')
     # .通配符,匹配任意字符
-    print(s)
+    print(all)
 
     v = re.findall(
         '%*',
         'cnzz_eid%3D2145852493-1565144951-https%253A%252F%252Fwww.baidu.com%252F%26ntime%3D1565144951')
     # * 匹配0个或无限个 %
-    # print(v)
+    print(v)
 
     e = re.findall(
         'D2?',
@@ -85,7 +86,7 @@ def letter():
         'ht|b2',
         'cnzz_eid%3D2145852493-1565144951-https%253A%252F%252Fwww.baidu.com%252F%26ntime%3D1565144951')
     q = re.findall(
-        '\n|\t',
+        r'\n|\t',
         'cnzz_eid%3D2145852493-15651\n44951-https%253A%\t252F%252Fwww.baidu.com%252F%26ntime%3D1565144951')
     # | 匹配ht或b2，当两个都存在时都显示出来。。。。
     print(w)

@@ -36,6 +36,7 @@ class Type(object):
 def deco(**kwargs):
     def wrapper(obj):
         for key, val in kwargs.items():
+            print(key, val)
             setattr(obj, key, Type(key, val))
         return obj
 

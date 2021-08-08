@@ -16,14 +16,17 @@ def timmer(func):  # 第一步，目前形参是test
     return wrapper  # 第二步，返回wrapper地址
 
 
-"""@表示语法堂,@后面加上装饰器>>>>相当于test = timmer(test)"""
+"""@表示语法堂,@后面加上装饰器>>>>相当于test = timmer(function)"""
 
 
-@timmer
-def test():
+# @timmer
+def function():
     time.sleep(2)  # 第七步
     print("test函数运行完毕")  # 第八步
     return "我是test的返回值"
 
+function = timmer(function)
 
-print(test())  # 运行wrapper
+print(function())  # 运行wrapper
+
+

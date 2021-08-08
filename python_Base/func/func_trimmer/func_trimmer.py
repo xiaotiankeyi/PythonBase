@@ -27,17 +27,17 @@ def trimmer(func):  # 第一步，目前形参是test
 
 
 @trimmer
-def test():
+def function():
     time.sleep(2)  # 第七步
     print("test函数运行完毕")  # 第八步
 
-test()
+function()
 
 """源代码没有被修改，但是调用方式被修改了....."""
-# ret = trimmer(test)  #第三步，获取wrapper地址并赋值给ret
+# ret = trimmer(function)  #第三步，获取wrapper地址并赋值给ret
 # ret()   #第四步，运行函数wrapper
 
 """源代码没有被修改，调用方式没被修改"""
-# test = trimmer(test)
+# test = trimmer(function)
 # test()  #运行函数wrapper
 
