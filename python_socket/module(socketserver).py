@@ -14,7 +14,7 @@ class Handler(BaseRequestHandler):
                 # 收消息
                 data = self.request.recv(1024)
                 if not data:
-                    break
+                    continue
                 print('收到客户端{}的消息是'.format(self.client_address), data, )
 
                 # 发消息

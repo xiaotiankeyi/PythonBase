@@ -1,6 +1,6 @@
 # 实现类装饰器，为函数增加新的功能
 
-class family(object):
+class Family(object):
     def __init__(self, func):
         self.__func = func
 
@@ -12,10 +12,13 @@ class family(object):
     def new(self):
         print('所要执行的新的功能!!!')
 
-@family
+
+@Family
 def daughter():
 
     return '需要被装饰得类.....'
+
+
 if __name__ == "__main__":
 
     daughter()
