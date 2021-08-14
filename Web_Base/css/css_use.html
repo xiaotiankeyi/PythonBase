@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>css四种引用方式</title>
+
+		<style>
+			p#one {
+				color: blue;
+				font-size: 20px;
+			}
+
+			< !--import导入式-->@import url("css_style.css");
+		</style>
+		<link rel="stylesheet" type="text/css" href="css_style.css" />
+	</head>
+	<body>
+		<!--行内样式-->
+		<p style="color: red;">方式一行内样式,健:值</p>
+
+		<p id="one">方式二,内嵌样式</p>
+
+		<p class="font">方式三,外部导入css样式,link标签实现导入</p>
+	</body>
+</html>

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>css常用选择器</title>
+		<style>
+			/* 使用*通用选择器 */
+			* {
+				color: red;
+				background-color: brown;
+			}
+
+			/* 同过标签名 */
+			div {
+				height: 200px;
+				width: 200px;
+				/* 边框的粗细,和颜色 */
+				border: 2px solid purple;
+			}
+
+			div#duaghter {
+				background-color: blue;
+			}
+
+			div.uncle {
+				background-color: #008000;
+			}
+		</style>
+	</head>
+	<body>
+		<div id="duaghter">1</div>
+		<div class="uncle">2</div>
+		<div>3</div>
+
+	</body>
+</html>
+
+<!--
+	选择器优先级
+		id选择器>class选择器>标签选择器>通用选择器
+-->
