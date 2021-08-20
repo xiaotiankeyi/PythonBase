@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>CSS样式引入及背景和字体属性</title>
+</head>
+
+<style>
+    div {
+        color: red;
+        font-size: 50px;
+        font-family: "Bitstream Vera Sans Mono", Monaco, "Courier New", Courier, monospace;
+        font-weight: lighter;
+        font-style: italic;
+    }
+    .img{
+        background-color: darkorchid;
+        height: 800px;
+        width: 800px;
+        background-image: url("16pi.png");
+        background-repeat: no-repeat;
+        background-position: center;
+    }
+</style>
+
+<link href="dir_css.css" rel="stylesheet" type="text/css">
+
+<body>
+<div>css引入四种方式之一嵌入式</div>
+
+<p style="color: green; font-size: 40px">css引入四种方式之二行内式</p>
+
+<a>css引入四种方式之三导入css文件链接式</a>
+
+<div class="img"></div>
+</body>
+</html>

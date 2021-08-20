@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>jquery元素选择</title>
+</head>
+<body>
+<script src="jquery-3.1.1.js"></script>
+
+<p class="two">jquery,基本选择器.class选择</p>
+<p id="one">jquery,基本选择器之#id选择</p>
+<div class="cls">jquery,基本选择器之element选择</div>
+
+<div class="start">第一爷爷层
+    <div class="status">第二爸爸层
+        <p class="server">层级选择器</p>
+    </div>
+</div>
+<div>同级</div>
+<div>同级2</div>
+<div id="title" class="stop">属性选择器</div>
+
+<!--<ul>-->
+<!--    <li>11111</li>-->
+<!--    <li>22222</li>-->
+<!--    <li>33333</li>-->
+<!--    <li>44444</li>-->
+<!--    <li>55555</li>-->
+<!--    <li>66666</li>-->
+<!--    <li>77777</li>-->
+<!--</ul>-->
+
+<div class="create">
+    <div class="insert">只能一级一级定位
+        <p class="alter">通过children定位子级</p>
+        <a class="update">通过find定位子级</a>
+    </div>
+</div>
+
+<ul>
+    <li class="drop">aaaaa</li>
+    <li class="delete">bbbbb</li>
+    <li class="commit">ccccc</li>
+    <li class="collback">ddddd</li>
+    <li class="savapoitn">eeeee</li>
+    <li class="character">fffff</li>
+    <li class="set">jjjjj</li>
+</ul>
+
+<div>我是下面标签的兄弟</div>
+<div class="use">parent()作用于父标签!!!
+    <div class="database">子标签</div>
+    <div class="group">我是父标签
+        <p class="show">这个也是子标签</p>
+    </div>
+</div>
+<div>我是上面标签的兄弟</div>
+
+<script>
+    //基本选择器
+    console.log($("*"));      //"*"通配符选择所有标签
+    console.log($(".two")[0]);      //.class选择器
+    console.log($("#one")[0]);      //#id选择器
+    console.log($("div")[0]);        //element元素选择
+    console.log($(".cls,p,div"));
+
+    //层级选择器
+    // $(".start div").css("color","red");      //定位内部所有div标签
+    // $(".start>div>p").css("color","red");       //定位子级
+    // $(".start+div").css("color","red");      //定位下方同级的div标签
+    // $(".start~div").css("color","red")      //定位下方所有div标签
+
+    //基本选择器
+    // $("li:first").css("color","red");    //定位第一个标签
+    // $("li").eq(3).css("color","red");    //定位第3个标签
+    // $("li:even").css("color","red")     //分一个间隔定位
+    // $("li:gt(1)").css("color","red")    //定位第二个标签以下所有的标签
+
+    //属性选择器
+    // $("[id='one']").css("color","red");     //通过一个属性定位
+    // $("[class='stop'][id='title']").css("color","red");      //通过两个属性定位
+
+    //查找筛选器
+    // $(".create").children(".insert").css("color","blue");    //只能定位子级
+    // $(".create").find(".update").css("color","blue");       //查找局部所有标签
+
+    // $(".commit").next().css("color","red");     //定位本身标签的下一个标签
+    // $(".commit").nextALL().css("color","red");
+    // $(".drop").nextUntil(.collback).css("color","red");      //定位当前标签下面的所有的标签到.collback标签为止
+
+    // $(".collback").prev().css("color","red");       // //定位本身标签的上一个标签
+    // $(".collback").prevAll().css("color","red");    //定位当前标签上面的所有标签
+    // $(".character").prevUntil(".delete").css("color","red")     ////定位当前标签上面的所有标签到.delete标签为止
+
+    // $(".database").parent().css("color","red");         //定位制定标签的父标签
+    // $(".use .group p").parents().css("color","red");
+    // $(".use .group .show").parentsUntil(".use").css("color","red");      //定位当前标签下面的所有的标签到.use标签为止
+    $(".use").siblings().css("color","blue")        //定位当前标签上面和下面所有的兄弟标签
+
+</script>
+
+</body>
+</html>

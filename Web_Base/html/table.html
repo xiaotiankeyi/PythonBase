@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>table表格标签</title>
+	</head>
+	<body>
+		<table border="1px" cellspacing="" cellpadding="">
+			<tr height="50px" align="center">
+				<th width="100px">时间</th>
+				<td width="100px">Date</td>
+				<td width="100px">Date</td>
+				<td width="100px">Date</td>
+			</tr>
+
+			<tr>
+				<th>数据</th>
+				<td>Data</td>
+				<td>Data</td>
+				<td>Data</td>
+			</tr>
+		</table>
+		<br>
+
+		<table border="" cellspacing="" cellpadding="">
+			<tr bgcolor="aqua">
+				<th colspan="2">python</th>
+				<th>javascrip</th>
+				<th>linux</th>
+			</tr>
+			<tr>
+				<td>1000</td>
+				<td>2000</td>
+				<td>3000</td>
+				<td rowspan="2">4000</td>
+			</tr>
+			<tr>
+				<td>8000</td>
+				<td>5000</td>
+				<td>6000</td>
+				<!-- <td>7000</td> -->
+			</tr>
+		</table>
+	</body>
+</html>
+
+<!--
+	table>tr*3>th*3     生成3行3列的表格
+	cellspacing    单元格和单元格之间的间距
+	cellpadding    内容和单元格之间的间距
+	colspan    合并行
+	rowspan    合并列
+	bgcolor    背景颜色
+-->

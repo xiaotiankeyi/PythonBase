@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>HTML5对音频的处理</title>
+	</head>
+	<body>
+
+		<p>音频</p>
+		<hr>
+		<audio src="music/汪苏泷-万有引力.mp3" controls="controls">
+			当前浏览器不支持audio
+		</audio>
+		<audio>
+			<source src="">mp3</source>
+			<source src="">mp4</source>
+			<embed src="music/汪苏泷-万有引力.mp3"></embed>
+			当前浏览器不支持audio
+		</audio>
+
+		<video width="800" height="" controls="controls">
+			<source src="music/css的margin定位.mp4" type="video/mp4">
+			</source>
+			<source src="myvideo.ogv" type="video/ogg">
+			</source>
+			<source src="myvideo.webm" type="video/webm">
+			</source>
+			<object width="" height="" type="application/x-shockwave-flash" data="myvideo.swf">
+				<param name="movie" value="myvideo.swf" />
+				<param name="flashvars" value="autostart=true&amp;file=myvideo.swf" />
+			</object>
+			当前浏览器不支持 video直接播放，点击这里下载视频： <a href="myvideo.webm">下载视频</a>
+		</video>
+		<hr>
+
+	</body>
+</html>

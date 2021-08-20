@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>from表单标签</title>
+	</head>
+	<body>
+		<form action="https://www.baidu.com/s?" method="get">
+
+			<!--普通文本框-->
+			<input type="text" name="wd" id="id" value="python" /><br>
+
+			<!--密码框-->
+			<input type="password" name="pwd" id="" value="123456" /><br>
+
+			<!--单选框,checked默认选择-->
+			男<input type="radio" name="sex" value="1" checked="checked" />
+			女<input type="radio" name="sex" value="0" /><br>
+
+			<!--多选框-->
+			足球 <input type="checkbox" value="soccer" />
+			网球 <input type="checkbox" value="tennis" checked="checked" />
+			篮球 <input type="checkbox" value="basketball" /><br>
+
+			<!--多行文本框-->
+			个人介绍 <textarea rows="15" cols="20">默认</textarea><br>
+
+			<!--文件选择框-->
+			<input type="file" name="file" /><br>
+
+			<!--隐藏框-->
+			<input type="hidden" name="aunt" value="duaghter" />
+
+			<!--下拉框,selected默认选择-->
+			<select name="select">
+				<option value="1">中国</option>
+				<option value="2" selected="selected">韩国</option>
+				<option value="3 ">日本</option>
+			</select><br>
+
+			<!--提交按钮-->
+			<input type="submit" value="百度一下" /><br>
+
+			<!--清除按钮-->
+			<input type="reset" value="清除" /><br>
+
+			<!--普通按钮,没有提交功能,配合事件使用-->
+			<input type="button" value="绑定提交" />
+		</form>
+	</body>
+</html>
+
+<!--
+	action    提交地址
+	method    提交方式
+-->

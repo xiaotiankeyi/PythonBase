@@ -1,0 +1,5 @@
+android 10 3
+tesla 100000 1
+mac 3000 2
+key 30000 3
+chicken 10 3

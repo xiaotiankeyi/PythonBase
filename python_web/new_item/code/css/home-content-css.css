@@ -1,0 +1,28 @@
+.outer-container{
+    width: 100%;
+}
+
+.main-fix{
+    margin-top: 74px;
+    margin-bottom: 100px;
+}
+.main-container{
+    margin: 0 auto;     /*居中*/
+    width: 1194px;
+}
+
+.main-wrap{
+    width: 100%;
+    float: left;
+}
+.main{
+    margin-right: 354px;
+    min-height: 600px;
+    height: auto!important;     /*自适应高度*/
+    overflow: visible;      /*overflow 属性规定当内容溢出元素框时发生的事情*/
+}
+/*.link-con .link-item{*/
+/*    background-color: #ffffff;*/
+/*    border-bottom: 1px solid #f5f5f5;*/
+/*    position: relative;*/
+/*}*/

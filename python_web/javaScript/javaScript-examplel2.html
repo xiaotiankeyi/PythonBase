@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>全选反选取消</title>
+</head>
+<body>
+<button onclick="select('all');">全选</button>
+<button onclick="select('cancel');">取消</button>
+<button onclick="select('reverse');">反选</button>
+
+<table border="1" id="Table">
+    <tr>
+        <td><input type="checkbox"></td>
+        <td>111</td>
+    </tr>
+    <tr>
+        <td><input type="checkbox"></td>
+        <td>222</td>
+    </tr>
+    <tr>
+        <td><input type="checkbox"></td>
+        <td>333</td>
+    </tr>
+    <tr>
+        <td><input type="checkbox"></td>
+        <td>444</td>
+    </tr>
+</table>
+
+<script>
+    function select(choice) {
+        var ele = document.getElementById("Table");
+
+        var inputs = ele.getElementsByTagName("input");
+        for (var i = 0; i < inputs.length; i = i + 1) {
+
+            var ele2 = inputs[i];
+            if (choice == "all") {
+                ele2.checked = true;
+
+            } else if (choice == "cancel") {
+                ele2.checked = false;
+            } else {
+                if (ele2.checked) {
+                    ele2.checked = false;
+                } else {
+                    ele2.checked = true;
+                }
+            }
+
+        }
+    }
+</script>
+
+</body>
+</html>

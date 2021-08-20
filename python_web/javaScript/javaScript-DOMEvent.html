@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>javaScript-DOMEvent事件</title>
+</head>
+<body>
+
+<div>
+    <div class="group" onclick="client()">邦定事件</div><br>
+    <div class="gender">第二种邦定事件方式</div><br>
+</div>
+<input id="search" name="accept" type="text" value="请输入参数值" onfocus="service()" onblur="succeed()">
+
+<div class="d1">
+    <div class="d2">aaaa</div>
+    <div class="d3">bbbb</div>
+    <div class="d4">cccc</div>
+    <div class="d5">dddd</div>
+    <p class="p1" onclick="func(this)">pppp</p>
+</div>
+
+<script>
+    function client() {
+        alert("点击后响应!!!")
+    }
+    
+    var ele=document.getElementsByClassName("gender")[0];
+    ele.onclick=function () {           //推荐使用
+        alert("相应第二个事件,实现js代码分离")
+    };
+
+    var tag=document.getElementById("search");
+    function service() {                //获取焦点
+        if(tag.value=="请输入参数值"){
+            tag.value=""
+        }
+    }
+
+    function succeed() {           ////失去焦点
+        if(!tag.value.trim()){
+            tag.value="请输入参数值"
+        }
+    }
+
+    function func(that) {       //this定位标签自身
+        console.log(that)
+    }
+</script>
+
+</body>
+</html>

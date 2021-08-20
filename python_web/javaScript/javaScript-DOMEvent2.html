@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>javaScript-DOMEvent事件</title>
+</head>
+<body>
+
+<form id="form">
+            <input type="text"/>
+            <input type="submit" value="点我!" />
+</form>
+
+<script type="text/javascript">
+            //阻止表单提交方式1().
+            //onsubmit 命名的事件函数,可以接受返回值. 其中返回false表示拦截表单提交.其他为放行.
+
+            var ele=document.getElementById("form");
+            ele.onsubmit=function(event) {
+               // alert("验证失败 表单不会提交!");
+               // return false;
+
+            // 阻止表单提交方式2 event.preventDefault(); ==>通知浏览器不要执行与事件关联的默认动作。
+             alert("验证失败 表单不会提交!");
+             event.preventDefault();
+    }
+</script>
+
+<div id="abc_1" style="border:1px solid red;width:300px;height:300px;">
+        <div id="abc_2" style="border:1px solid blue;width:200px;height:200px;"></div>
+    </div>
+<script type="text/javascript">
+    document.getElementById("abc_1").onclick=function(){
+        alert('111');
+    };
+    document.getElementById("abc_2").onclick=function(event){
+        alert('222');
+        event.stopPropagation(); //阻止事件向外层div传播.
+    }
+</script>
+
+</body>
+</html>

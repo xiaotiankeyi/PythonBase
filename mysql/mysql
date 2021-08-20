@@ -1,0 +1,182 @@
+对数据库的操作;
+        增;
+            create database 'name';
+            create database 'name' character set utf8;
+        删;
+            drop database 'name';
+        改;
+            alter database 'name' character set gbk;
+        查;
+            show create database 'name';
+            show variable like 'character%';
+            show databases;
+            select database();
+
+对表的操作;
+        增;
+            create table school(
+             id tinyint primary key auto_increment not null uniqub,     #'主键-非空唯一性'
+             name varchar(10),
+             gender varchar(10) default men,
+             age tinyint
+             );
+        删:
+            drop table 'table_name';
+        改:
+            表:
+                rename table 'table_name' to 'table_name';
+                alter table 'table_name' character set utf8;
+
+            字段:
+                alter table 'table_name' add birthday date,
+                    add field char(2);
+                alter table 'table_name' add primary key 'field_name';      #添加主键
+
+                alter table 'table_name' drop 'field_name',
+                    drop 'field_name';
+                alter table 'table_name' drop primary key;      #删除主键
+
+                alter table 'table_name' change 'field_name' 'new_field_name' datatype;
+
+                alter table 'table_name' modify 'field_name' datatype after id(放在id字段的后面);      #修改数据类型
+        查;
+            show tables;
+            desc 'table_name';
+            show create table 'table_name';     #查看表创建信息
+
+对数据的操作:
+        增:
+            insert into 'table_name'(id, name, age) values(1, 'jack', 23),
+                                                        (0, 'lucy', 21);
+            insert into 'table_name' values(0, 'tom', 22),
+                                            (1, 'json', 34);
+            insert into 'table_name' set 'key=value', 'key=values';
+        删:
+            delete from 'table_name' where id = 2;
+            delete from 'table_name';
+            truncate table 'table_name'
+        改:
+            update 'table_name' set 'key=new values' where id = 1;
+
+        查:
+            select * from 'table_name';
+            select ' ',' ' form 'table_name';
+
+            #过滤表中重复数据
+            select distinct ' ',' ' from 'table_name';
+
+            #给字段加别名
+            select ' ' as a1, from 'table_name';
+
+            #where字句的使用:
+                比较运算符:
+                    >, <, >=, <=, !=
+                    between 80 and 100
+                    like 'req%'
+                逻辑运行符:
+                    and, or, not
+
+                select result from 'table_name' where result between 50 and 100;
+                select result from 'table_name' where result in(50, 70, 100);
+                select result from 'table_name' where result like '10%';
+                select result from 'table_name' where result is null;
+
+            #排序:
+                select result from 'table_name'  order by result ASC;
+                select result from 'table_name'  order by result DESC;
+                select result from 'table_name' where result like '%10' order by result asc;
+
+            #分组:
+                注意: 按分组条件分组后没一组只会显示第一条记录
+                        having是在分组前进行筛选, where是分组之后进行筛选
+                select 'name' sum(result) from 'table_name' group by 'name';
+                select 'name' sum(result) from 'table_name' group by 'name' having sum(result)>100;
+                select 'name' count(result) from 'table_name' where result>70;
+                #ifnull(result,0)解决为null的问题
+                select 'name' sum(result) from 'table_name' where (ifnull(result,0) + ifnnull(result,0));
+                select 'name' avg(result) from 'table_name';
+                select max(result) as a from 'table_name';
+                select min(result) as a from 'table_name';
+                #limit 2,3 跳过2条,显示3条
+                select * from 'table_name' limit 2,3;
+
+            #使用正则表达式查询
+                select * from 'table_name' where 'field_name' regexp '^yu';     #以什么开头
+                select * from 'table_name' where 'field_name' regexp 'yu$';     #以什么结尾
+                select * from 'table_name' where 'field_name' regexp 'a{2}';    #包含2个a的
+
+            #创建外键:
+                create table school(
+                    id tinyint primary key auto_increment not null uniqub,     #'主键-非空唯一性'
+                    name varchar(10),
+                    gender varchar(10) default men,
+                    age tinyint,
+                    FOREIGN KEY ('field_name') REFERENCES 'table_name'(id)
+                        #外键一定要和关联主键的数据类型保持一致
+                )ENGINE=INNODB;
+                    临时增加外键:
+                        alter table 'table_name' add CONSTRAINT 'abd'
+                                            FOREIGN KEY ('field_name') references 'table_name'(id);
+                    临时删除外键:
+                        alter table 'table_name' drop FOREIGN KEY 'abc';
+
+                创建外键+联级删除:
+                    FOREIGN KEY 'field_name' REFERENCES 'table_name'(id) on delete cascade;
+
+            #多表查询:
+                内连接: inner join
+                        select * from 'table_name' inner join 'table_name' on 'table_name'.id = 'table_name'.id_card
+                                                                            and 'table_name'.name ='A';
+                外连接: left join  right join
+                        select * from 'table_name' left join 'table_name' on 'table_name'.id = 'table_name'.id_card;
+                        select * from 'table_name' right join 'table_name' on 'table_name'.id = 'table_name'.id_card;
+
+                全连接: full join
+                        union 会去重, union all
+
+            #索引
+                添加索引_1:
+                    create table a1(
+                        id tinyint primary key,
+                        index '索引名' ('字段名', '字段')
+                        unqiue index '索引名' '字段'
+                    );
+                two_2:
+                    create index '索引名' on 'table_name'('field_name');
+
+                删除索引:
+                    drop index '索引名' on 'table_name';
+
+            #事务:
+                start transaction       #开始事务
+                rollback    #回滚事务,即撤销上一步操作
+                commit  #提交事务,存储
+
+                savepoint   #保留点
+
+对用户操作:
+            创建用户:
+                        create user 'jack'@'192.168.1.39' identified by '123456';
+            修改密码:
+                        (登录) set passeord for 'jack'@localhost = password('123');
+
+                        (用mysqladmin) mysqladmin -ujack -p123456 password123;
+
+                         update user set password=password('123') where user='root' and host='localhost';
+
+            对所以库授权;
+                        grant select on *.* to 'jack'@'localhost' identified by '123456';
+
+            对某一个库授权"mysql库":
+                                    grant select on 'mysql'.* to 'jack'@'%' identified by '123456';
+
+            对库中的某张表授权:
+                                grant select on 'mysql'.user to 'jack'@'%' identfied by '123456';
+
+            允许root用户远程访问:
+                                 grant all privileges on *.* to 'jack'@'%' identified by '123456' with grant option;
+            刷新权限:
+                    flush privileges;
+
+            删除权限:
+                    revoke select on mysql.* from 'jack'@'%';

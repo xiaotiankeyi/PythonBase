@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>css3动画的应用</title>
+	</head>
+	<style>
+		body {
+			background-color: #000000;
+		}
+
+		.thank {
+			width: 30px;
+			height: 100px;
+			background-color: red;
+			border-radius: 10px;
+			margin-top: 150px;
+			margin-left: 300px;
+
+			/* 动画调用 */
+			animation-name: play;
+			/* 动画运行时间 */
+			animation-duration: 4s;
+			/* 动画一直运行 */
+			animation-iteration-count: infinite;
+
+			/* 适配浏览器调用 */
+			/* Firefox */
+			-moz-animation: mymove 5s infinite;
+			/* Safari and Chrome */
+			-webkit-animation: mymove 5s infinite;
+			/* Opera */
+			-o-animation: mymove 5s infinite;
+
+		}
+
+		/* @-moz-keyframes mymove  火狐模式 */
+		/* @-webkit-keyframes mymove  Safari 和 Chrome模式 */
+		/* @-o-keyframes mymove  Opera模式 */
+		@keyframes play {
+			0% {
+				transform: rotate(0deg);
+				background-color: red;
+			}
+
+			25% {
+				transform: rotate(90deg);
+				background-color: yellow;
+			}
+
+			50% {
+				transform: rotate(180deg);
+				background-color: blue;
+			}
+
+			75% {
+				transform: rotate(270deg);
+				background-color: orange;
+			}
+
+			100% {
+				transform: rotate(360deg);
+				background-color: green;
+			}
+		}
+	</style>
+	<body>
+		<div class="thank dictionary">
+
+		</div>
+
+	</body>
+</html>

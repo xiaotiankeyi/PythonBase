@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>属性操作</title>
+    <script src="jquery-3.1.1.js"></script>
+
+</head>
+<body>
+
+<div class="between">
+    <p class="count" id="desc" style="color: red; font-size: 20px">属性修改操作标签</p>
+</div>
+
+<div class="delete">
+    <p class="brother" id="stop">删除标签中的id属性</p>
+</div>
+
+<div class="right">
+    <p>prop取固有属性值</p>
+    <input type="text" value="请输入">
+</div>
+
+<div class="left">
+    <p>css属性类</p>
+    <div id="top" style="display: none"></div>
+</div>
+
+<div class="clear">
+    <button class="btn1" style="display: inline-block">改变 p 元素的内容</button><br>
+    <span>This is a paragraph.</span><br>
+    <span>This is another paragraph.</span>
+</div>
+
+<div class="char">
+    <button>设置所有p元素的文本内容</button>
+    <h1>这是一个段落。</h1>
+    <h1>这是另一个段落。</h1>
+</div>
+
+<div class="moaning">
+    <p>点击val</p>
+    <input name="val" class="succeed" value="被查询的值">
+</div>
+<script>
+    //attr操作
+    console.log($('.count').attr('class'));     //返回选中元素中class的值
+    $('.between').click(function () {
+        // $('#desc').attr('class','distinct');        //设置属性/值
+        $('div p').attr({'class':'distinct', 'id':'asc'})       //设置多个属性/值
+    });
+
+    //removeAttr操作
+    $('.delete').click(function () {
+        $('p').removeAttr('id')       //移出id属性
+    });
+
+    //prop操作
+    $('.right').click(function () {
+        console.log($('input').prop('type'));       //prop可以取除元素固定的属性值
+    });
+
+    //addClass操作
+    $('.left').click(function () {
+        $('#top').addClass('button are')      //prop可以取除元素固定的属性值
+    });
+
+    //html更换内容操作
+    $('.clear .btn1').blur(function () {
+        $("span").html("Hello <b>world!</b>");      //改变所有span标签文本
+    });
+
+    //text文本操作
+    $('.char button').blur(function () {
+        // console.log($('h1').text());      //读取返回值
+        $('h1').text("hello world");        //设置新的值
+    });
+
+    //val操作
+    // console.log($('.moaning .succeed').val());       //获取values值
+    $('.moaning .succeed').val(["值1", "值2"]);       //修改values值
+
+</script>
+
+</body>
+</html>

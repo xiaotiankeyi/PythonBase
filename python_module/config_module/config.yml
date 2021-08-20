@@ -1,0 +1,7 @@
+IP: 192.168.117.9
+post: 3306
+user: root
+password: 123
+db: s2
+status_code: ok
+token: 21793621974712832831231

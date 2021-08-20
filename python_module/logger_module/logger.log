@@ -1,0 +1,5 @@
+2019-11-19 18:00:35 PM\realize_logging\DEBUG\10\MainThread:97100\realize_logging.py:48: debug
+2019-11-19 18:00:35 PM\realize_logging\INFO\20\MainThread:97100\realize_logging.py:49: info
+2019-11-19 18:00:35 PM\realize_logging\WARNING\30\MainThread:97100\realize_logging.py:50: warning
+2019-11-19 18:00:35 PM\realize_logging\ERROR\40\MainThread:97100\realize_logging.py:51: error
+2019-11-19 18:00:35 PM\realize_logging\CRITICAL\50\MainThread:97100\realize_logging.py:52: critical
