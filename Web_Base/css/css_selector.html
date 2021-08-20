@@ -18,12 +18,26 @@
 				border: 2px solid purple;
 			}
 
+			/* div下class为daughter的标签 */
 			div#duaghter {
 				background-color: blue;
 			}
 
+			/* div下id为uncle的标签 */
 			div.uncle {
 				background-color: #008000;
+			}
+
+			/*同时选中h4,h5两个标签*/
+			h4,
+			h5 {
+				font-size: 20px;
+			}
+
+			/* div下class为ten标签下面的p标签 */
+			div.ten p {
+				float: left;
+				padding: 6px;
 			}
 		</style>
 	</head>
@@ -31,7 +45,14 @@
 		<div id="duaghter">1</div>
 		<div class="uncle">2</div>
 		<div>3</div>
-
+		<h4>被一起选中</h4>
+		<h5>也被一起选中</h5>
+		<div class="ten">
+			<p>six</p>
+			<p>seven</p>
+			<p>night</p>
+			<p>nine</p>
+		</div>
 	</body>
 </html>
 

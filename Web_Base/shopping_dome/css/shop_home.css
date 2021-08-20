@@ -1,0 +1,86 @@
+/* 第一部分 */
+#shortcut,
+.w,
+.fl {
+	height: 30px;
+	background-color: #e3e4e5;
+}
+
+.w {
+	width: 990px;
+	margin: 0 auto;
+}
+
+.fl,
+.fr .dt {
+	float: left;
+}
+
+.fl>li {
+	float: left;
+}
+
+.fl a {
+	line-height: 30px;
+	color: grey;
+}
+
+.fl .address {
+	margin-left: 20px;
+}
+
+.fr {
+	float: right;
+}
+
+.fr .dt,
+.fr span {
+	line-height: 30px;
+	margin-left: 10px;
+}
+
+.fr a {
+	color: grey;
+}
+
+.w a:hover {
+	color: red;
+}
+
+/* 第二部分 */
+.clearfix {
+	clear: both;
+	height: 97px;
+	width: 990px;
+	margin: 0 auto;
+	/* border: 1px solid black; */
+}
+
+.log-2014 {
+	float: left;
+	margin-top: 20px;
+	/* border: 1px solid red; */
+}
+
+
+.form {
+	float: right;
+	margin-top: 40px;
+
+}
+
+input[type=text] {
+	height: 21px;
+	width: 256px;
+	border: 3px solid #C91623;
+	position: relative;
+	left: 5px;
+}
+
+input[type=button] {
+	width: 51px;
+	height: 29px;
+	background-color: #c91623;
+	border: 1.5px solid #C91623;
+	color: #FFFFFF;
+}

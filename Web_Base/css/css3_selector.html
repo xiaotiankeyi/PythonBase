@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>css3选择器之关系/伪类/伪对象</title>
+		<style>
+			/* 第一个 */
+			#sister>p:first-child {
+				color: red;
+			}
+
+			/* 最后一个 */
+			#sister>p:last-child {
+				color: green;
+			}
+
+			/* 指定某个 */
+			#sister>p:nth-child(3) {
+				color: blue;
+			}
+
+			/* 制定偶数行颜色 */
+			#sister>p:nth-child(even) {
+				background-color: brown;
+			}
+
+			/* 制定基数行颜色 */
+			#sister>p:nth-child(odd) {
+				background-color: purple;
+			}
+
+			/* 获得内容为空的元素对象 */
+			p:empty {
+				height: 50px;
+				background-color: #000000;
+			}
+
+			/* input:focus { */
+			/* width: 100px; */
+			/* height: 100px; */
+			/* } */
+
+			/* 改变单选后的显示效果 */
+			input:checked {
+				width: 20px;
+				height: 20px;
+			}
+
+			/* 伪对象,在元素选中之后插入内容 */
+			h4:after {
+				content: ":- 注释";
+			}
+
+			h5:before {
+				content: "- 注释:";
+			}
+
+			/* 给活动的链接加上样式 */
+			a.uncle:active {
+				background-color: yellow;
+				text-decoration: none;
+			}
+
+			/* 选择鼠标指针位于其上的链接改变样式 */
+			a#cousin:hover {
+				background-color: yellow;
+			}
+
+			/* 标签配合属性定位 */
+			input[type=text] {
+				width: 150px;
+				height: 30px;
+			}
+
+			/* 以什么开头name^=options以什么结尾name$=options */
+			input[name=options] {
+				width: 150px;
+				height: 30px;
+			}
+		</style>
+	</head>
+	<body>
+		<div id="sister">
+			<p>onr</p>
+			<p>two</p>
+			<p>three</p>
+			<p>four</p>
+			<p>five</p>
+		</div>
+		<p></p>
+		<input type="text" name="" id="" value="" /><br>
+
+		男：<input type="radio" name="sex" id="" value="0" />
+		女：<input type="radio" name="sex" id="" value="1" />
+		<h4>after作用是往选中的元素之后插入内容</h4>
+		<h5>before作用是往选中的元素之前插入内容</h5>
+
+		<a href="" class="uncle">百度</a>
+		<a href="" id="cousin">淘宝</a>
+		<a href="">京东</a><br>
+		通过text <input type="text" name="" id="" value="" /><br>
+		通过name <input type="text" name="options" id="" value="" />
+	</body>
+</html>

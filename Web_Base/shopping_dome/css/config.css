@@ -1,0 +1,26 @@
+/* 对网页一些标签进行配置 */
+body,
+div,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+ol,
+ul {
+	margin: 0px;
+	padding: 0px;
+}
+
+body {
+	font-size: 14px;
+}
+
+a {
+	text-decoration: none;
+}
+
+li {
+	list-style: none;
+}

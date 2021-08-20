@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>css盒子模型</title>
+		<style>
+			body,
+			html {
+				margin: 0px;
+				padding: 0px;
+			}
+
+			#class {
+				width: 200px;
+				height: 200px;
+				background-color: #008000;
+				/* 内边距设定 */
+				padding: 50px 50px;
+				/* 上右下左顺序 */
+				/* padding: 10px 20px 30px 40px; */
+
+				/* 外边距设定 给盒子进行定位*/
+				margin-bottom: 20px;
+			}
+
+			#friend {
+				width: 200px;
+				height: 200px;
+				background-color: red;
+				/* 外边距垂直方向会取最大值两个距离不会相加 */
+				margin-top: 50px;
+			}
+
+			#father {
+				width: 200px;
+				height: 200px;
+				background-color: black;
+				margin-top: 10px;
+				/* 浮动 */
+				float: left;
+				margin-right: 20px;
+			}
+
+			#mather {
+				width: 200px;
+				height: 200px;
+				background-color: blue;
+				margin-top: 10px;
+				/* 浮动 */
+				float: left;
+				/* 外边距水平方向时两个距离会相加 */
+				margin-left: 40px;
+			}
+
+			#match {
+				width: 300px;
+				height: 300px;
+				background-color: #800080;
+				margin: 0px;
+				border: 2px solid yellow;
+			}
+
+			#dirthday {
+				width: 160px;
+				height: 160px;
+				background-color: orange;
+				border: 2px solid #FF0000;
+				margin-top: 70px;
+				margin-left: 70px;
+				/* position: relative; */
+				/* left: 70px; */
+				/* top: 70px; */
+			}
+		</style>
+	</head>
+	<body>
+		<div id="class"></div>
+		<div id="friend"></div>
+		<hr>
+		<div id="father"></div>
+		<div id="mather"></div>
+		<!-- clear: left清除浮动 -->
+		<hr style="clear: left;">
+		<p>请注意，如果不设置 div 的内边距和边框，那么内部 div 的上外边距将与外部 div 的上外边距合并(叠加)</p>
+		<div id="match">
+			<div id="dirthday">
+				生日
+			</div>
+		</div>
+	</body>
+</html>
