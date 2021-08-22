@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>js函数声明方式</title>
+		<script type="text/javascript">
+			// 方式一
+			function demo(string) {
+				document.write("函数被调用且被转参数!!!,string")
+			}
+
+			demo("string")
+
+			// 方式二
+			var tools = function() {
+				document.write("<br />")
+				document.write("第二种方式!!!")
+			}
+
+			tools()
+
+			// 方式三
+			document.write("<br />")
+			var options = new Function("document.write('第三种调用方式!')")
+			options()
+
+			// 参数
+			document.write("<br />")
+
+			function desk(a, b, c) {
+				document.write(a, b, )
+			}
+
+			desk(1, 2)
+
+
+			// 返回值
+			document.write("<br />")
+
+			function table() {
+				document.write("有返回值")
+				return "被返回的数据"
+			}
+
+			a = table()
+			console.log(a)
+
+			//函数调用函数
+			function modily(int) {
+				console.log("输出:" + int())
+			}
+
+			var int = function() {
+				console.log("我是int函数!!")
+				return 33
+			}
+
+			modily(int)
+		</script>
+	</head>
+	<body>
+
+
+	</body>
+</html>
