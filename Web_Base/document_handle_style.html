@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>document操作元素样式</title>
+
+		<style type="text/css">
+			#group {
+				width: 100px;
+				height: 100px;
+				background-color: red;
+				font-size: 20px;
+				color: #000000;
+				border: 1px solid brown;
+			}
+
+			.newstyle {
+				border: 3px solid purple;
+			}
+		</style>
+
+		<script type="text/javascript">
+			function style_func() {
+				// 处理行内样式的style
+				var p = document.getElementById("character")
+				console.log(p)
+				// 获得css样式
+				var width = p.style.width;
+				console.log(width)
+				var height = p.style.height;
+				console.log(height)
+
+				// 改变css样式
+				var div_tag = document.getElementById("group")
+				console.log(div_tag)
+				div_tag.style.width = "200px";
+				div_tag.style.backgroundColor = "green"
+
+				// 第二种方式
+				div_tag.className = "newstyle"
+			}
+		</script>
+	</head>
+	<body>
+		<input type="button" name="" id="" value="css样式" onclick="style_func()" /><br>
+
+		<p style="display: block; width: 200px; height: 30px;" id="character">行内样式</p>
+
+		<div id="group" class="newstyle">
+			操作元素样式测试
+		</div>
+
+	</body>
+</html>

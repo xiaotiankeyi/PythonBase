@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>document操作节点对象的属性</title>
+		<script type="text/javascript">
+			function attribbute() {
+				var attr = document.getElementById("user");
+				console.log(attr)
+
+				// 获得属性
+				var type = attr.type;
+				var name = attr.name;
+				var id = attr.id;
+				var value = attr.value;
+
+				console.log(type)
+				console.log(name)
+				console.log(id)
+				console.log(value)
+
+				// 获得属性方式二
+				var type = attr.getAttribute("type")
+				console.log(type)
+
+				// 改变元素属性
+				attr.value = "测试改变";
+				// 改变元素属性方式二
+				attr.setAttribute("value", "方式二改变")
+			}
+		</script>
+	</head>
+	<body>
+		<input type="button" name="username" id="user" value="获取属性" onclick="attribbute()" />
+	</body>
+</html>

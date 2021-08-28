@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>document操作文本内容</title>
+		<script type="text/javascript">
+			function elementtext() {
+				var body = document.getElementsByClassName("body");
+
+				// 只对双标签起作用
+				var html = body[0].innerHTML;
+				var text = body[0].innerText;
+
+				console.log(html)
+				console.log(text)
+
+				// 处理单标签
+				var single = document.getElementById("button").value;
+				console.log(single)
+
+			}
+
+			function action() {
+				// 特殊标签
+				var order_by = document.getElementById("ordey").value;
+				alert(order_by)
+			}
+		</script>
+	</head>
+	<body onload="elementtext()">
+		<div class="body">
+			我是男的
+
+		</div>
+
+		<input type="button" name="" id="button" value="按钮" onclick="action()" /><br>
+
+		<select id="ordey">
+			<option value="0">中国</option>
+			<option value="1">美国</option>
+			<option value="2">法国</option>
+			<option>德国</option>
+		</select>
+	</body>
+</html>
