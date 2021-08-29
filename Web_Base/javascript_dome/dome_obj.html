@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>js案例一</title>
+		<style type="text/css">
+			#tables {
+				align-content: center;
+				margin: 0 auto;
+
+			}
+
+			tr {
+				height: 50px;
+			}
+
+			td,
+			th {
+				width: 140px;
+				text-align: center;
+			}
+		</style>
+
+		<script type="text/javascript">
+			function add_coures() {
+				var tables = document.getElementById("tables")
+
+				var tr = document.createElement("tr")
+
+				var td = document.createElement("td")
+				td.innerHTML = "<input type='text' size='10px' onblur='add_data(this)'/>"
+
+				var td1 = document.createElement("td")
+				td1.innerHTML = "<input type='text' size='10px' onblur='add_data(this)'/>"
+
+				var td2 = document.createElement("td")
+				td2.innerHTML = "<button type='button' onclick='add_coures()'>添加</button>" +
+					"&nbsp<button type='button' onclick='del_data(this)'>删除</button>"
+				tr.appendChild(td)
+				tr.appendChild(td1)
+				tr.appendChild(td2)
+
+				tables.appendChild(tr)
+			}
+
+			function add_data(thi) {
+				// 获取数据
+				// console.log(thi.value)
+				var td = thi.parentNode;
+				td.innerHTML = thi.value;
+			}
+
+			function del_data(thi) {
+				// 删除数据
+				var tr = thi.parentNode.parentNode;
+				tr.remove()
+			}
+		</script>
+	</head>
+	<body>
+		<table border="1px" id="tables">
+			<tr>
+				<th>课程</th>
+				<th>价格</th>
+				<th>操作</th>
+			</tr>
+			<tr>
+				<td>python</td>
+				<td>60000</td>
+				<td>
+					<button type="button" onclick="add_coures()">添加</button>
+					<button type="button">删除</button>
+				</td>
+			</tr>
+		</table>
+
+	</body>
+</html>
