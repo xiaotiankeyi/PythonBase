@@ -26,17 +26,34 @@
 				// 向定位好的元素追加新元素节点
 				element.appendChild(newelement);
 			}
+
+			function egg() {
+				// 删除html元素节点
+				// 如需删除某个 HTML 元素，您需要知晓该元素的父
+				var element = document.getElementById("question");
+				var delelement = document.getElementsByTagName("li")
+				console.log(delelement)
+				// 删除节点
+				// element.removeChild(delelement[0])
+
+				// 第二种删除方式
+				var element = document.getElementById("format");
+				console.log(element)
+				element.parentNode.removeChild(element)
+			}
 		</script>
 	</head>
-	<body onload="eat()">
+	<body>
 		<div class="really">
+			<input type="button" name="" id="" value="addElement" onclick="eat()" />
 			<ul id="question">
-				<li>班尼特</li>
+				<li id="format">班尼特</li>
 				<li>迪卢克</li>
 				<li>香菱</li>
 				<li>诺艾尔</li>
 				<li>丽莎</li>
 			</ul>
+			<input type="button" name="" id="" value="deleteElement" onclick="egg()" />
 		</div>
 
 	</body>
