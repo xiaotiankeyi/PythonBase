@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>js数组</title>
+		<script type="text/javascript">
+			// 方式一
+			var list = Array(10);
+
+			// 方式二
+			var arr = new Array();
+
+			// 方式三推荐
+			var tuple = ["Porsche", "BMW", "Volvo"];
+			console.log(tuple[1])
+
+			// 方式四
+			var number = Array('jack', true, 'dictionary');
+			number[3] = new Date();
+
+			console.log(number);
+
+			// 数组遍历
+			function telephone() {
+				// 方式一
+				for (var i = 0; i < tuple.length; i++) {
+					console.log(tuple[i]);
+				}
+
+				// 方式二
+				for (var i in number) {
+					console.log(number[i]);
+				}
+			}
+			telephone()
+
+			// 数组方法
+			document.write("添加数组并返回长度：" + tuple.push("he", "her") + "<br />")
+			document.write("访问数组最后一个元素：" + tuple[tuple.length - 1] + "<br />")
+			document.write("删除数组最后一个元素并返回值：" + tuple.pop() + "<br />")
+			document.write("数组所有元素结合为一个字符串：" + tuple.join("_") + "<br />")
+			document.write("删除数组第一个元素并返回值：" + tuple.shift() + "<br />")
+			document.write("往数组开头添加元素：" + tuple.unshift("length") + "<br />")
+			document.write("删除元素：" + tuple.splice(1, 2) + "<br />")
+			document.write(tuple + "<br />")
+			document.write("添加元素：" + number.splice(1, 0, "tom"))
+			document.write(number)
+		</script>
+	</head>
+	<body>
+	</body>
+</html>

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>document对象之操作元素</title>
+		<style type="text/css">
+			#question {
+				/* 取消样式 */
+				list-style: none;
+			}
+		</style>
+		<script type="text/javascript">
+			function eat() {
+				// 创建新的节点, HTML DOM 添加新元素，您必须首先创建这个元素（元素节点）
+				// 然后将其追加到已有元素。
+
+				// 创建新的<li>元素节点
+				var newelement = document.createElement("li");
+
+				// 创建文本节点
+				var newtext = document.createTextNode("凝光");
+				// 向新的元素节点里追加文本节点
+				newelement.appendChild(newtext);
+
+				var element = document.getElementById("question");
+				// 向定位好的元素追加新元素节点
+				element.appendChild(newelement);
+			}
+		</script>
+	</head>
+	<body onload="eat()">
+		<div class="really">
+			<ul id="question">
+				<li>班尼特</li>
+				<li>迪卢克</li>
+				<li>香菱</li>
+				<li>诺艾尔</li>
+				<li>丽莎</li>
+			</ul>
+		</div>
+
+	</body>
+</html>

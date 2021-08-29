@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>js事件</title>
+		<script>
+			function fried() {
+				var date = new Date();
+				alert("当前时间是:" + date.toDateString());
+			}
+
+			function how() {
+				var date = new Date();
+				alert("当前时间是:" + date.toDateString());
+			}
+
+			function map() {
+				// var date = new Date();
+				// alert("当前时间是:" + date.toDateString());
+				console.log("鼠标移动")
+			}
+
+			function girl() {
+				var date = new Date();
+				alert("当前时间是:" + date.toDateString());
+			}
+
+			function clock(x) {
+				x.style.background = "red";
+			}
+
+			function upper(x) {
+				x.style.background = "white";
+			}
+
+			function refresh() {
+				var date = new Date();
+				alert("当前时间是:" + date.toDateString());
+			}
+		</script>
+	</head>
+	<body onload="refresh()">
+		<input type="button" name="" id="" value="单击事件" onclick="fried()" /><br />
+		<br />
+		<input type="button" name="" id="" value="双击事件" ondblclick="how()" /><br />
+		<br />
+
+		<!-- 放上onmouseover  移开onmouseout  鼠标移动onmousemove-->
+		<div class="rule" style="width: 100px; height: 100px; background-color: red;" onmousemove="map()"></div>
+		<br />
+
+		<!-- 键盘弹起onkeyup 键盘收起onkeydown-->
+		<input type="text" name="" id="" value="" onkeyup="girl()" /><br />
+		<br />
+
+		<!-- 焦点事件 onfocus获得焦点  onblur失去焦点-->
+		<input type="text" name="" id="" value="" onfocus="clock(this)" onblur="upper(this)" />
+	</body>
+</html>

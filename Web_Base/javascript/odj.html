@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>js对象date/math</title>
+		<script type="text/javascript">
+			// 时间对象 date()
+			var date = new Date();
+			document.write("本月第几天" + date.getDate() + "<br />");
+			document.write("本周第几天" + date.getDay() + "<br />");
+			document.write("月份" + date.getMonth() + "<br />");
+			document.write("年份" + date.getFullYear() + "<br />");
+			document.write("本地时间" + date.toLocaleString() + "<br />");
+
+			// 数学对象 Math()
+
+			document.write("四舍" + Math.round(2.4) + "<br />");
+			document.write("五入" + Math.round(2.5) + "<br />");
+			document.write("次幂" + Math.pow(8, 2) + "<br />");
+			document.write("平方根" + Math.sqrt(8) + "<br />");
+			document.write("最大值" + Math.max(8, 232, 32, 43, 55, 54, 7) + "<br />");
+			document.write("最小值" + Math.min(8, 232, 32, 43, 55, 54, 7) + "<br />");
+			document.write("随机数" + Math.random() + "<br />");
+			document.write("随机返回指定范围0-9的数" + Math.floor(Math.random() * 10) + "<br />");
+			a = Math.floor(Math.random() * 10) + 1;
+			document.write("随机返回指定范围1-10的数" + a + "<br />");
+
+			function getRndInteger(min, max) {
+				// getRndInteger(min, max) 就会返回 1 与 10（均包含）之间的随机数
+				return Math.floor(Math.random() * (max - min + 1)) + min;
+			}
+			document.write("输出:" + getRndInteger(1, 10))
+		</script>
+	</head>
+	<body>
+	</body>
+</html>

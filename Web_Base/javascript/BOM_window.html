@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>BOM对象Window/timeing/弹出框/对象</title>
+		<script type="text/javascript">
+			function spell() {
+				// 警告框
+				window.alert("确定")
+			}
+
+			function quit() {
+				// 确认框
+				var val = window.confirm("是否删除")
+				alert(val)
+			}
+
+			function English() {
+				// 提示框
+				var val = window.prompt("请输入你的名字：");
+				alert(val)
+			}
+
+			function that() {
+				alert('Hello');
+			}
+
+			function purplr() {
+				var date = new Date();
+				var newdate = date.toLocaleString();
+				var white = document.getElementsByClassName("green")[0].innerHTML = newdate;
+				console.log(white)
+				// white[0].innerHTML = newdate;
+			}
+
+			var brown = window.setInterval("purplr()", 1000);
+
+			function cleardate() {
+				// 清除定时器
+				window.clearInterval(brown)
+			}
+
+			function openpage() {
+				// 打开网页
+				open("http://www.baidu.com")
+			}
+
+			function closepage() {
+				// 关闭当前网页
+				window.close()
+			}
+		</script>
+	</head>
+	<body>
+		<input type="button" name="" id="" value="警告框" onclick="spell()" /><br />
+		<br />
+
+		<input type="button" name="" id="" value="确认框" onclick="quit()" /><br />
+		<br />
+
+		<input type="button" name="" id="" value="提示框" onclick="English()" /><br />
+		<br />
+
+		<input type="button" name="" id="" value="等待几秒后执行" onclick="result = setTimeout(that, 3000)" /><br />
+		<br />
+
+		<input type="button" name="" id="" value="停止执行" onclick="clearTimeout(result)" /><br />
+		<br />
+
+		<p>nue date:&nbsp;<span class="green"></span></p>
+
+		<input type="button" name="" id="" value="停止执行" onclick="cleardate()" /><br />
+		<br />
+
+		<input type="button" name="" id="" value="打开百度" onclick="openpage()" /><br />
+		<br />
+
+		<input type="button" name="" id="" value="关闭当前窗口" onclick="closepage()" /><br />
+		<br />
+
+	</body>
+</html>
