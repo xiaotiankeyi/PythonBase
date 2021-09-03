@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>JavaScript 表单验证</title>
+
+		<script type="text/javascript">
+			function value_val() {
+				// 用户名必填项验证
+				var val = document.getElementById("username").value;
+
+				var sp = document.getElementById("tennis")
+
+				if (val == null || val == "") {
+					sp.innerHTML = "用户名不能为空"
+					return false
+				} else {
+					sp.innerHTML = "用户名符合要求"
+					return true
+				}
+			}
+		</script>
+	</head>
+	<body>
+
+		<form action="" method="get" onsubmit="return value_val()">
+			<!-- required防止数据为空的情况下被提交 -->
+			用户名: <input type="text" name="username" id="username" onblur="value_val()" /><span id="tennis"></span><br>
+
+			<!-- disabled只读属性,数据无法提交 -->
+			邮箱: <input type="email" name="email" id="email" value="laizhitian@163.com" disabled /><br>
+
+			<!-- required只读属性,数据可以提交后台 -->
+			密码: <input type="password" name="passwd" id="passwd" value="123456" readonly="readonly" /><br>
+			<input type="submit" value="提交" />
+		</form>
+
+	</body>
+</html>
