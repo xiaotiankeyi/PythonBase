@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>form表单验证</title>
+		<link rel="stylesheet" type="text/css" href="form_css.css" />
+		<script type="text/javascript" src="form_js.js" charset="UTF-8"></script>
+	</head>
+	<body onload="verify()">
+		<table cellspacing="20">
+			<form action="" method="get" onsubmit="return commit()">
+				<tr>
+					<td>用户名:</td>
+					<td>
+						<input type="text" name="username" id="username" alt="用户名" onblur="username_verify()" />
+						<span class="username_span">输入至少3位汉字字符</span>
+					</td>
+				</tr>
+				<tr>
+					<td>密码:</td>
+					<td>
+						<input type="text" name="password" id="password" alt="密码" onblur="password_verify()" />
+						<span class="password_span">输入至少6至12位数字或字母</span>
+					</td>
+				</tr>
+				<tr>
+					<td>手机号:</td>
+					<td>
+						<input type="text" name="telphone" id="telphone" alt="手机号" onblur="telphone_verify()" />
+						<span class="telphone_span">输入正确的手机号码</span>
+					</td>
+				</tr>
+				<tr>
+					<td>邮箱:</td>
+					<td>
+						<input type="email" name="email" id="email" alt="邮箱" onblur="email_verify()" />
+						<span class="email_span">输入正确的邮箱</span>
+					</td>
+				</tr>
+				<tr>
+					<td>性别:</td>
+					<td>
+						男<input type="radio" name="gender" id="gender" value="1" checked="checked" alt="性别" />
+						女<input type="radio" name="gender" id="gender" value="0" alt="性别" />
+					</td>
+				</tr>
+				<tr>
+					<td>爱好:</td>
+					<td>
+						<label><input type="checkbox" name="soccer" value="1" />足球</label>
+						<label><input type="checkbox" name="backetball" value="2" />篮球</label>
+						<label><input type="checkbox" name="tennis" value="3" />网球</label>
+						<label><input type="checkbox" name="music" value="4" />音乐</label>
+					</td>
+				</tr>
+				<tr>
+					<td>籍贯:</td>
+					<td>
+						<select name="address" size="1" id="options">
+							<option value="0">请选择</option>
+							<option value="1">海南</option>
+							<option value="2">江西</option>
+							<option value="3">广东</option>
+							<option value="4">福建</option>
+							<option value="5">四川</option>
+						</select>
+						<span class="address_span"></span>
+					</td>
+				</tr>
+				<tr>
+					<td>个人介绍:</td>
+					<td><textarea rows="5" cols="30"></textarea></td>
+				</tr>
+				<tr>
+					<td>验证码:</td>
+					<td>
+						<input type="text" name="verify" id="verify" alt="验证码" onblur="verify_code()" />
+						<span id="verify_span"></span>
+					</td>
+
+				</tr>
+				<tr>
+					<td></td>
+					<td><input type="checkbox" name="deal" id="deal" alt="协议" onclick="verify_deal()" />是否同意本公司协议</td>
+				</tr>
+				<tr>
+					<td></td>
+					<td><input type="submit" name="register" id="register" alt="注册" value="提交" disabled="true" />
+					</td>
+				</tr>
+			</form>
+
+		</table>
+	</body>
+</html>

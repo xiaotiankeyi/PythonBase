@@ -1,0 +1,17 @@
+table {
+	margin: 0px auto;
+}
+
+.finish {
+	margin-left: -10px;
+}
+
+span {
+	font-size: 10px;
+	color: brown;
+}
+
+#verify_span {
+	font-weight: bolder;
+	color: black;
+}
