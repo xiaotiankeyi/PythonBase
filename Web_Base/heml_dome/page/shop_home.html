@@ -53,7 +53,7 @@
 		</div>
 		<div class="evening">
 			<ul>
-				<li><input type="checkbox" name="option" id="" value="" checked="" onclick="options(this)" />全选</li>
+				<li><input type="checkbox" name="option" id="" value="" onclick="options(this)" />全选</li>
 				<li>商品</li>
 				<li>单价</li>
 				<li>数量</li>
@@ -63,71 +63,71 @@
 		</div>
 		<div class="please">
 			<ul>
-				<li><input type="checkbox" name="option" id="" value="" onclick="one_option()" /></li>
+				<li><input type="checkbox" name="option" id="" value="" onclick="one_option(this)" /></li>
 				<li><img src="../img/phone.jpg" width="115px" height="105px"></li>
 				<li><a href="">realme,真我Q35G手机,骁龙750G,120Hz官方标配</a></li>
 				<li>8+128G 科幻黑</li>
-				<li>￥4500.0</li>
+				<li>4500.0</li>
 				<li>
-					<button type="button">-</button>
+					<button type="button" onclick="modify_number(this,1)">-</button>
 					<input type="text" name="" class="fine" value="1" />
-					<button type="button">+</button>
+					<button type="button" onclick="modify_number(this,2)">+</button>
 				</li>
-				<li>￥4500.0</li>
+				<li name="price">￥4500.0</li>
 				<li>
-					<a href="">删除</a><br>
+					<a href="#" onclick="delete_node(this)">删除</a><br>
 					<a href="">移到我的关注</a>
 				</li>
 			</ul>
 		</div>
 		<div class="please">
 			<ul>
-				<li><input type="checkbox" name="option" id="" value="" onclick="one_option()" /></li>
+				<li><input type="checkbox" name="option" id="" value="" onclick="one_option(this)" /></li>
 				<li><img src="../img/phone.jpg" width="115px" height="105px"></li>
 				<li><a href="">realme,真我Q35G手机,骁龙750G,120Hz官方标配</a></li>
 				<li>8+128G 科幻黑</li>
-				<li>￥4500.0</li>
+				<li>4500.0</li>
 				<li>
-					<button type="button">-</button>
+					<button type="button" id="Reduction" onclick="modify_number(this,1)">-</button>
 					<input type="text" name="" class="fine" value="1" />
-					<button type="button">+</button>
+					<button type="button" id="add" onclick="modify_number(this,2)">+</button>
 				</li>
-				<li>￥4500.0</li>
+				<li name="price">￥4500.0</li>
 				<li>
-					<a href="">删除</a><br>
+					<a href="#" onclick="delete_node(this)">删除</a><br>
 					<a href="">移到我的关注</a>
 				</li>
 			</ul>
 		</div>
 		<div class="please">
 			<ul>
-				<li><input type="checkbox" name="option" id="" value="" onclick="one_option()" /></li>
+				<li><input type="checkbox" name="option" id="" value="" onclick="one_option(this)" /></li>
 				<li><img src="../img/phone.jpg" width="115px" height="105px"></li>
 				<li><a href="">realme,真我Q35G手机,骁龙750G,120Hz官方标配</a></li>
 				<li>8+128G 科幻黑</li>
-				<li>￥4500.0</li>
+				<li>4500.0</li>
 				<li>
-					<button type="button">-</button>
+					<button type="button" onclick="modify_number(this,1)">-</button>
 					<input type="text" name="" class="fine" value="1" />
-					<button type="button">+</button>
+					<button type="button" onclick="modify_number(this,2)">+</button>
 				</li>
-				<li>￥4500.0</li>
+				<li name="price">￥4500.0</li>
 				<li>
-					<a href="">删除</a><br>
+					<a href="#" onclick="delete_node(this)">删除</a><br>
 					<a href="">移到我的关注</a>
 				</li>
 			</ul>
 		</div>
 		<div class="eraser">
 			<ul class="eight">
-				<li><input type="checkbox" name="option" id="" value="" checked="" onclick="options(this)" />全选</li>
+				<li><input type="checkbox" name="option" id="" value="" onclick="options(this)" />全选</li>
 				<li>删除选中商品</li>
 				<li>移到我的关注</li>
 				<li>清除下柜商品</li>
 			</ul>
 			<ul class="nine">
-				<li>已经选择<span>1</span>件商品</li>
-				<li>总价<span>￥1,234.0</span></li>
+				<li>已经选择<span id="digital">0</span>件商品</li>
+				<li>总价<span id="total">￥0</span></li>
 				<li><button type="button" class="key">去结算</button></li>
 			</ul>
 		</div>

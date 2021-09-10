@@ -200,7 +200,7 @@
 }
 
 .please .fine {
-	width: 27px;
+	width: 40px;
 	position: relative;
 	left: -7px;
 	top: 0px;
@@ -218,11 +218,13 @@
 }
 
 .please li:nth-child(7) {
-	margin-left: 35px;
+	margin-left: 25px;
+	width: 60px;
 }
 
 .please li:nth-child(8) {
-	margin-left: 25px;
+	margin-left: 18px;
+	text-align: center;
 }
 
 .please a:hover {
@@ -230,7 +232,7 @@
 }
 
 /* 最后一部分 */
-.eraser{
+.eraser {
 	width: 990px;
 	height: 50px;
 	margin: 0px auto;
@@ -238,24 +240,26 @@
 	margin-top: 20px;
 }
 
-.eraser .eight li, .nine li{
+.eraser .eight li,
+.nine li {
 	float: left;
 }
 
-.eraser .nine{
+.eraser .nine {
 	float: right;
+	line-height: 46px;
 }
 
-.eraser .eight li{
+.eraser .eight li {
 	line-height: 50px;
 	margin-left: 31px;
 }
 
-.eraser .nine li{
-	margin-left: 60px;
+.eraser .nine li {
+	margin-left: 75px;
 }
 
-.key{
+.key {
 	height: 50px;
 	width: 90px;
 	background-color: #C91623;
@@ -265,7 +269,7 @@
 	border: 0px;
 }
 
-.eraser span{
+.eraser span {
 	color: #C91623;
 	font-size: 20px;
 }
