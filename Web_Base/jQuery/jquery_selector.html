@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>jquery学习选择器之层级选择器</title>
+
+		<!-- 引用jquery -->
+		<script src="jquery-3.6.0.min.js" type="text/javascript" charset="utf-8"></script>
+
+		<script type="text/javascript">
+			function selector() {
+				// 选择父标签下的第一个元素
+				var first = $("span>h3")
+				first.css("text-decoration", "underline")
+				console.log(first)
+
+				//+下一个相邻选择器
+				var tt = $(".user_info + p")
+				tt.css("color", "red")
+
+				// ~扩展到所有随后的兄弟元素
+				var rr = $("#brother ~ div")
+				console.log(rr)
+				rr.css("color", "green")
+ 
+				//后代选择器,子元素、孙子元素、曾孙元素
+				var kk = $("form #refer input")
+				kk.css("background-color", "yellow")
+			}
+		</script>
+	</head>
+	<body onload="selector()">
+		<span>
+			<h3>用户注册</h3>
+		</span>
+		<form action="" method="post" class="user_info">
+			<p>用户名: <input type="text" name="" id="user" value="laizitian" /></p>
+			<p>密码: <input type="password" class="pwd" name="" id="passwd" value="123456" /></p>
+			<p>确认密码: <input type="password" class="pwd" name="" id="password" value="" /></p>
+			<p>邮箱: <input type="email" name="" id="email" value="" /></p>
+			<p id="refer"><input type="submit" name="" id="commot" value="提交" /></p>
+		</form>
+		<p><input type="checkbox" name="" id="" value="" />请同意用户协议</p>
+
+		<div id="brother">
+			<span>John,</span>
+			<span>Karl,</span>
+			<span>Brandon</span>
+		</div>
+		<div>
+			<span>Glen,</span>
+			<span>Tane,</span>
+			<span>Ralph</span>
+		</div>
+		<div>
+			<span>Jack,</span>
+			<span>Tom,</span>
+			<span>ruly</span>
+		</div>
+	</body>
+
+</html>

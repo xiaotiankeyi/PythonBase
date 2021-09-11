@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>jquery学习选择器之基本选择器</title>
+
+		<!-- 引用jquery -->
+		<script src="jquery-3.6.0.min.js" type="text/javascript" charset="utf-8"></script>
+
+		<script type="text/javascript">
+			// $(function() {
+			// 	alert("2344")
+			// })
+
+			// window.onload = function() {
+			// 	alert("3456")
+			// }
+
+			// 基本选择器
+			function selector() {
+
+				// var id = document.getElementById("user");
+
+				// id选择器
+				var id = $("#user");
+				console.log(typeof(id));
+				console.log(id.eq(0).val());
+
+				// 元素选择器
+				var element = $("input");
+				console.log(typeof(element));
+				console.log(element.length);
+
+				// 类选择器
+				var classname = $(".pwd")
+				// 通过把jquery对象转化为js对象, 在用value取值
+				console.log(classname[0].value)
+				console.log(typeof(classname));
+
+				// 通用选择器
+				$("*").css("background-color", "yellow");
+
+				// 多重选择器
+				var mulit = $("input.pwd, h3")
+				console.log(mulit)
+			}
+		</script>
+	</head>
+	<body onload="selector()">
+		<span>
+			<h3>用户注册</h3>
+		</span>
+		<p>用户名: <input type="text" name="" id="user" value="laizitian" /></p>
+		<p>密码: <input type="password" class="pwd" name="" id="passwd" value="123456" /></p>
+		<p>确认密码: <input type="password" class="pwd" name="" id="password" value="" /></p>
+		<p>邮箱: <input type="email" name="" id="email" value="" /></p>
+		<p><input type="submit" name="" id="commot" value="提交" /></p>
+	</body>
+</html>

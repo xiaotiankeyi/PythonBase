@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>jquery学习选择器之筛选及扩展</title>
+
+		<!-- 引用jquery -->
+		<script src="jquery-3.6.0.min.js" type="text/javascript" charset="utf-8"></script>
+
+		<script type="text/javascript">
+			function selector() {
+
+
+				// first第一个
+				var rr = $("#brother span:first")
+				console.log(rr)
+				rr.css("color", "yellow", "font-style", "italic")
+
+				// last最后一个
+				var rr = $("#brother span:last")
+				console.log(rr)
+				rr.css("color", "red")
+
+				// eq通过索引获取
+				var rr = $(".aunt span:eq(1)")
+				console.log(rr)
+				rr.css("color", "brown")
+
+				// eq通过偶数索引获取
+				var rr = $(".cousin span:even")
+				console.log(rr)
+				rr.css("color", "red")
+
+				// eq通过基数索引获取
+				var rr = $(".cousin span:odd")
+				console.log(rr)
+				rr.css("color", "green")
+			}
+		</script>
+	</head>
+	<body onload="selector()">
+
+		<div id="brother">
+			<span>John,</span>
+			<span>Karl,</span>
+			<span>Brandon</span>
+		</div>
+
+		<div class="aunt">
+			<span>Glen,</span>
+			<span>Tane,</span>
+			<span>Ralph</span>
+		</div>
+
+		<div class="cousin">
+			<span>Jack,</span>
+			<span>Tom,</span>
+			<span>ruly</span>
+			<span>lucy</span>
+		</div>
+	</body>
+
+</html>

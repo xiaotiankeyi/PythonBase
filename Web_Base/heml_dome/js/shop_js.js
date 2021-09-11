@@ -17,7 +17,7 @@ function options(thi) {
 			num = goods_number[j].value;
 			number += Number(num);
 		}
-		console.log(number);
+		// console.log(number);
 		document.getElementById("digital").innerText = number;
 
 		// 总计出结算价格
@@ -52,15 +52,16 @@ function one_option(thi) {
 	// 定位商品价格
 	var all_price = thi.parentNode.parentNode.children[6].innerHTML.substr(1);
 
+	var uu = 0;
 	if (thi.checked) {
 		// 计算已经选择了多少商品数
-		console.log(goods_number.children[1].value)
+		// console.log(goods_number.children[1].value)
 		// 赋值商品总数
 		count_num.innerHTML = Number(count_num.innerHTML) + Number(goods_number.children[1].value)
 
 
 		// 总计出总价格
-		console.log(all_price)
+		// console.log(all_price)
 		var new_digital = count_price.innerHTML.substr(1)
 
 		// console.log(count_price.innerHTML.substr(1))
@@ -68,7 +69,7 @@ function one_option(thi) {
 
 		var d = Number(new_digital) + Number(all_price)
 		count_price.innerHTML = "¥" + d
-
+		uu++;
 	} else {
 		// 减少总数量
 
@@ -96,15 +97,67 @@ function one_option(thi) {
 
 function modify_number(thi, digital) {
 	// 实现数量的加一减一
-	var element;
+
+	// 实现加减数量来控制价格
+	var gg = thi.parentNode.parentNode.children[0].firstChild;
+	console.log(gg.checked);
+	if (gg.checked) {
+		// 如果勾选
+		if (digital == "1") {
+			var element = thi.nextElementSibling;
+			if (Number(element.value) > 0) {
+				element.value = Number(element.value) - 1;
+
+				// 总数变化
+				var tt = document.getElementById("digital")
+				tt.innerHTML = Number(tt.innerHTML) - 1
+
+				// 实现总价格变化
+				var price = element.parentNode.previousElementSibling.innerHTML;
+				// // console.log(price)
+				var count_price = Number(price) * Number(element.value);
+				element.parentNode.nextElementSibling.innerText = "¥" + count_price;
+
+				// // 结算总价格变化
+				var oo = document.getElementById("total");
+				var yy = Number(oo.innerHTML.substr(1)) - Number(price);
+				oo.innerHTML = "￥" + yy;
+				return true
+			}
+		} else {
+			var element = thi.previousElementSibling;
+			var val = Number(element.value) + 1;
+			element.value = val;
+			// 总数变化
+			var tt = document.getElementById("digital")
+			tt.innerHTML = Number(tt.innerHTML) + 1
+
+			// 实现总价格变化
+			var price = element.parentNode.previousElementSibling.innerHTML;
+			// console.log(price)
+			var count_price = Number(price) * Number(element.value);
+
+			element.parentNode.nextElementSibling.innerText = "¥" + count_price;
+
+			var oo = document.getElementById("total");
+			// console.log(oo.innerHTML.substr(1))
+
+			// 结算总价格变化
+			var ee = Number(oo.innerHTML.substr(1)) + Number(price);
+			oo.innerHTML = "￥" + ee
+			return true
+		}
+
+	}
+
 	if (digital == "1") {
-		element = thi.nextElementSibling;
+		var element = thi.nextElementSibling;
 		if (Number(element.value) > 0) {
 			element.value = Number(element.value) - 1;
 
 		}
 	} else {
-		element = thi.previousElementSibling;
+		var element = thi.previousElementSibling;
 		var val = Number(element.value) + 1;
 		element.value = val;
 	}
@@ -114,6 +167,7 @@ function modify_number(thi, digital) {
 	var count_price = Number(price) * Number(element.value);
 
 	element.parentNode.nextElementSibling.innerText = "¥" + count_price;
+	return true
 }
 
 function delete_node(thi) {
