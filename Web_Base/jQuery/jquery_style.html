@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>jquery操作css样式</title>
+		<script src="jquery-3.6.0.min.js" type="text/javascript" charset="utf-8"></script>
+
+		<style type="text/css">
+			#one {
+				width: 200px;
+				height: 200px;
+				border: 1px solid #0000FF;
+			}
+
+			.two {
+				width: 100px;
+				height: 100px;
+				border: 1px solid red;
+			}
+		</style>
+
+		<script type="text/javascript">
+			// $(function() {
+			// 	$("#click").click(function() {
+			// 		var s = $("#one")
+			// 		// 获得css样式
+			// 		var width = s.css("width")
+			// 		var height = s.css("height")
+			// 		console.log(width, height)
+
+			// 		// 添加样式
+			// 		s.css("background-color", "red")
+
+			// 		// 写法二
+			// 		s.css({
+			// 			'width': '300px',
+			// 			'height': '300px'
+			// 		});
+
+			// 		// 写法三
+			// 		var f = $("#two");
+			// 		// f.attr("class", "two");
+
+			// 		// 写法四
+			// 		f.addClass("two")
+			// 	});
+			// });
+
+			function add() {
+
+				var s = $("#one")
+				// 获得css样式
+				var width = s.css("width")
+				var height = s.css("height")
+				console.log(width, height)
+
+				// 添加样式
+				s.css("background-color", "red")
+
+				// 写法二
+				s.css({
+					'width': '300px',
+					'height': '300px'
+				});
+
+				// 写法三
+				var f = $("#two");
+				// f.attr("class", "two");
+
+				// 写法四
+				f.addClass("two")
+			}
+		</script>
+	</head>
+	<body>
+		<input type="button" name="" id="click" value="点击" onclick="add()" />
+		<hr>
+		<div id="one">
+
+		</div>
+
+		<div id="two">
+
+		</div>
+	</body>
+</html>

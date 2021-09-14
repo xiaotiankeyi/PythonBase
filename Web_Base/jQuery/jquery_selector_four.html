@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>jquery学习选择器之子选择器</title>
+
+		<!-- 引用jquery -->
+		<script src="jquery-3.6.0.min.js" type="text/javascript" charset="utf-8"></script>
+
+		<script type="text/javascript">
+			function selector() {
+				// first-child其父项第一个子元素
+				var rr = $("#brother span:first-child")
+				console.log(rr)
+				rr.css("color", "green")
+
+				// last-child其父项最后一个子元素
+				var rr = $("#brother span:last-child")
+				console.log(rr)
+				rr.css("color", "red")
+
+				// nth-child其父项第几个子元素
+				var rr = $(".aunt span:nth-child(1)")
+				console.log(rr)
+				rr.css("color", "red")
+			}
+		</script>
+	</head>
+	<body onload="selector()">
+
+		<div id="brother">
+			<span>John,</span>
+			<span>Karl,</span>
+			<span>Brandon</span>
+		</div>
+
+		<div class="aunt">
+			<span>Glen,</span>
+			<span>Tane,</span>
+			<span>Ralph</span>
+		</div>
+
+		<div class="cousin">
+			<span>Jack,</span>
+			<span>Tom,</span>
+			<span>ruly</span>
+			<span>lucy</span>
+		</div>
+	</body>
+
+</html>
