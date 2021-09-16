@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>jquery操作css</title>
+		<script src="../jquery-3.6.0.min.js" type="text/javascript" charset="utf-8"></script>
+		<style type="text/css">
+			.two {
+				font-size: 18px;
+			}
+
+			.three {
+				text-decoration: underline;
+			}
+
+			.four {
+				color: #0000FF;
+			}
+		</style>
+		<script type="text/javascript">
+			$(document).ready(function() {
+				$("button:nth-child(1)").click(function() {
+					// 设置css属性
+					$(".one").css({
+						"width": "200px",
+						"height": "200px",
+						"border": "1px solid red"
+					});
+					// 返回段落的颜色
+					var d = $(".one p").css("color")
+					console.log(d)
+
+					// 添加CSS属性
+					$(".one").addClass("two three");
+				});
+
+				$("button:nth-child(2)").click(function() {
+					// 移除css属性
+					$(".one").removeClass("three");
+
+					// 点击切换样式
+					$("p").toggleClass("four");
+
+					// 获取高度/宽度
+					console.log($(".one").width())
+					console.log($(".one").height())
+				});
+
+				$("button:last").click(function() {
+					// 设置水平滚动条
+					$("#five").scrollLeft(100);
+
+					// 设置垂直滚动条
+					$("#five").scrollTop(100);
+
+				});
+			});
+		</script>
+	</head>
+	<body>
+		<button type="button">点击按钮一</button>
+		<button type="button">点击按钮二</button>
+		<hr>
+		<div class="one">
+			<p style="color: #C91623;">返回段落的颜色</p>
+		</div>
+		<p>切换css样式</p>
+
+		<div id="five" style="border:1px solid black;width:100px;height:130px;overflow:auto">
+			The longest word in the english dictionary is: pneumonoultramicroscopicsilicovolcanoconiosis.
+			The longest word in the english dictionary is: pneumonoultramicroscopicsilicovolcanoconiosis.
+			The longest word in the english dictionary is: pneumonoultramicroscopicsilicovolcanoconiosis.
+			The longest word in the english dictionary is: pneumonoultramicroscopicsilicovolcanoconiosis.
+			The longest word in the english dictionary is: pneumonoultramicroscopicsilicovolcanoconiosis.
+			The longest word in the english dictionary is: pneumonoultramicroscopicsilicovolcanoconiosis.
+		</div>
+
+		<button type="button">滚动条的水平位置设置为 100px</button>
+	</body>
+</html>

@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>jquery事件方法</title>
+		<script src="../jquery-3.6.0.min.js" type="text/javascript" charset="utf-8"></script>
+		<script type="text/javascript">
+			$(document).ready(function() {
+				//文档就绪事件
+
+				$(selector).click(function() {
+					// 触发或将函数绑定到被选元素的点击事件
+
+				});
+
+				$(selector).dblclick(function() {
+					// 触发或将函数绑定到被选元素的双击事件
+
+				});
+
+				$(selector).focus(function() {
+					// 触发或将函数绑定到被选元素的获得焦点事件
+
+				});
+
+				$("input").blur(function() {
+					// 失去焦点事件
+					$("input").css("background-color", "#D6D6FF");
+				});
+
+				$(selector).mouseover(function() {
+					// 触发或将函数绑定到被选元素的鼠标悬停事件
+
+				});
+
+				$("button").bind({
+					// bind() 方法为被选元素添加一个或多个事件处理程序，并规定事件发生时运行的函数。
+					mouseover: function() {
+						// 当鼠标指针位于元素上方时时，改变元素的背景色
+						$("body").css("background-color", "red");
+					},
+					mouseout: function() {
+						// 当鼠标从元素上移开时，改变元素的背景色
+						$("body").css("background-color", "#FFFFFF");
+					}
+				});
+
+				$(".field").change(function() {
+					// 当元素的值发生改变时，会发生 change 事件
+					// 该事件仅适用于文本域（text field），以及 textarea 和 select 元素。
+					$(this).css("background-color", "#FFFFCC");
+				});
+
+				$("img").error(function() {
+					// 当元素遇到错误（没有正确载入）时，发生 error 事件
+					$("img").replaceWith("<p><b>图片未加载！</b></p>");
+				});
+
+				$("form").submit(function() {
+					// 当提交表单时， 会发生 submit 事件, 该事件只适用于表单元素。
+					alert("Submitted");
+				});
+			})
+		</script>
+	</head>
+	<body>
+		<button type="button">请点击这里</button>
+	</body>
+</html>

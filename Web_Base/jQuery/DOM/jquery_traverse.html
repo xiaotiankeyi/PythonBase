@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>jQuery 遍历DOM树</title>
+		<script src="../jquery-3.6.0.min.js" type="text/javascript" charset="utf-8"></script>
+		<script type="text/javascript">
+			$(document).ready(function() {
+				$("span").parent().css({
+					"color": "red",
+					"border": "2px solid red"
+				});
+
+			});
+		</script>
+		<style type="text/css">
+			.ancestors * {
+				display: block;
+				border: 2px solid lightgrey;
+				color: lightgrey;
+				padding: 5px;
+				margin: 15px;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="ancestors">
+			<div style="width:500px;">div (曾祖父)
+				<ul>ul (祖父)
+					<li>li (直接父)
+						<span>span</span>
+					</li>
+				</ul>
+			</div>
+
+			<div style="width:500px;">div (祖父)
+				<p>p (直接父)
+					<span>span</span>
+				</p>
+			</div>
+		</div>
+	</body>
+</html>

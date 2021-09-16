@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>jquery文档操作方法</title>
+		<script src="../jquery-3.6.0.min.js" type="text/javascript" charset="utf-8"></script>
+		<style type="text/css">
+			.info {
+				color: red;
+				font-size: 14px;
+			}
+
+			.tag {
+				text-decoration: underline;
+			}
+
+			.blue {
+				color: blue;
+			}
+		</style>
+		<script type="text/javascript">
+			$(document).ready(function() {
+				//文档就绪函数,这是为了防止文档在完全加载（就绪）之前运行 jQuery 代码
+				$("button").click(function() {
+					// 获取内容
+					console.log($('p').text());
+					console.log($('p').html());
+					console.log($("[name='one']").val());
+
+
+
+					// 获取属性设置属性
+					console.log($("#w3s").attr("href"));
+					// 设置方法一
+					$("#w3s").attr({
+						"href": "http://www.w3school.com.cn/jquery",
+						"title": "W3School jQuery Tutorial"
+					});
+					// 设置方法二
+					// $("#w3s").attr("href", "http://www.w3school.com.cn/jquery");
+
+
+					// after() 方法在被选元素后插入指定的内容
+					$("p:first").after("<p>被插入的内容 Hello world!</p>");
+					// append() 方法在被选元素的结尾（仍然在内部）插入指定内容
+					$("p:first").append("<b>测试append</b>");
+					// before() 方法在被选元素前插入指定的内容
+					$("p:nth-child(2)").before("<p>在选中元素之前插入内容</p>");
+
+
+
+					// empty() 方法删除被选元素的子元素
+					$("#div1").empty();
+					// remove() 方法移除被选元素，包括所有文本和子节点
+					// 该方法不会把匹配的元素从 jQuery 对象中删除， 因而可以在将来再使用这些匹配的元素。
+					// 但除了这个元素本身得以保留之外， remove() 不会保留元素的 jQuery 数据
+					// 其他的比如绑定的事件、 附加的数据等都会被移除。 这一点与 detach() 不同
+					// 支持过滤 .remove(".id")
+					var a = $("input#eight").remove()
+					console.log(a);
+					// detach() 方法移除被选元素，包括所有文本和子节点
+					// 这个方法会保留 jQuery 对象中的匹配的元素，因而可以在将来再使用这些匹配的元素。
+					// detach() 会保留所有绑定的事件、附加的数据，这一点与 remove() 不同。
+					$("a").detach()
+
+
+
+					// addclass添加属性
+					$("p:first").addClass("info tag");
+					// removeClass() 方法从被选元素移除一个或多个类
+					$("p:first").removeClass("tag");
+					// 该方法对被选元素进行添加/删除类的切换操作
+					$("button").toggleClass("blue");
+
+
+
+					// 用新的内容替换被选择的元素
+					$("#nine").replaceWith("<p>Hello world!</p>");
+					// 用匹配的元素替换所有匹配到的元素
+					$("span").replaceAll("[name='zero']");
+					// insertAfter() 方法在被选元素之后插入 HTML 标记或已有的元素
+					$("<span>你好！</span>").insertAfter("span");
+
+				});
+			});
+		</script>
+	</head>
+	<body>
+		<p>测试添加addclass</p>
+		<p>利用jquery获取<b>内容和属性值</b>信息</p>
+
+		<input type="text" name="one" id="" value="用户名" /><br>
+		<input type="text" name="two" id="" value="" /><br>
+		<input type="text" name="zero" id="" value="" /><br>
+		<input type="text" name="attr_three" id="" value="" /><br>
+		<input type="text" name="element_four" id="" value="" /><br>
+		<input type="text" name="five" id="" value="" /><br>
+		<input type="text" name="six" id="eight" value="123456" /><br>
+
+		<p><a href="http://www.w3school.com.cn" id="w3s">W3School.com.cn</a></p>
+		<p>测试移除内容</p>
+		<p id="nine">要被替换的内容</p>
+		<span>被匹配的元素,替换被选择的元素</span>
+
+		<div id="div1" style="height:100px;width:300px;border:1px solid black;background-color:yellow;">
+			This is some text in the div.
+			<p>This is a paragraph in the div.</p>
+			<p>This is another paragraph in the div.</p>
+		</div>
+
+		<button type="button">点击获取</button>
+
+	</body>
+</html>
