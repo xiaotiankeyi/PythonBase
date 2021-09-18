@@ -2,19 +2,44 @@
 <html>
 	<head>
 		<meta charset="utf-8">
-		<title>jQuery 遍历DOM树</title>
+		<title>jQuery 遍历DOM树之遍历父节点/子节点</title>
 		<script src="../jquery-3.6.0.min.js" type="text/javascript" charset="utf-8"></script>
 		<script type="text/javascript">
+			// arent() 方法返回被选元素的直接父元素
 			$(document).ready(function() {
-				$("span").parent().css({
+				// $("span").parent().css({
+				// 	"color": "red",
+				// 	"border": "2px solid red"
+				// });
+
+				// parents() 方法返回被选元素的所有祖先元素，它一路向上直到文档的根元素 (<html>)
+				$("span").parents("div").css({
+					"color": "green",
+					"border": "2px solid green"
+				});
+
+				// children() 方法返回被选元素的所有直接子元素,支持写法children("p.1")
+				$("div.descendants").children().css({
 					"color": "red",
 					"border": "2px solid red"
 				});
 
+				$("div.descendants").find("span").css({
+					"color": "red",
+					"border": "2px solid purple"
+				});
 			});
 		</script>
 		<style type="text/css">
 			.ancestors * {
+				display: block;
+				border: 2px solid lightgrey;
+				color: lightgrey;
+				padding: 5px;
+				margin: 15px;
+			}
+
+			.descendants * {
 				display: block;
 				border: 2px solid lightgrey;
 				color: lightgrey;
@@ -38,6 +63,15 @@
 					<span>span</span>
 				</p>
 			</div>
+		</div>
+		<hr>
+		<div class="descendants" style="width:500px;">div (当前元素)
+			<p>p (子)
+				<span>span (孙)</span>
+			</p>
+			<p>p (child)
+				<span>span (孙)</span>
+			</p>
 		</div>
 	</body>
 </html>

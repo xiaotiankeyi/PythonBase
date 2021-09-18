@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>jquery水平遍历-同胞</title>
+		<script src="../jquery-3.6.0.min.js" type="text/javascript" charset="utf-8"></script>
+
+		<script type="text/javascript">
+			// 同胞拥有相同的父元素。
+			// 通过 jQuery，您能够在 DOM 树中遍历元素的同胞元素。
+
+			$(document).ready(function() {
+				// iblings() 方法返回被选元素的所有同胞元素,支持写法.siblings("span")
+				$("h2").siblings("span").css({
+					"color": "red",
+					"border": "2px solid red"
+				});
+
+				// next() 方法返回被选元素的下一个同胞元素
+				$("span").next().css({
+					"color": "green",
+					"border": "2px solid green"
+				});
+
+				// nextAll() 方法返回被选元素的所有跟随的同胞元素
+				$("h2").nextAll().css({
+					"color": "brown",
+					"border": "2px solid brown"
+				});;
+
+				// nextUntil() 方法返回介于两个给定参数之间的所有跟随的同胞元素
+				$("p").nextUntil("p").css({
+					"color": "orange",
+					"border": "2px solid orange"
+				});
+
+			});
+			// prev(), prevAll() 以及 prevUntil() 方法的工作方式与上面的方法类似，
+			// 只不过方向相反而已：它们返回的是前面的同胞元素（在 DOM 树中沿着同胞元素向后遍历，而不是向前）。
+		</script>
+
+		<style type="text/css">
+			.siblings * {
+				display: block;
+				border: 2px solid lightgrey;
+				color: lightgrey;
+				padding: 5px;
+				margin: 15px;
+			}
+		</style>
+	</head>
+	<body class="siblings">
+		<div>div (父)
+			<p>p</p>
+			<span>span</span>
+			<h2>h2</h2>
+			<h3>h3</h3>
+			<p>p</p>
+		</div>
+	</body>
+</html>
