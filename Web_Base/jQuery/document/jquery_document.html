@@ -22,21 +22,6 @@
 			$(document).ready(function() {
 				//文档就绪函数,这是为了防止文档在完全加载（就绪）之前运行 jQuery 代码
 				$("button").click(function() {
-					// 获取内容
-					console.log($('p').text());
-					console.log($('p').html());
-					console.log($("[name='one']").val());
-
-					// 获取属性设置属性
-					console.log($("#w3s").attr("href"));
-					// 设置方法一
-					$("#w3s").attr({
-						"href": "http://www.w3school.com.cn/jquery",
-						"title": "W3School jQuery Tutorial"
-					});
-					// 设置方法二
-					// $("#w3s").attr("href", "http://www.w3school.com.cn/jquery");
-
 
 					// after() 方法在被选元素后插入指定的内容
 					$("p:first").after("<p>被插入的内容 Hello world!</p>");
