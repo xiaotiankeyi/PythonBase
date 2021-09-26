@@ -2,6 +2,7 @@ import json
 import random
 import flask
 import pymysql
+from flask import render_template
 
 from Flask.hashlib_password import encryption
 
@@ -144,7 +145,7 @@ def select():
     return json.dumps(res, ensure_ascii=False)
 
 
-server.run(port=7777, debug=True, host='127.0.0.1')
+server.run(port=7777, debug=True, host='localhost')
 # 启动服务。debug=True，改了代码之后，不用重启它会自动帮你重启redis
 # host=0.0.0.0表示别人访问的时候，用你的ip就可以访问了。
 

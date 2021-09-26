@@ -6,7 +6,7 @@
 		<script src="../jQuery/jquery-3.6.0.min.js" type="text/javascript" charset="utf-8"></script>
 		<script type="text/javascript">
 			$(document).ready(function() {
-
+				// 在jquery下使用ajax
 				$(".one").click(function() {
 					// 创建ajax对象
 					var Ajax = new XMLHttpRequest();
@@ -16,7 +16,7 @@
 						};
 					};
 					// Ajax.open('GET', "new_file.asp", true)
-					Ajax.open('GET', "new_file.asp?fname=Bill&lname=Gates", true)
+					Ajax.open('GET', "new_file.asp", true)
 					Ajax.send()
 				});
 			});
