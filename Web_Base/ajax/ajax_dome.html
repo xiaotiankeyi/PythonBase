@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>Ajax向服务器发送请求</title>
+		<script src="../jQuery/jquery-3.6.0.min.js" type="text/javascript" charset="utf-8"></script>
+		<script type="text/javascript">
+			$(document).ready(function() {
+
+				$(".one").click(function() {
+					// 创建ajax对象
+					var Ajax = new XMLHttpRequest();
+					Ajax.onreadystatechange = function() {
+						if (this.readyState == 4 && this.status == 200) {
+							document.getElementById("dome").innerHTML = this.responseText;
+						};
+					};
+					// Ajax.open('GET', "new_file.asp", true)
+					Ajax.open('GET', "new_file.asp?fname=Bill&lname=Gates", true)
+					Ajax.send()
+				});
+			});
+
+			function test() {
+				var xhttp = new XMLHttpRequest();
+				xhttp.onreadystatechange = function() {
+					if (this.readyState == 4 && this.status == 200) {
+						console.log(this)
+						console.log(this.responseText)
+						var a = $("#dome");
+						// console.log(a)
+						a.text(this.responseText)
+					};
+				};
+				xhttp.open("GET", "new_file.asp", true);
+				xhttp.send();
+			};
+		</script>
+	</head>
+	<body>
+		<p id="dome">要被替换的数据</p>
+
+		<button type="button" onclick="test()">点击按钮一</button>
+		<button type="button" class="one">点击按钮二</button>
+	</body>
+
+
+</html>
