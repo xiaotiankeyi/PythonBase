@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>vue基础模版语法</title>
+    <!--    <script src="https://unpkg.com/vue@next"></script>-->
+    <script src="vue.global.js" type="application/javascript"></script>
+    <style>
+        div#hello-vue {
+            text-align: center;
+            font-size: 18px;
+        }
+        ol {
+            list-style-type: none;
+        }
+    </style>
+</head>
+<body>
+<div id="hello-vue" class="demo">
+    <!--    文本-->
+    <p v-once>这个将不会改变: {{ message }}</p>
+    <p>{{ messages }}</p>
+
+    <!--    原始html-->
+    <p v-html="raw_html"></p>
+
+    <!--    更变属性Attribute-->
+    <div v-bind:class="fang">测试变更属性</div>
+    <p><a v-bind:href="url">菜鸟教程</a></p>
+
+    <!--    使用JavaScript表达式-->
+    <p>表达式加一 {{ number + 1 }}</p>
+    <p>三元表达式 {{ seen? '$2.00' : '$10.00' }}</p>
+    <p>{{ messages.split('').reverse().join('') }}</p>
+
+</div>
+
+<script>
+    const HelloVueApp = {
+        data() {
+            return {
+                message: 'Hello Vue!!',
+                raw_html: '<span style="color: red">这里会显示红色</span>',
+                fang: "test",
+                url: 'https://www.runoob.com',
+                number:1,
+                seen: false,
+                messages:'用户请求成功,响应已发送'
+            }
+        }
+    }
+
+    Vue.createApp(HelloVueApp).mount('#hello-vue')
+
+</script>
+</body>
+</html>
