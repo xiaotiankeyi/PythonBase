@@ -31,7 +31,6 @@ def handle():
 
 """菲波那切数列"""
 
-
 def fid(n):
     a = 0
     b = 1
@@ -41,12 +40,18 @@ def fid(n):
     return ''
 # print(fid(100))
 
+
 def fib_loop(n):
-  a, b = 0, 1
-  for i in range(n + 1):
-    a, b = b, a + b
-  return a
+    # a, b = 0, 1
+    # for i in range(n + 1):
+    #   a, b = b, a + b
+    # return a
+    """递归函数"""
+    if n <= 1:
+        return n
+    else:
+        return (fib_loop(n -1) + fib_loop(n-2))
 
 
-for i in range(20):
-  print(fib_loop(i), end=' ')
+for i in range(10):
+    print(fib_loop(i), end=' ')

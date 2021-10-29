@@ -1,0 +1,23 @@
+
+.login-page{
+    height: 469px;
+    width: 440px;
+    border: 1px solid red;
+    border-radius: 4px;
+    background-color: #fff;
+    margin: 0 auto;
+    text-align: center;
+    display: none;
+
+}
+
+.call-tag{
+    border-style: none;
+    display: inline-block;
+    width: 12px;
+    height: 12px;
+    position: relative;
+    right: -160px;
+    top: 22px;
+    cursor: pointer;
+}
