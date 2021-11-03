@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        body {
+            height: 100%;
+        }
+
+        .background-div{
+            position: fixed;
+            left: 0;
+            top: 0;
+            background: rgba(0, 0, 0, 0.8);
+            height: 100%;
+            width: 100%;
+            display: none;
+            z-index: 99;
+        }
+        .login-page {
+            position: fixed;
+            border: 1px solid red;
+            height: 50px;
+            width: 50px;
+            left: 50%;
+            top: 50%;
+            margin: 0 auto;
+            text-align: center;
+            display: none;
+            z-index: 99;
+        }
+
+
+    </style>
+    <script type="text/javascript">
+        function show(){
+            var a = document.getElementsByClassName('background-div')[0]
+            a.style.display = 'block'
+
+            var b = document.getElementsByClassName('login-page')[0]
+            b.style.display = 'block'
+        }
+
+        function hide(){
+            var a = document.getElementsByClassName('background-div')[0]
+            a.style.display = 'none'
+            var b = document.getElementsByClassName('login-page')[0]
+            b.style.display = 'none'
+        }
+
+    </script>
+</head>
+<body>
+    <div class="background-div"></div>
+    <div class="login-page">
+        <button type="button" onclick="hide()">点击</button>
+    </div>
+    <button type="button" onclick="show()">点击</button>
+</body>
+</html>

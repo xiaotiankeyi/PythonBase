@@ -5,56 +5,48 @@
     <title>抽屉示例</title>
     <link href="css/css_header.css" rel="stylesheet" type="text/css">
     <link href="css/css_login.css" rel="stylesheet" type="text/css">
-    <script src="../../Web_Base/jQuery/jquery-3.6.0.min.js" type="text/javascript" charset="UTF-8" ></script>
+    <script src="../../Web_Base/jQuery/jquery-3.6.0.min.js" type="text/javascript" charset="UTF-8"></script>
     <script src="js/js_header.js" type="text/javascript" charset="UTF-8"></script>
+    <style>
 
-    <script>
-
-        // function show(){
-        //     var a = document.getElementsByClassName('login-page')[0]
-        //     console.log(a)
-        //     a.style.display = "block"
-        // }
-        //
-        // function hide(){
-        //     var a = document.getElementsByClassName('login-page')[0]
-        //     console.log(a)
-        //     a.style.display = "none"
-        // }
-    </script>
+    </style>
 </head>
 
 <body>
-<header class="head_box">
-    <div class="header">
-        <a class="logo-con logo_left" href="images">
-            <img class="logo-icon" src="images/logo_head.png">
-            <img class="logo-txt" src="images/logo.png">
-        </a>
-        <div class="action-menu">
-            <a href="#" class="tb active">首页</a>
-            <a href="#" class="tb">专区</a>
-            <a href="#" class="tb">人类发布</a>
-            <a href="#" class="tb">视频</a>
-            <a href="#" class="tb">发现</a>
-            <a href="#" class="tb">话题</a>
-        </div>
-        <div class="search right">
-            <input class="search-input" placeholder="搜索">
-            <span class="search-icon"></span>
-        </div>
-        <div class="action-nav">
-            <a href="#"><img class="publish-icon" src="images/img_tag.png"></a>
-        </div>
+    <header class="head_box">
+        <div class="header">
+            <a class="logo-con logo_left" href="images">
+                <img class="logo-icon" src="images/logo_head.png">
+                <img class="logo-txt" src="images/logo.png">
+            </a>
+            <div class="action-menu">
+                <a href="#" class="tb active">首页</a>
+                <a href="#" class="tb">专区</a>
+                <a href="#" class="tb">人类发布</a>
+                <a href="#" class="tb">视频</a>
+                <a href="#" class="tb">发现</a>
+                <a href="#" class="tb">话题</a>
+            </div>
+            <div class="search right">
+                <input class="search-input" placeholder="搜索">
+                <span class="search-icon"></span>
+            </div>
+            <div class="action-nav">
+                <a><img class="publish-icon" src="images/img_tag.png" onclick="show(this)"></a>
+            </div>
 
-<!--        <a class="login-btn right">登录</a>-->
-        <a class="login-btn right" onclick="show()">登录</a>
+            <a class="login-btn right" onclick="show(this)">登录</a>
 
+        </div>
+    </header>
+
+    <div class="background-div"></div>
+    <div class="login-page">
+        <img class="call-tag" src="images/img_call.png" onclick="hide(this)">
     </div>
-</header>
 
-<div class="login-page hide">
-    <img class="call-tag" src="images/img_call.png" onclick="hide()">
-</div>
+    <div class="registered">
+        <img class="call-tag-exit" src="images/img_call.png" onclick="hide(this)">
+    </div>
 </body>
 </html>
