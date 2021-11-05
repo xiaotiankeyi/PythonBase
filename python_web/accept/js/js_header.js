@@ -23,38 +23,49 @@ $(document).ready(function () {
             $(this).css("filter", "brightness(100%)");
         }
     });
+
+    // 实现电话区位切换
+    $(".select-li span").click(function () {
+        var s = $(this).parent('li').attr('data-value').split('+')[1]
+        // console.log(this.innerText)
+
+        $(".select-value").text(this.innerText)
+        $(".select-value").attr('data-value', '+' + s)
+
+    });
+
 })
 
 // js
 function show(thi) {
     // 显示
-    if(thi.className == 'login-btn right'){
-            var a = document.getElementsByClassName('login-page')[0]
-            a.style.display = "block"
+    if (thi.className == 'login-btn right') {
+        var a = document.getElementsByClassName('login-page')[0]
+        a.style.display = "block"
 
-            var b = document.getElementsByClassName('background-div')[0]
-            b.style.display = "block"
-            // console.log(thi.className)
-    }else {
-            var a = document.getElementsByClassName('registered')[0]
-            a.style.display = "block"
+        var b = document.getElementsByClassName('background-div')[0]
+        b.style.display = "block"
+        // console.log(thi.className)
+    } else {
+        var a = document.getElementsByClassName('registered')[0]
+        a.style.display = "block"
 
-            var b = document.getElementsByClassName('background-div')[0]
-            b.style.display = "block"
-            // console.log(thi.className)
+        var b = document.getElementsByClassName('background-div')[0]
+        b.style.display = "block"
+        // console.log(thi.className)
     }
 }
 
 function hide(thi) {
     // 隐藏
-    if(thi.className == 'call-tag'){
+    if (thi.className == 'call-tag') {
         var a = document.getElementsByClassName('login-page')[0]
         a.style.display = "none"
 
         var b = document.getElementsByClassName('background-div')[0]
         b.style.display = "none"
         // console.log(thi.className)
-    }else {
+    } else {
         var a = document.getElementsByClassName('registered')[0]
         a.style.display = "none"
 
@@ -62,34 +73,62 @@ function hide(thi) {
         b.style.display = "none"
         // console.log(thi.className)
     }
+}
+
+
+function show_phone(thi) {
+    // 通过判断none值来控制显示和隐藏
+    var c = document.getElementsByClassName("select-ul")[0]
+    console.log('点了', c)
+
+    if (c.style.display == 'none') {
+        c.style.display = "block"
+    } else {
+        c.style.display = "none"
+    }
+    console.log(c.style.display)
+}
+
+
+$(document).mouseup(function (e) {
+    // 现实点击空白区域弹窗消失
+    var _con = $('.select-con');   // 设置目标区域
+
+    if (!_con.is(e.target) && _con.has(e.target).length === 0) { // Mark 1
+        var a = document.getElementsByClassName('select-ul')[0]
+        console.log('空白点击')
+        a.style.display = "none"
+    }
+});
+
+// 点击手机号登录
+function phone_login(thi){
+
+    var a = document.getElementsByClassName('phone-item')[0]
+    a.style.display = "block"
+    thi.style.color = "#f8aa00"
+
+
+    var u = document.getElementsByClassName('username-item')[0]
+    u.style.display = "none"
+
+    var user = document.getElementsByClassName('username-login')[0]
+    // user.style.removeProperty('color')
+    user.style.setProperty('color', '#444')
 
 }
 
-// function center(obj, width, height) {
-//     // 实现居中
-//     var screenWidth = $(window).width()      //当前浏览器窗口的 宽高
-//     console.log(screenWidth)
-//
-//     var scrollheight = $(window).height(); //获取浏览器窗口 高度
-//     console.log(scrollheight)
-//
-//     var objLeft = (screenWidth - width) / 2;
-//     // console.log(objLeft)
-//
-//     var objTop = (scrollheight - height) / 2;
-//     // console.log(objTop)
-//
-//     obj.style.left = objLeft + 'px'
-//     obj.style.top = objTop + 'px'
-//     obj.style.display = "block"
-// }
-//
-// $(window).resize(function () {
-//     // 浏览器窗口大小改变时就改变
-//     var obj = document.getElementsByClassName('login-page')[0]
-//     var w = $(".login-page").width();
-//
-//     var screenWidth = $(window).width(), screenHeight = $(window).height(); //当前浏览器窗口的 宽高
-//     var objLeft = (screenWidth - w) / 2;
-//     obj.style.left = objLeft + 'px'
-// });
+
+// 点击用户名登录
+function user_login(thi){
+    var a = document.getElementsByClassName('phone-item')[0]
+    a.style.display = "none"
+
+    var phone = document.getElementsByClassName('phone-login')[0]
+    // phone.style.removeProperty('color')
+    phone.style.setProperty('color', '#444')
+
+    var u = document.getElementsByClassName('username-item')[0]
+    u.style.display = "block"
+    thi.style.color = "#f8aa00"
+}
