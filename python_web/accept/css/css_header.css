@@ -1,54 +1,68 @@
-*{
-    margin: 0;
-    box-sizing: border-box;
-    -webkit-font-smoothing: antialiased;
-}
-body{
-    font-family: "Roboto", "Lucida Grande", "DejaVu Sans", "Bitstream Vera Sans", Verdana, Arial, sans-serif;
+html {
+    font-family: tahoma,Arial,"PingFang SC","Hiragino Sans GB","Microsoft YaHei","\5FAE\8F6F\96C5\9ED1","\5b8b\4f53","WenQuanYi Micro Hei",sans-serif;
+    background-color: #f5f5f5;
+    color: #4b4c4d;
     font-size: 14px;
 }
 
-a{
-    text-decoration: none;
+body{
+    /*边框*/
+    /*border: 1px solid red;*/
+    /*外边距*/
+    margin: 0;
+    height: 100%;
 }
 
-/*head_box头部开始*/
-div.head_box{
-    background-color: #2459a2;
+a{
+    text-decoration: none;  /*去除下划线*/
+}
+
+li{
+    /*取出样式*/
+    list-style: none;
+}
+
+/*头部开始*/
+header{
     width: 100%;
     height: 56px;
-    position: fixed;
-    top: 0;
-    left: 0;
-    /*border: 1px solid red;*/
-
+    background-color: #fff;
+    /*border: 1px solid green;*/
 }
+
 div.header{
     width: 1194px;
     height: 56px;
-    line-height: 56px;      /*行高line-height*/
     margin: 0 auto;         /*意思是这个元素处于其父元素的居中位置，并且这个元素的上下外边距为0*/
     /*border: 1px solid black;*/
-    position: relative;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
 }
+
 .header .logo-con{
     display: inline-block;
     text-decoration: none;
     height: 56px;
-    /*border: 1px solid yellow;*/
 }
-.header .left{
+
+.header .logo_left{
     float: left;
 }
-div .header a img{
+
+.header a img{
     border-style: none;
 }
+
 .header .logo-con .logo-icon{
     margin-top: 10px;
     display: inline-block;
     height: 36px;
     width: 36px;
 }
+
 .header .logo-con .logo-txt {
     margin-top: 17px;
     margin-left: 12px;
@@ -57,38 +71,40 @@ div .header a img{
     position: relative;
     top: -7px;
 }
+
 .header .action-menu{
     float: left;
-    margin-left: 8px;
-}
-.header .action-menu a.active, .header .action-menu a.active:hover{
-    color: white;
-    background-color: #204982;
+    margin-left: 50px;
 }
 
 .header .action-menu .tb{
     display: inline-block;
-    margin-left: -3px;
-    padding: 0 16px 0 13px;     /*上右下左*/
-    color: darkgrey;
+    padding: 17px 18px;     /*上右下左*/
 }
+
+.header .action-menu .tb{
+    color: #4b4c4d;
+}
+
 .header .action-menu .tb:hover{
-    color: white;
-    background-color: #396bb3;
+    color: orange;
 }
+
 .header .right{
     float: right;
 }
+
 .header .search {
     width: 208px;
     height: 36px;
     line-height: 36px;
     margin-top: 10px;
     background-color: #f5f5f5;
-    margin-right: 25px;
     position: relative;
+    right: 200px;
     border-radius: 2px;         /* 这个属性允许你为元素添加圆角边框！*/
 }
+
 .header .search .search-input {
     margin-left: 10px;
     background-color: #f5f5f5;
@@ -96,6 +112,7 @@ div .header a img{
     outline: 0;     /*outline （轮廓）是绘制于元素周围的一条线*/
     font-size: 14px;
 }
+
 .header .search .search-icon {
     display: inline-block;
     width: 18px;
@@ -105,22 +122,44 @@ div .header a img{
     right: 12px;
     cursor: pointer;
     background-size: 100%;
-    background-image: url("images/search-7acb7b9349.png");
+    background-image: url("../images/search-7acb7b9349.png");
+
 }
+
 .header .action-nav{
-    position: absolute;
-    right: 250px;
+    border: 1px solid #f8aa00;
+    height: 30px;
+    width: 30px;
+    float: right;
+    position: relative;
+    left: 80px;
+    top: 12px;
+    background-color: #f8aa00;
+    border-radius: 2px;
 }
-.header .action-nav a{
-    color: white;
+
+.header .action-nav img{
     display: inline-block;
-    line-height: 56px;
-    margin: 0 5px;      /*上外边距和下外边距是0px,右外边距和左外边距是 5px*/
-    padding: 0 20px;
+    height: 15px;
+    width: 15px;
+    margin-top: 7px;
+    margin-left: 7px;
+    filter: brightness(100%);
 }
 
-main{
-    display: block;
-    background-color: #f5f5f5;
+.header .login-btn{
+    border: 1px solid #f8aa00;
+    position: absolute;
+    right: 14px;
+    padding: 8px 21px;
+    margin-top: 8px;
+    border-radius: 2px;
+    color: #f8aa00;
+    clear: right;
+    cursor: pointer;    /*鼠标样式*/
 }
 
+.header .login-btn:hover{
+    color: #fff;
+    background-color: #f8aa00;
+}

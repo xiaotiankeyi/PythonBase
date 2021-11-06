@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>vue计算属性和侦听器</title>
+    <script src="vue.global.js" type="application/javascript"></script>
+    <style>
+        #hello-vue{
+            text-align: center;
+        }
+        li{
+            list-style-type: none;
+        }
+
+    </style>
+</head>
+<body>
+    <div id="hello-vue">
+        <ul>
+            <li v-for="i of publishedBooksMessage">{{ i }}</li>
+        </ul>
+        <p v-if="fang">{{ now }}</p>
+        <button @click="func">submit</button>
+    </div>
+</body>
+<script>
+    const HelloVueApp = {
+        data() {
+            return {
+                num:[2, 32, 22, 21, 4, 6, 44, 7],
+                fang:true
+            }
+        },
+        methods: {
+            func(event){
+                this.fang = !this.fang
+            },
+        },
+        computed: {
+            // 计算属性的 getter
+            publishedBooksMessage() {
+              // `this` 指向 vm 实例
+                var f =[]
+                for(x in this.num){
+                    if(x % 2 == 0){
+                        f.push(x)
+                    }
+                }
+                return f
+            },
+            now() {
+                return Date.now()
+            },
+        }
+    }
+
+    Vue.createApp(HelloVueApp).mount('#hello-vue')
+
+</script>
+</html>

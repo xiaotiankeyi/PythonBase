@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>vue监听事件,事件处理</title>
+    <script src="vue.global.js" type="application/javascript"></script>
+    <style>
+        #hello-vue{
+            text-align: center;
+        }
+
+    </style>
+</head>
+<body>
+<div id="hello-vue">
+    <button @click="counter += 1">监听事件 Add 1</button>
+    <p>The button above has been clicked {{ counter }} times.</p>
+    <button @click="greet($event)">Greet事件处理方法</button>
+    <hr>
+    <button type="button" value="测试事件" @click="modify">事件处理方法</button>
+    <hr>
+    <button v-on:click="result('python')">内联处理器中的方法 在内联JavaScript语句中调用方法</button>
+    <hr>
+    <button @click="options('Form cannot be submitted yet.', $event)">submit</button>
+    <hr>
+    <button @click="one($event), two($event)">Submit 多事件处理器</button>
+</div>
+</body>
+<script>
+    const HelloVueApp = {
+        data() {
+            return {
+                counter:0,
+                name:'xiao'
+            }
+        },
+        methods: {
+            // 事件处理方法
+            greet(event) {
+              // `methods` 内部的 `this` 指向当前活动实例
+              alert('Hello ' + this.name + '!')
+              // `event` 是原生 DOM event
+              if (event) {
+                alert(event.target.tagName)
+              }
+            },
+            // 事件处理方法
+            modify(event) {
+                // event是标签本身
+                console.log(event)
+                var w = document.getElementsByTagName("button")
+                console.log(w[2])
+
+                w[2].style.backgroundColor="red"
+                console.log(this)
+            },
+
+            // 内联处理器中的方法
+            result(val){
+                console.log(val)
+            },
+
+            options(message, event){
+                if (event) {
+                  event.preventDefault()
+                  console.log(event.target.innerHTML)
+                }
+                alert(message)
+            },
+
+            // 多事件处理器
+            one(event) {
+                console.log('事件一')
+                // 第一个事件处理器逻辑...
+             },
+            two(event) {
+                console.log('事件二')
+                // 第二个事件处理器逻辑...
+            }
+        }
+    }
+
+    Vue.createApp(HelloVueApp).mount('#hello-vue')
+
+</script>
+</html>

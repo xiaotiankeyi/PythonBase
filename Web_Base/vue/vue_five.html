@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>vue表单输入绑定</title>
+    <script src="vue.global.js" type="application/javascript"></script>
+    <style>
+        #hello-vue{
+            text-align: center;
+        }
+
+    </style>
+</head>
+<body>
+    <div id="hello-vue">
+<!--        文本-->
+        <input v-model="message" placeholder="edit me" />
+        <p>Message is: {{ message }}</p>
+
+<!--        在 change 事件_之后_进行同步-->
+        <input v-model.lazy="message" placeholder="edit me" />
+        <p>Message is: {{ message }}</p>
+
+<!--        自动将用户的输入值转为数值类型-->
+        <input v-model.number="age" type="number" />
+        <p>age is: {{ age }}</p>
+
+<!--        自动过滤用户输入的首尾空白字符-->
+        <input v-model.trim="msg" />
+        <p>msg is: {{ msg }}</p>
+
+    </div>
+</body>
+<script>
+    const HelloVueApp = {
+        data() {
+            return {
+                message:'',
+                age:'',
+                msg:''
+            }
+        },
+        methods: {
+
+
+        },
+    }
+
+    Vue.createApp(HelloVueApp).mount('#hello-vue')
+
+</script>
+</html>

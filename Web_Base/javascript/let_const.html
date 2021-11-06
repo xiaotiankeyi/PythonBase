@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+	</head>
+	<body>
+
+		<script>
+			// JavaScript 块级作用域
+			{
+				var param = 55
+			}
+
+			document.write('块级别作用域外可以访问' + param + '<br>');
+
+
+			try {
+
+				{
+					// let使变量parameter只在当前块有效
+					let parameter = 99
+				}
+				document.write('块级别作用域不可以访问' + parameter)
+
+			} catch (err) {
+				document.write(err)
+			};
+
+			// 重新定义变量
+			var x = 10;
+			// 这里输出 x 为 10
+			{
+				let x = 2;
+				// 这里输出 x 为 2
+			}
+			// 这里输出 x 为 10
+
+			// 循环作用域
+			let i = 5;
+			for (let i = 0; i < 10; i++) {
+				// 一些代码...
+			}
+			// 这里输出 i 为 5
+
+			let carName = "Volvo";
+			// 不能使用 window.carName 访问变量
+			
+			
+			// 在这里不可以使用 carName 变量,需要先声明在使用
+			let carName;
+			
+			// const关键字
+			// const 用于声明一个或多个常量，声明时必须进行初始化，且初始化后值不可再修改：
+
+
+		</script>
+
+	</body>
+</html>

@@ -1,0 +1,220 @@
+
+.background-div {
+    height: 100%;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.8);
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: none;
+    /*堆叠*/
+    z-index: 99;
+}
+
+/*登录*/
+.login-page {
+    position: fixed;
+    height: 469px;
+    width: 440px;
+    border: 1px solid red;
+    border-radius: 4px;
+    background-color: #fff;
+    margin: 0 auto;
+    text-align: center;
+    display: none;
+    /*堆叠*/
+    z-index: 101;
+    top: 200px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+
+.call-tag {
+    border-style: none;
+    display: inline-block;
+    width: 12px;
+    height: 12px;
+    position: absolute;
+    right: 22px;
+    top: 22px;
+    cursor: pointer;
+}
+
+
+/*注册*/
+.registered {
+    position: fixed;
+    height: 469px;
+    width: 440px;
+    border: 1px solid red;
+    border-radius: 4px;
+    background-color: #fff;
+    margin: 0 auto;
+    text-align: center;
+    display: none;
+    /*堆叠*/
+    z-index: 101;
+    top: 200px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.call-tag-exit {
+    border-style: none;
+    display: inline-block;
+    width: 12px;
+    height: 12px;
+    position: absolute;
+    right: 22px;
+    top: 22px;
+    cursor: pointer;
+}
+
+/*内容部分*/
+.auto-center {
+    left: 10%;
+    top: 0;
+    position: absolute;
+}
+
+/*title部分*/
+.login-head {
+    /*border: 1px solid black;*/
+    margin-top: 48px;
+    text-align: center;
+}
+
+.login-head img {
+    width: 66px;
+    height: 2px;
+    position: relative;
+    top: -8px;
+}
+
+.login-head span {
+    color: #4b4c4d;
+    font-size: 24px;
+    margin: 0 2px;
+}
+
+/*登录类型部分*/
+.login-type {
+    /*border: 1px solid brown;*/
+    margin-top: 40px;
+    text-align: left;
+}
+
+.link-normal {
+    color: #444;
+    font-size: 16px;
+}
+
+.phone-login {
+    color: #f8aa00;
+}
+
+.username-login {
+    margin-left: 25px;
+}
+
+
+/*数据输入部分*/
+.form-item {
+    width: 344px;
+    height: 44px;
+    border: 1px solid #eaeaea;
+}
+
+.mt24 {
+    margin-top: 23px;
+}
+
+.left-com {
+    float: left;
+}
+
+.form-item .select-country {
+    height: 44px;
+    width: 130px;
+    border: 1px solid #eaeaea;
+    line-height: 44px;
+    cursor: pointer;
+    background-color: #fff;
+    margin: -1px;
+}
+
+.form-item .current-country {
+    text-align: center;
+    font-size: 14px;
+}
+
+.form-item .select-con2 {
+    /*display: block;*/
+    line-height: 44px;
+}
+
+/*手机号码输入框*/
+.input-item {
+    border: 1px solid #eaeaea;
+    float: right;
+    width: 213px;
+    height: 44px;
+    line-height: 44px;
+    background-color: #fff;
+    margin: -1px;
+}
+
+.input-item .login-phone {
+    text-align: left;
+    height: 35px;
+    position: relative;
+    left: -19px;
+    outline: none;
+    border: 0;
+}
+
+
+.form-item .select-con .select-ul {
+    /*border: 1px solid #eee;*/
+    position: absolute;
+    background-color: #fff;
+    width: 130px;
+    left: 0;
+    z-index: 5;
+    max-height: 350px;
+    overflow-y: scroll; /*现实滚动条*/
+    box-shadow: 1px 1px 5px #eee;
+}
+
+ul li {
+    display: list-item;
+    text-align: left;
+    position: relative;
+    left: -40px;
+    /*border: 1px solid red;*/
+    width: 168px;
+}
+
+ul li span {
+    display: inline-block;
+    font-size: 14px;
+    height: 41px;
+    line-height: 41px;
+    cursor: pointer;
+    padding-left: 20px;
+}
+
+ul li:hover {
+    background-color: #f2f2f2;
+}
+
+/*用户名输入框*/
+.user-name {
+    float: left;
+    /*text-align: left;*/
+    line-height: 42px;
+    border: 0;
+    outline-style: none;
+    margin-left: 10px;
+}

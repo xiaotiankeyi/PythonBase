@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>vue条件渲染</title>
+    <script src="vue.global.js" type="application/javascript"></script>
+    <style>
+        #hello-vue{
+            text-align: center;
+        }
+
+    </style>
+</head>
+<body>
+<div id="hello-vue">
+        <!--    条件渲染-->
+        <p v-if="seen" style="color: #c91623">根据seen值true就显示</p>
+        <p v-else style="color: #0000FF">根据seen值false就显示</p>
+
+        <!--    多个元素-->
+        <template v-if="seen">
+            <h1>网站</h1>
+            <p>Google</p>
+            <p>Runoob</p>
+            <p>Taobao</p>
+        </template>
+        <div v-if="type === 'A'">
+             A
+        </div>
+        <div v-else-if="type === 'B'">
+          B
+        </div>
+        <div v-else-if="type === 'C'">
+          C
+        </div>
+        <div v-else>
+          Not A/B/C
+        </div>
+
+<!--        v-show 不支持 <template> 元素，也不支持 v-else-->
+        <p v-show="show">hello world</p>
+</div>
+</body>
+<script>
+        const HelloVueApp = {
+        data() {
+            return {
+                seen: true,
+                type:'C',
+                show:true
+            }
+        }
+    }
+
+    Vue.createApp(HelloVueApp).mount('#hello-vue')
+
+</script>
+</html>

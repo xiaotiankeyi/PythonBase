@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>抽屉示例</title>
+    <link href="css/css_header.css" rel="stylesheet" type="text/css">
+    <link href="css/css_login.css" rel="stylesheet" type="text/css">
+    <script src="../../Web_Base/jQuery/jquery-3.6.0.min.js" type="text/javascript" charset="UTF-8"></script>
+    <script src="js/js_header.js" type="text/javascript" charset="UTF-8"></script>
+    <style>
+
+    </style>
+</head>
+
+<body>
+    <header class="head_box">
+        <div class="header">
+            <a class="logo-con logo_left" href="javascript:;">
+                <img class="logo-icon" src="images/logo_head.png">
+                <img class="logo-txt" src="images/logo.png">
+            </a>
+            <div class="action-menu">
+                <a href="#" class="tb active">首页</a>
+                <a href="#" class="tb">专区</a>
+                <a href="#" class="tb">人类发布</a>
+                <a href="#" class="tb">视频</a>
+                <a href="#" class="tb">发现</a>
+                <a href="#" class="tb">话题</a>
+            </div>
+            <div class="search right">
+                <input class="search-input" placeholder="搜索">
+                <span class="search-icon"></span>
+            </div>
+            <div class="action-nav">
+                <a><img class="publish-icon" src="images/img_tag.png" onclick="show(this)"></a>
+            </div>
+
+            <a class="login-btn right" href="javascript:;" onclick="show(this)">登录</a>
+
+        </div>
+    </header>
+
+    <div class="background-div"></div>
+    <div class="login-page">
+        <img class="call-tag" src="images/img_call.png" onclick="hide(this)">
+
+        <div class="auto-center">
+            <div class="login-head">
+                <img src="images/img_1.png">
+                <span class="title">不正经的咨询社区</span>
+                <img src="images/img.png">
+            </div>
+            <div class="login-type">
+                <a class="link-normal phone-login" href="javascript:;" data-type="phone" onclick="phone_login(this)">手机号登录</a>
+                <a class="link-normal username-login" href="javascript:;" data-type="username" onclick="user_login(this)">用户名登录</a>
+            </div>
+            <div class="login-body">
+                <div class="form-item login-item clearfix phone-item mt24" style="display: block;">
+                    <div class="select-con left-com" onclick="show_phone(this)">
+                        <div class="select-current select-country clearfix">
+                            <span class="current-country select-value" data-id="+86">中国+86</span>
+                            <img src="images/img_2.png" class="select-icon2">
+                        </div>
+                        <ul style="display: none;" class="select-ul">
+                            <li class="select-li" data-id="+86" data-value="中国+86"><span>中国+86</span></li>
+                            <li class="select-li" data-id="+355" data-value="阿尔巴尼亚+355"><span>阿尔巴尼亚+355</span></li>
+                            <li class="select-li" data-id="+213" data-value="阿尔及利亚+213"><span>阿尔及利亚+213</span></li>
+                            <li class="select-li" data-id="+93" data-value="阿富汗+93"><span>阿富汗+93</span></li>
+                            <li class="select-li" data-id="+54" data-value="阿根廷+54"><span>阿根廷+54</span></li>
+                            <li class="select-li" data-id="+353" data-value="爱尔兰+353"><span>爱尔兰+353</span></li>
+                            <li class="select-li" data-id="+20" data-value="埃及+20"><span>埃及+20</span></li>
+                            <li class="select-li" data-id="+1907" data-value="阿拉斯加+1907"><span>阿拉斯加+1907</span></li>
+                            <li class="select-li" data-id="+968" data-value="阿曼+968"><span>阿曼+968</span></li>
+                            <li class="select-li" data-id="+1809" data-value="安圭拉岛+1809"><span>安圭拉岛+1809</span></li>
+                            <li class="select-li" data-id="+61" data-value="澳大利亚+61"><span>澳大利亚+61</span></li>
+                            <li class="select-li" data-id="+43" data-value="奥地利+43"><span>奥地利+43</span></li>
+                            <li class="select-li" data-id="+853" data-value="澳门+853"><span>澳门+853</span></li>
+                            <li class="select-li" data-id="+1809" data-value="巴巴多斯+1809"><span>巴巴多斯+1809</span></li>
+                            <li class="select-li" data-id="+1809" data-value="巴哈马+1809"><span>巴哈马+1809</span></li>
+                            <li class="select-li" data-id="+92" data-value="巴基斯坦+92"><span>巴基斯坦+92</span></li>
+                            <li class="select-li" data-id="+595" data-value="巴拉圭+595"><span>巴拉圭+595</span></li>
+                            <li class="select-li" data-id="+973" data-value="巴林+973"><span>巴林+973</span></li>
+                            <li class="select-li" data-id="+507" data-value="巴拿马+507"><span>巴拿马+507</span></li>
+                            <li class="select-li" data-id="+55" data-value="巴西+55"><span>巴西+55</span></li>
+                            <li class="select-li" data-id="+32" data-value="比利时+32"><span>比利时+32</span></li>
+                            <li class="select-li" data-id="+51" data-value="秘鲁+51"><span>秘鲁+51</span></li>
+                            <li class="select-li" data-id="+354" data-value="冰岛+354"><span>冰岛+354</span></li>
+                            <li class="select-li" data-id="+1809" data-value="波多黎各+1809"><span>波多黎各+1809</span></li>
+                            <li class="select-li" data-id="+48" data-value="波兰+48"><span>波兰+48</span></li>
+                            <li class="select-li" data-id="+591" data-value="玻利维亚+591"><span>玻利维亚+591</span></li>
+                            <li class="select-li" data-id="+501" data-value="伯利兹+501"><span>伯利兹+501</span></li>
+                            <li class="select-li" data-id="+975" data-value="不丹+975"><span>不丹+975</span></li>
+                            <li class="select-li" data-id="+226" data-value="布基拉法索+226"><span>布基拉法索+226</span></li>
+                            <li class="select-li" data-id="+850" data-value="朝鲜+850"><span>朝鲜+850</span></li>
+                            <li class="select-li" data-id="+45" data-value="丹麦+45"><span>丹麦+45</span></li>
+                            <li class="select-li" data-id="+49" data-value="德国+49"><span>德国+49</span></li>
+                            <li class="select-li" data-id="+684" data-value="东萨摩亚+684"><span>东萨摩亚+684</span></li>
+                            <li class="select-li" data-id="+593" data-value="厄瓜多尔+593"><span>厄瓜多尔+593</span></li>
+                            <li class="select-li" data-id="+7" data-value="俄罗斯+7"><span>俄罗斯+7</span></li>
+                            <li class="select-li" data-id="+33" data-value="法国+33"><span>法国+33</span></li>
+                            <li class="select-li" data-id="+298" data-value="法罗群岛+298"><span>法罗群岛+298</span></li>
+                            <li class="select-li" data-id="+396" data-value="梵蒂冈+396"><span>梵蒂冈+396</span></li>
+                            <li class="select-li" data-id="+594" data-value="法属圭亚那+594"><span>法属圭亚那+594</span></li>
+                            <li class="select-li" data-id="+679" data-value="斐济+679"><span>斐济+679</span></li>
+                            <li class="select-li" data-id="+63" data-value="菲律宾+63"><span>菲律宾+63</span></li>
+                            <li class="select-li" data-id="+500" data-value="福克兰群岛+500"><span>福克兰群岛+500</span></li>
+                            <li class="select-li" data-id="+220" data-value="冈比亚+220"><span>冈比亚+220</span></li>
+                            <li class="select-li" data-id="+299" data-value="格陵兰岛+299"><span>格陵兰岛+299</span></li>
+                            <li class="select-li" data-id="+57" data-value="哥伦比亚+57"><span>哥伦比亚+57</span></li>
+                            <li class="select-li" data-id="+506" data-value="哥斯达黎加+506"><span>哥斯达黎加+506</span></li>
+                            <li class="select-li" data-id="+671" data-value="关岛+671"><span>关岛+671</span></li>
+                            <li class="select-li" data-id="+53" data-value="古巴+53"><span>古巴+53</span></li>
+                            <li class="select-li" data-id="+592" data-value="圭亚那+592"><span>圭亚那+592</span></li>
+                            <li class="select-li" data-id="+509" data-value="海地+509"><span>海地+509</span></li>
+                            <li class="select-li" data-id="+82" data-value="韩国+82"><span>韩国+82</span></li>
+                            <li class="select-li" data-id="+31" data-value="荷兰+31"><span>荷兰+31</span></li>
+                            <li class="select-li" data-id="+504" data-value="洪都拉斯+504"><span>洪都拉斯+504</span></li>
+                            <li class="select-li" data-id="+233" data-value="加纳+233"><span>加纳+233</span></li>
+                            <li class="select-li" data-id="+1" data-value="加拿大+1"><span>加拿大+1</span></li>
+                            <li class="select-li" data-id="+855" data-value="柬埔寨+855"><span>柬埔寨+855</span></li>
+                            <li class="select-li" data-id="+686" data-value="基里巴斯+686"><span>基里巴斯+686</span></li>
+                            <li class="select-li" data-id="+224" data-value="几内亚+224"><span>几内亚+224</span></li>
+                            <li class="select-li" data-id="+974" data-value="卡塔尔+974"><span>卡塔尔+974</span></li>
+                            <li class="select-li" data-id="+682" data-value="科克群岛+682"><span>科克群岛+682</span></li>
+                            <li class="select-li" data-id="+6722" data-value="科科斯岛+6722"><span>科科斯岛+6722</span></li>
+                            <li class="select-li" data-id="+225" data-value="科特迪瓦+225"><span>科特迪瓦+225</span></li>
+                            <li class="select-li" data-id="+965" data-value="科威特+965"><span>科威特+965</span></li>
+                            <li class="select-li" data-id="+856" data-value="老挝+856"><span>老挝+856</span></li>
+                            <li class="select-li" data-id="+961" data-value="黎巴嫩+961"><span>黎巴嫩+961</span></li>
+                            <li class="select-li" data-id="+218" data-value="利比亚+218"><span>利比亚+218</span></li>
+                            <li class="select-li" data-id="+4175" data-value="列支敦士登+4175"><span>列支敦士登+4175</span></li>
+                            <li class="select-li" data-id="+40" data-value="罗马尼亚+40"><span>罗马尼亚+40</span></li>
+                            <li class="select-li" data-id="+352" data-value="卢森堡+352"><span>卢森堡+352</span></li>
+                            <li class="select-li" data-id="+960" data-value="马尔代夫+960"><span>马尔代夫+960</span></li>
+                            <li class="select-li" data-id="+60" data-value="马来西亚 +60"><span>马来西亚 +60</span></li>
+                            <li class="select-li" data-id="+223" data-value="马里+223"><span>马里+223</span></li>
+                            <li class="select-li" data-id="+222" data-value="毛里塔尼亚+222"><span>毛里塔尼亚+222</span></li>
+                            <li class="select-li" data-id="+596" data-value="马提尼克+596"><span>马提尼克+596</span></li>
+                            <li class="select-li" data-id="+1" data-value="美国+1"><span>美国+1</span></li>
+                            <li class="select-li" data-id="+976" data-value="蒙古+976"><span>蒙古+976</span></li>
+                            <li class="select-li" data-id="+880" data-value="孟加拉国+880"><span>孟加拉国+880</span></li>
+                            <li class="select-li" data-id="+95" data-value="缅甸+95"><span>缅甸+95</span></li>
+                            <li class="select-li" data-id="+210" data-value="摩洛哥+210"><span>摩洛哥+210</span></li>
+                            <li class="select-li" data-id="+52" data-value="墨西哥+52"><span>墨西哥+52</span></li>
+                            <li class="select-li" data-id="+338" data-value="南斯拉夫+338"><span>南斯拉夫+338</span></li>
+                            <li class="select-li" data-id="+674" data-value="瑙鲁+674"><span>瑙鲁+674</span></li>
+                            <li class="select-li" data-id="+977" data-value="尼泊尔+977"><span>尼泊尔+977</span></li>
+                            <li class="select-li" data-id="+505" data-value="尼加拉瓜+505"><span>尼加拉瓜+505</span></li>
+                            <li class="select-li" data-id="+234" data-value="尼日利亚+234"><span>尼日利亚+234</span></li>
+                            <li class="select-li" data-id="+683" data-value="纽埃岛+683"><span>纽埃岛+683</span></li>
+                            <li class="select-li" data-id="+6723" data-value="诺福克岛+6723"><span>诺福克岛+6723</span></li>
+                            <li class="select-li" data-id="+47" data-value="挪威+47"><span>挪威+47</span></li>
+                            <li class="select-li" data-id="+351" data-value="葡萄牙+351"><span>葡萄牙+351</span></li>
+                            <li class="select-li" data-id="+81" data-value="日本+81"><span>日本+81</span></li>
+                            <li class="select-li" data-id="+46" data-value="瑞典+46"><span>瑞典+46</span></li>
+                            <li class="select-li" data-id="+41" data-value="瑞士+41"><span>瑞士+41</span></li>
+                            <li class="select-li" data-id="+503" data-value="萨尔瓦多+503"><span>萨尔瓦多+503</span></li>
+                            <li class="select-li" data-id="+221" data-value="塞内加尔+221"><span>塞内加尔+221</span></li>
+                            <li class="select-li" data-id="+966" data-value="沙特阿拉伯+966"><span>沙特阿拉伯+966</span></li>
+                            <li class="select-li" data-id="+6724" data-value="圣诞岛+6724"><span>圣诞岛+6724</span></li>
+                            <li class="select-li" data-id="+1809" data-value="圣卢西亚+1809"><span>圣卢西亚+1809</span></li>
+                            <li class="select-li" data-id="+223" data-value="圣马力诺+223"><span>圣马力诺+223</span></li>
+                            <li class="select-li" data-id="+94" data-value="斯里兰卡 +94"><span>斯里兰卡 +94</span></li>
+                            <li class="select-li" data-id="+597" data-value="苏里南+597"><span>苏里南+597</span></li>
+                            <li class="select-li" data-id="+677" data-value="所罗门群岛+677"><span>所罗门群岛+677</span></li>
+                            <li class="select-li" data-id="+66" data-value="泰国+66"><span>泰国+66</span></li>
+                            <li class="select-li" data-id="+886" data-value="台湾+886"><span>台湾+886</span></li>
+                            <li class="select-li" data-id="+676" data-value="汤加+676"><span>汤加+676</span></li>
+                            <li class="select-li" data-id="+90" data-value="土耳其+90"><span>土耳其+90</span></li>
+                            <li class="select-li" data-id="+216" data-value="突尼斯+216"><span>突尼斯+216</span></li>
+                            <li class="select-li" data-id="+688" data-value="图瓦卢+688"><span>图瓦卢+688</span></li>
+                            <li class="select-li" data-id="+678" data-value="瓦努阿图+678"><span>瓦努阿图+678</span></li>
+                            <li class="select-li" data-id="+502" data-value="危地马拉+502"><span>危地马拉+502</span></li>
+                            <li class="select-li" data-id="+1809" data-value="维尔京群岛+1809"><span>维尔京群岛+1809</span></li>
+                            <li class="select-li" data-id="+1808" data-value="威克岛+1808"><span>威克岛+1808</span></li>
+                            <li class="select-li" data-id="+58" data-value="委内瑞拉+58"><span>委内瑞拉+58</span></li>
+                            <li class="select-li" data-id="+673" data-value="文莱+673"><span>文莱+673</span></li>
+                            <li class="select-li" data-id="+852" data-value="香港+852"><span>香港+852</span></li>
+                            <li class="select-li" data-id="+1808" data-value="夏威夷+1808"><span>夏威夷+1808</span></li>
+                            <li class="select-li" data-id="+34" data-value="西班牙+34"><span>西班牙+34</span></li>
+                            <li class="select-li" data-id="+30" data-value="希腊+30"><span>希腊+30</span></li>
+                            <li class="select-li" data-id="+65" data-value="新加坡+65"><span>新加坡+65</span></li>
+                            <li class="select-li" data-id="+64" data-value="新西兰+64"><span>新西兰+64</span></li>
+                            <li class="select-li" data-id="+685" data-value="西萨摩亚+685"><span>西萨摩亚+685</span></li>
+                            <li class="select-li" data-id="+963" data-value="叙利亚+963"><span>叙利亚+963</span></li>
+                            <li class="select-li" data-id="+1809" data-value="牙买加+1809"><span>牙买加+1809</span></li>
+                            <li class="select-li" data-id="+39" data-value="意大利+39"><span>意大利+39</span></li>
+                            <li class="select-li" data-id="+964" data-value="伊拉克+964"><span>伊拉克+964</span></li>
+                            <li class="select-li" data-id="+98" data-value="伊朗+98"><span>伊朗+98</span></li>
+                            <li class="select-li" data-id="+91" data-value="印度+91"><span>印度+91</span></li>
+                            <li class="select-li" data-id="+62" data-value="印度尼西亚+62"><span>印度尼西亚+62</span></li>
+                            <li class="select-li" data-id="+44" data-value="英国+44"><span>英国+44</span></li>
+                            <li class="select-li" data-id="+972" data-value="以色列+972"><span>以色列+972</span></li>
+                            <li class="select-li" data-id="+962" data-value="约旦+962"><span>约旦+962</span></li>
+                            <li class="select-li" data-id="+84" data-value="越南+84"><span>越南+84</span></li>
+                            <li class="select-li" data-id="+350" data-value="直布罗陀+350"><span>直布罗陀+350</span></li>
+                            <li class="select-li" data-id="+56" data-value="智利+56"><span>智利+56</span></li>
+                            <li class="select-li" data-id="+1808" data-value="中途岛+1808"><span>中途岛+1808</span></li>
+                        </ul>
+                    </div>
+                    <div class="input-item input-item-short clearfix">
+                        <input type="text" class="input login-phone" name="phone" placeholder="手机号" value="">
+                    </div>
+                </div>
+                <div class="form-item login-item clearfix username-item mt24" style="display: none;">
+                    <div class="input-item2 clearfix">
+                        <input type="text" class="input user-name" name="username" placeholder="用户名">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="registered">
+        <img class="call-tag-exit" src="images/img_call.png" onclick="hide(this)">
+    </div>
+</body>
+</html>

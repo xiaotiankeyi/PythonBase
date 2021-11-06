@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>vue列表渲染</title>
+    <script src="vue.global.js" type="application/javascript"></script>
+    <style>
+        #hello-vue{
+            text-align: center;
+        }
+        ol,li{
+            list-style-type: none;
+        }
+
+    </style>
+</head>
+<body>
+<div id="hello-vue">
+<!--    处理数组-->
+    <button @click="alter">push增加数组</button>
+    <ol>
+        <li v-for="site in sites" :key="site.id">
+          {{ site.text }}
+        </li>
+        <li v-for="(item, index) of items" :key="index">
+          {{ parentMessage }} - {{ index }} - {{ item.message }}
+        </li>
+    </ol>
+
+<!--    处理对象,三种写法-->
+    <ul>
+        <li v-for="values of myObject">
+            {{ values }}
+        </li>
+    </ul>
+    <ul>
+        <li v-for="(values,key) of myObject">
+            {{ key }}: {{ values }}
+        </li>
+    </ul>
+    <ul>
+        <li v-for="(value, name, index) in myObject">
+            {{ index }}. {{ name }}: {{ value }}
+        </li>
+    </ul>
+
+    <ul>
+      <template v-for="item in items" :key="item.message">
+        <li>{{ item.message }}</li>
+        <li class="divider" role="presentation"></li>
+      </template>
+    </ul>
+
+    <li v-for="n in evenNumbers" :key="n">{{ n }}</li>
+</div>
+</body>
+<script>
+const HelloVueApp = {
+    data() {
+            return {
+                sites: [
+                        { id:1001, text: 'Google' },
+                        { id:1002, text: 'Runoob' },
+                        { id:1003, text: 'Taobao' }
+                      ],
+                parentMessage: 'Parent',
+                items: [
+                    { message: 'Foo' },
+                    { message: 'Bar' },
+                    { message: 'java'}
+                ],
+                myObject: {
+                    title: 'How to do lists in Vue',
+                    author: 'Jane Doe',
+                    publishedAt: '2016-04-10'
+                  },
+                numbers: [2, 3, 4, 54, 66, 21]
+            }
+        },
+        methods:{
+            // 通过操作事件来编辑数组
+            alter(event){
+                this.sites.push(
+                    {id:1004, text: 'tomcat'}
+                )
+            }
+        },
+        computed: {
+          evenNumbers() {
+              // 显示过滤/排序后的结果
+            return this.numbers.filter(number => number % 2 === 0)
+          }
+        }
+    }
+
+    Vue.createApp(HelloVueApp).mount('#hello-vue')
+
+</script>
+</html>
