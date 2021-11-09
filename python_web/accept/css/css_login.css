@@ -1,4 +1,8 @@
 
+img {
+    border-style: none;
+}
+
 .background-div {
     height: 100%;
     width: 100%;
@@ -20,7 +24,6 @@
     border-radius: 4px;
     background-color: #fff;
     margin: 0 auto;
-    text-align: center;
     display: none;
     /*堆叠*/
     z-index: 101;
@@ -124,6 +127,9 @@
     width: 344px;
     height: 44px;
     border: 1px solid #eaeaea;
+    line-height: 44px;
+    background-color: #fff;
+
 }
 
 .mt24 {
@@ -135,13 +141,11 @@
 }
 
 .form-item .select-country {
-    height: 44px;
-    width: 130px;
     border: 1px solid #eaeaea;
-    line-height: 44px;
+    width: 130px;
     cursor: pointer;
-    background-color: #fff;
     margin: -1px;
+    text-align: center;
 }
 
 .form-item .current-country {
@@ -149,29 +153,20 @@
     font-size: 14px;
 }
 
-.form-item .select-con2 {
-    /*display: block;*/
-    line-height: 44px;
-}
-
 /*手机号码输入框*/
 .input-item {
-    border: 1px solid #eaeaea;
     float: right;
     width: 213px;
-    height: 44px;
-    line-height: 44px;
-    background-color: #fff;
     margin: -1px;
+    text-align: center;
 }
 
 .input-item .login-phone {
-    text-align: left;
-    height: 35px;
     position: relative;
     left: -19px;
     outline: none;
     border: 0;
+    font-size: 14px;
 }
 
 
@@ -210,11 +205,73 @@ ul li:hover {
 }
 
 /*用户名输入框*/
+
 .user-name {
-    float: left;
-    /*text-align: left;*/
-    line-height: 42px;
-    border: 0;
     outline-style: none;
     margin-left: 10px;
+    position: relative;
+    left: 4px;
+    font-size: 14px;
+    border: 0;
+}
+
+
+/*密码输入框*/
+.pwd-item .pwd {
+    text-align: left;
+    border: 0;
+    outline-style: none;
+    width: 240px;
+    position: relative;
+    left: 14px;
+    font-size: 14px;
+}
+
+/*秘密显示隐藏*/
+.eyes-icon {
+    height: 16px;
+    width: 16px;
+    position: relative;
+    cursor: pointer;
+    left: 68px;
+    top: 4px;
+}
+
+.show-tag {
+    display: inline;
+}
+
+.hide-tag {
+    display: none;
+}
+
+a.reset-pwd {
+    display: inline-block;
+    color: #f8aa00;
+    float: right;
+    margin-top: 18px;
+    cursor: pointer;
+}
+
+.submit-login {
+    width: 100%;
+    height: 44px;
+    line-height: 44px;
+    border: 1px solid #f8aa00;
+    border-radius: 3px;
+    background-color: #f8aa00;
+    position: relative;
+    top: 35px;
+    cursor: pointer;
+}
+
+.click-login {
+    text-align: center;
+    font-size: 16px;
+    color: #fff;
+    filter: brightness(100%);
+}
+
+.click-login:hover {
+    filter: brightness(120%);
 }

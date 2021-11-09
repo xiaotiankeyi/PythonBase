@@ -43,7 +43,6 @@
     <div class="background-div"></div>
     <div class="login-page">
         <img class="call-tag" src="images/img_call.png" onclick="hide(this)">
-
         <div class="auto-center">
             <div class="login-head">
                 <img src="images/img_1.png">
@@ -203,11 +202,16 @@
                     </div>
                 </div>
                 <div class="form-item login-item clearfix username-item mt24" style="display: none;">
-                    <div class="input-item2 clearfix">
-                        <input type="text" class="input user-name" name="username" placeholder="用户名">
-                    </div>
+                    <input type="text" class="input user-name" name="username" placeholder="用户名">
+                </div>
+                <div class="form-item pwd-item mt24">
+                    <input type="password" class="pwd" name="password" value="" placeholder="密码">
+                    <img src="images/img_4.png" class="show-tag eyes-icon" alt="显示" onclick="pwd_display_show(this)">
+                    <img src="images/img_3.png" class="hide-tag eyes-icon" alt="隐藏" onclick="pwd_display_hide(this)">
                 </div>
             </div>
+            <a class="reset-pwd" href="javascript:;">忘记密码?</a>
+            <input type="submit" class="click-login submit-login">
         </div>
     </div>
 
