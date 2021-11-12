@@ -2,11 +2,10 @@ import json
 import random
 import flask
 import pymysql
-from flask import render_template
 
-from flask.hashlib_password import encryption
+from hashlib_password import encryption
 
-server = flask.Flask(__name__)  # 把当前这个python文件，当做一个服务，定义Server(启动服务)
+server = flask.flask(__name__)  # 把当前这个python文件，当做一个服务，定义Server(启动服务)
 
 
 def my_db(sql):

@@ -1,20 +1,15 @@
-import json
-import flask
-from flask import render_template
+from flask import Flask
 from flask import request
-# import os
-# base_dir = os.path.dirname(os.path.dirname(os.path.dirname(__file__)))
-# html_dir = os.path.join(base_dir + '/python_web/')
-# print(html_dir)
-
-server = flask.Flask(__name__)  # 把当前这个python文件，当做一个服务，定义Server(启动服务)
+from flask import render_template
+import json
 
 
-@server.route('/index/', methods=['get'])  # 接口装饰器，get请求
+server = Flask(__name__)
+
+@server.route("/index/", methods=['get'])
 def index():
-    # return render_template("ajax.html")
-    # return render_template("ajax_two.html")
-    return render_template("ajax_three.html")
+
+    return render_template("home.html")
 
 
 @server.route('/string/', methods=['get', 'post'])
@@ -35,7 +30,6 @@ def string():
 
         res = {'msg': '请求成功！', 'msg_code': 200}
         return json.dumps(res, ensure_ascii=False)
-
 
 if __name__ == "__main__":
     server.run(debug=True)

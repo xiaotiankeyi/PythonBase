@@ -6,7 +6,7 @@
 def create(function):
     def add():
         v = function()
-        if v == None:  # 这个函数就是use在运行
+        if v is None:  # 这个函数就是use在运行
             print('use没有返回值')
         else:
             return '有返回值,且返回的值为：%s' % v
@@ -30,7 +30,6 @@ print(use())  # 通过return add我获取了函数add的地址，现在运行add
 
 def judge(func):
     def realize(name, age):
-
         print("perform传入得参数有 %s %s" % (type(name), type(age)))
 
         d = func(name, age)

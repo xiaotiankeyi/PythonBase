@@ -3,6 +3,17 @@ img {
     border-style: none;
 }
 
+input:-webkit-autofill, textarea:-webkit-autofill, select:-webkit-autofill{
+    -webkit-text-fill-color: #444 !important;
+    -webkit-box-shadow: 0 0 0 1000px #fff inset !important;
+    background-color: transparent;
+    transition: background-color 5000s ease-in-out 0s;
+}
+
+input{
+    background-color: transparent;
+}
+
 .background-div {
     height: 100%;
     width: 100%;
@@ -20,7 +31,7 @@ img {
     position: fixed;
     height: 469px;
     width: 440px;
-    border: 1px solid red;
+    /*border: 1px solid red;*/
     border-radius: 4px;
     background-color: #fff;
     margin: 0 auto;
@@ -207,7 +218,7 @@ ul li:hover {
 /*用户名输入框*/
 
 .user-name {
-    outline-style: none;
+    outline: none;
     margin-left: 10px;
     position: relative;
     left: 4px;
@@ -274,4 +285,18 @@ a.reset-pwd {
 
 .click-login:hover {
     filter: brightness(120%);
+}
+
+p.tips {
+    position: relative;
+    top: 44px;
+    text-align: center;
+    cursor: pointer;
+}
+
+.error-tips{
+    float: left;
+    margin-top: 18px;
+    color: #dd2b00;
+    display: none;
 }

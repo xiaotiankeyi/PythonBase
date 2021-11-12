@@ -7,8 +7,9 @@ import time
 def one(num1):
     """闭包的形式,写法"""
     def two(num2):
-        nonlocal num1
-        num1 = 5
+        # 如果要修改外部函数的参数
+        # nonlocal num1
+        # num1 = 5
         return num2 + num1
     return two
 
@@ -41,9 +42,11 @@ def login():
 
 
 if __name__ == "__main__":
-    # a = one(10)
-    # print(type(a))
-    # val = a(20)
-    # print(val)
-    login = ruler(login)
-    login()
+    a = one(10)
+    print('a.__name__', a.__name__)
+    print(type(a), a)
+    val = a(20)
+    print(val)
+    # funcin = ruler(login)
+    # print('func_name:', funcin.__name__)
+    # funcin()
