@@ -1,6 +1,6 @@
 """
-1、数据属性 -----属于class的属性，也属于实例(对象)的属性
-2、函数属性 ---- 属于class的属性，实例(对象)可以调用类的函数属性
+1、数据属性 -----属于class的属性，也属于"类对象"的属性
+2、函数属性 ---- 属于class的属性，"实例对象"可以调用类的函数属性
 """
 import types
 
@@ -49,10 +49,11 @@ people.func('苹果')  # 调用这个方法
 """查看类的属性的一些方法,以及返回属性字典"""
 print(dir(Chinese))
 print(Chinese.__dict__)
-# print(Chinese.__dict__["height"])
-Chinese.__dict__["Features"](people)
+print(Chinese.__dict__["weight"])
+Chinese.__dict__["Features"](people)       # 类对象执行实例方法
 
 print('==============查看类的特殊属性===============')
 print(Chinese.__name__)  # 类名
 print(Chinese.__doc__)  # 类说明,文档
 print(Chinese.__module__)  # 显示当前所在模块
+print(Chinese.__class__)

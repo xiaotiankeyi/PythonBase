@@ -8,7 +8,7 @@ from python_oo.reflection.oo_reflection import Chinese
 
 i = Chinese(1.65, 62)
 if hasattr(i, 'Features'):  # hasattr参数为(实例，查找的函数),存在返回true
-    accept = getattr(i, 'Features')
+    accept = getattr(i, 'Features')     # 在就返回实例方法地址
     print('反射回的函数运行:', accept())
 else:
     print('不存在，编写其他逻辑')

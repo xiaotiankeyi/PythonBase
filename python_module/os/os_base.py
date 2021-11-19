@@ -38,8 +38,8 @@ print(os.listdir(r"C:\Users\admin\PycharmProjects\python_study\python_module"))
 print(os.stat(r"C:\Users\admin\PycharmProjects\python_study\python_module"))
 
 """返回path目录,可以返回上一级"""
-v = os.path.dirname(os.path.dirname(__file__))
-print(v)
+vv = os.path.dirname(os.path.dirname(__file__))
+print(vv)
 
 """返回path最后的文件名"""
 g = os.path.basename("C:/Users/admin/PycharmProjects/python/python_Base")

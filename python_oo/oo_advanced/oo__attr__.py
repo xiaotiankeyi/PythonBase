@@ -5,7 +5,7 @@
         2、在不自己设定的时候，python就执行默认的设定
 """
 
-class Chinese:
+class Chinese(object):
     """中国人的类"""
     def __init__(self, height, weight):
         self.height = height

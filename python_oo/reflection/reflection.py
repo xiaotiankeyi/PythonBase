@@ -12,7 +12,7 @@ class BlackMedium(object):
 
     def __delattr__(self, item):
         if item in self.__dict__:
-            """判断要删除的key是否存在对象字典中"""
+            """判断要删除的key是否存在实例对象字典中"""
             del self.__dict__[item]
         else:
             print('你要删除的属性%s不存在,运行自定义的delattr' % item)
@@ -27,7 +27,7 @@ class BlackMedium(object):
 if __name__ == "__main__":
     b1 = BlackMedium('万成置地', '回龙观天露园')
 
-    # 检测是否含有某属性
+    # 检测实例是否含有某属性
     print(hasattr(b1, 'name'))
     print(hasattr(b1, 'sell_house'))
 
@@ -36,7 +36,8 @@ if __name__ == "__main__":
     # 获取属性
     n = getattr(b1, 'name')
     print(n)
-    func = getattr(b1, 'rent_house')
+    func = getattr(b1, 'rent_house')    # 查询实例函数并返回地址加上()可以运行
+    print(func)
     func()
 
     getattr(b1, 'aaaaaaaa')  # 报错
@@ -44,9 +45,9 @@ if __name__ == "__main__":
 
     # #设置属性
     setattr(b1, 'sb', True)
-    setattr(b1, 'show_name', lambda self: self.name + 'sb')
+    setattr(b1, 'show_name', lambda self: self.name + 'sb')     # 为实例对象添加了一个实例函方法
     print(b1.__dict__)
-    print(b1.show_name(b1))
+    print('调用后面添加的实例方法：', b1.show_name(b1))
 
     # #删除属性
     delattr(b1, 'addr')

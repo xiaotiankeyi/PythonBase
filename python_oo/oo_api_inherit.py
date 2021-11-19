@@ -10,32 +10,29 @@
 import abc
 
 
-class All_file(metaclass=abc.ABCMeta):  # 调用该方法后，子类必须实现父类所声明的功能，起限定功能
+class AllFile(metaclass=abc.ABCMeta):  # 调用该方法后，子类必须实现父类所声明的功能，起限定功能
     @abc.abstractmethod
-    def read(self):
+    def read(self, value):
         pass
 
     @abc.abstractmethod
-    def write(self):
+    def write(self, content):
         pass
 
 
-class Men(All_file):
-    def read(self):
-        return 'men, read'
+class Disk(AllFile):
+    def read(self, value):
 
-    def write(self):
-        return 'man write'
+        return "书籍 %s 阅读完成" % value
+        pass
 
+    def write(self, content):
 
-class Disk(All_file):
-    def read(self):
-        return "disk read"
+        return "内容 %s 写入成功" % content
+        pass
 
-    def write(self):
-        return 'disk write'
 
 if __name__ == "__main__":
     mode = Disk()
-    print(mode.write())
-    print(mode.read())
+    print(mode.write("赖志添"))
+    print(mode.read("平凡的世界"))

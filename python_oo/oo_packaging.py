@@ -22,6 +22,7 @@ class Handle(object):
             Handle.__name, (self.__weight / (self.__height * self.__height)))
 
     def func_interface(self):
+        """共外部调用的接口"""
         return self.__collection()
 
 
@@ -32,5 +33,5 @@ print(obj.__dict__)
 # print(obj._Handle__name)         # 外部强制调用被封装的私有属性
 # print(obj._Handle__collection())     # 外部强制调用被封装的私有方法
 
-# print(obj.interface())
-# print(obj.func_interface())
+print(obj.interface())          # 通过调用接口现实访问私有属性和方法
+print(obj.func_interface())

@@ -12,6 +12,8 @@ r"""元字符 . ^ $ * + ? {} [] | () \ 匹配出来的数据可通过for循环�
 h = re.findall(
     r'formhash=(.*)>',
     "[<a href='member.php?mod=logging&amp;action=logout&amp;formhash=dc66d9c9'>退出</a>]")
+
+
 # print(h, type(h))
 
 # for i in h:
@@ -86,7 +88,7 @@ def letter():
         'ht|b2',
         'cnzz_eid%3D2145852493-1565144951-https%253A%252F%252Fwww.baidu.com%252F%26ntime%3D1565144951')
     q = re.findall(
-        r'\n|\t',
+        r'[\n\t]',
         'cnzz_eid%3D2145852493-15651\n44951-https%253A%\t252F%252Fwww.baidu.com%252F%26ntime%3D1565144951')
     # | 匹配ht或b2，当两个都存在时都显示出来。。。。
     print(w)
@@ -153,4 +155,6 @@ def method():
         '51zxw',
         'id%3D2145852493-1565144951-https%253A%252F%252Fwww.baidu.com%')  # 替换
     print(f)
-# method()
+
+
+method()

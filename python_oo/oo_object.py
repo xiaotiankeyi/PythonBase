@@ -33,8 +33,8 @@ people = PePole('tom', 22, '男', '165cm', '60kg')  # 实例化过程,self就是
 
 print(people.__dict__)  # 查看实例属性
 print(people.height)  # 调用实例属性,查看该属性的值
-PePole.Features(people)  # class调用函数属性需要绑定实例对象
-PePole.trait(people)  # class调用函数属性
+PePole.Features(people)  # class调用实例方法需要绑定实例对象
+PePole.trait(people)  # class调用实例方法
 
 
 def handle():  # 对象(实例)调用函数属性的正确方式

@@ -1,4 +1,4 @@
-from web import division
+import division
 
 """test调用同级目录下的division模块"""
 def run():

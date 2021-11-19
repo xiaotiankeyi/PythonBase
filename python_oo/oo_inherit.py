@@ -1,9 +1,9 @@
-# 继承
+# 继承单继承和·多继承
 """
     python三大特性：继承\\多态\\封装
     概念：
         1、单继承、多继承
-        2、子类可以继承父类的函数属性及数据属性
+        2、子类可以继承父类的实例属性和实例方法及数据属性
         3、当子类中的数据属性和父类出现重名时,在调用时先在自身寻找
         4、两个概念 派生\\继承
     使用场景：当类之间有很多相同的功能，提取这些公共的功能做成基类，用继承较好
@@ -21,6 +21,7 @@ class Chinese:
 
 
 class Countries(Chinese):
+    height = "180cm"
 
     def __init__(self, name, state):
         self.name = name
@@ -30,10 +31,17 @@ class Countries(Chinese):
         return '%s所在的国家是%s，他的身高是%s,体重为%s,' % (
             self.name, self.state, self.height, self.weight)
 
+    def alter(self):
+        """和父类的数据属性出现重名命的值，优先调用自身的值"""
+        print(self.height)
+
 
 print(issubclass(Countries, Chinese))  # 判断是否是子类
 
 accept = Countries('jack', 'chinese')
+print(accept.alter())
+
+
 # print(accept.update(), accept.Features())
 # print(accept.Features())
 # print(accept.height)      #通过子类生成的对象去访问父类的数据属性。。。。
@@ -59,7 +67,18 @@ class Animal(object):
         return '会撒'
 
 
-class Cat(Animal):
+class Feature(object):
+
+    def running(self):
+        return "会跑"
+
+    def fight(self):
+        return "会打"
+
+
+
+# 多继承
+class Cat(Animal, Feature):
 
     def __init__(self, name):
         self.name = name
@@ -78,7 +97,8 @@ print(
     obj.drink(), '\n', '\t',
     obj.shit(), '\n', '\t',
     obj.pee(), '\n', '\t',
-    obj.cry()
+    obj.cry(), '\n', '\t',
+    obj.running(), '\n', '\t'
 )
 
 print(isinstance(obj, Cat))  # 判断obj是不是Cat实例化而来的
