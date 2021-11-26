@@ -8,6 +8,8 @@ from flask import Response
 import time
 from flask import redirect
 from flask import url_for
+from datetime import datetime
+from datetime import timedelta
 
 # 如果想要把客户端的文件名作为服务器上的文件名
 from werkzeug.utils import secure_filename
@@ -31,13 +33,17 @@ def login():
         print(pwd)
         if user == 'jack' and int(pwd) == 123456:
             res_cookies = make_response(redirect(url_for("page")))
-            cookies = f"{user}+{time.ctime()}"
-            res_cookies.set_cookie('cookies', cookies)
+            res_cookies.set_cookie('username', 'jack')
+            res_cookies.set_cookie('password', '123456', max_age=60)
+            time = datetime.now() + timedelta(days=10)
+            print(time)
+            res_cookies.set_cookie('token', '123456hdjahdauas&qwqwsd',expires=time)
+
             return res_cookies
         else:
-            return redirect(url_for("index"))
+            return render_template("send_file.html")
     else:
-        return "fail"
+        return render_template("send_file.html")
 
 
 @app.route("/page/")
