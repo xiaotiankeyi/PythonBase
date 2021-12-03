@@ -1,6 +1,7 @@
-# 列队
+# 在进程之间交换对象通信方式一 列队
 # 优点：可以进行并发执行，空间独立，数据安全
 # 缺点：创建和删除时占用资源多
+# 以下例子实现父进程和子进程之间的数据通信
 import os
 import queue
 import time
@@ -11,7 +12,8 @@ def foo(q):
     time.sleep(1)
     print("子进程", os.getpid())
     print('获得主进程添加的值--{}'.format(q.get()))
-    q.put('子进程添加了数字{}'.format(123))
+
+    q.put('子进程添加的数字{}'.format(123))
 
 
 if __name__ == '__main__':
@@ -26,4 +28,4 @@ if __name__ == '__main__':
     p.start()
     p.join()
 
-    print('{}获取{}'.format(os.getpid(), q.get()))
+    print('主进程{}获取{}'.format(os.getpid(), q.get()))

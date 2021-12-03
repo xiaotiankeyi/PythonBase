@@ -1,4 +1,4 @@
-# 进程通信
+# 在进程之间交换对象进行通信方式二  管道
 import multiprocessing
 import os
 import time
@@ -8,7 +8,7 @@ from multiprocessing import Pipe
 def foo(q1):
     time.sleep(1)
     print("子进程", os.getpid())
-    print('获得主进程添加的值--{}'.format(q1.recv()))
+    print('子进程获得主进程添加的值--{}'.format(q1.recv()))
     q1.send('子进程添加的数字{}'.format(123))
 
 
