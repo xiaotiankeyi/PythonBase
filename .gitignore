@@ -1,0 +1,3 @@
+# 忽略idea目录
+.idea/
+.DS_Store
