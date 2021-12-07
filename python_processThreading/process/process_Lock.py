@@ -6,15 +6,22 @@ import time
 
 
 def f(l, i):
-    try:
-        l.acquire()
-        time.sleep(0.5)
-        print('hello world %s' % i)
-    except Exception as err:
-        print(err)
-    finally:
-        l.release()
+    # try:
+    #     l.acquire()
+    #     time.sleep(0.5)
+    #     print('hello world %s' % i)
+    # except Exception as err:
+    #     print(err)
+    # finally:
+    #     l.release()
 
+    """look锁的第二种写法"""
+    with l:
+        try:
+            time.sleep(0.5)
+            print('hello world %s' % i)
+        except Exception as err:
+            print(err)
 
 if __name__ == "__main__":
     """解决FileNotFoundError: [Errno 2] No such file or directory发方法一,更换启动方式"""

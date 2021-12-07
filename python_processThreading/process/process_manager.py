@@ -7,14 +7,15 @@ from multiprocessing import Process
 
 def f(d, l, lock):
     with lock:
+        print(f"子进程{os.getpid()}开始做减法时count等于{d}")
         d["count"] -= 1
-        print(os.getppid(), "{1}子线程{0}".format(d, os.getpid()))
+        print(os.getppid(), "{0}子线程做减法后count等于{1}".format(os.getpid(), d))
         l.append(d['count'])
 
 
 if __name__ == '__main__':
     print("编辑器主进程{}".format(os.getppid()))
-    print('函数进程{}'.format(os.getpid()))
+    print('py文件进程{}'.format(os.getpid()))
 
     lock = Lock()
     with Manager() as manager:

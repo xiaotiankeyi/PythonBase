@@ -19,8 +19,7 @@ def Foo(task):
 
 def Bas(bas):
     """接收Foo返回的字符"""
-    print(os.getppid(), "result", os.getpid(), bas)
-
+    print(os.getppid(), "result", os.getpid(), "|", bas)
 
 if __name__ == "__main__":
     systemStart = time.time()
