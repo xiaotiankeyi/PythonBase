@@ -1,4 +1,4 @@
-# 装饰器和生成器
+# 装饰器
 
 def init(func):
     def wrapper(*args, **kwargs):

@@ -8,7 +8,7 @@ import time
 
 def sub():
     global num
-    print("当前执行的是:", threading.current_thread().getName())
+
     # 获得一个锁
     print("当前执行的是:", threading.current_thread().getName())
     lock.acquire()
@@ -38,5 +38,5 @@ if __name__ == "__main__":
     end_date = time.time()
     print(
         '主线程是运行:{},num是:{}'.format(
-            (start_date - end_date),
+            (end_date - start_date),
             num))  # 获取子线程的数据,和子线程数据同步

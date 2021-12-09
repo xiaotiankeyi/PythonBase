@@ -1,4 +1,4 @@
-# 类的形式实现线程
+# 自定义实现class实现线程方法
 
 from threading import Thread
 from time import sleep
@@ -18,7 +18,6 @@ class Function(Thread):
 
 
 if __name__ == "__main__":
-
     # 创建线程
     t1 = Function('t1')
     t2 = Function('t2')
@@ -26,3 +25,7 @@ if __name__ == "__main__":
     # 启动线程
     t1.start()
     t2.start()
+    t1.join()
+    t2.join()
+
+    print("当前py文件进程:", os.getpid())

@@ -12,20 +12,21 @@ import time
 
 def Hi(num):
     print("hello %d" % num)
-    time.sleep(3)
+    time.sleep(1)
 
 
 if __name__ == '__main__':
-
     t1 = threading.Thread(target=Hi, args=(10,))  # 创建了一个线程对象t1
     t1.start()
 
-    # t1.join()   #t1没完成就不运行主线程，
+    # t1.join()  # t1没完成就不运行主线程，
 
     t2 = threading.Thread(target=Hi, args=(9,))  # 创建了一个线程对象t1
     t2.start()
+    # t2.join()
 
     print("\nending..........")
+
 
     def record():
         """threading way threading 对象方法"""

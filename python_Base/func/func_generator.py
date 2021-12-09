@@ -16,6 +16,7 @@ print(type(n))
 for i in n:
     print(i)
 
+
 # 通过yield实现生成器
 def accept():
     for i in range(10):
@@ -29,6 +30,7 @@ print(all.__next__())
 print(next(all))
 print(next(all))
 
+
 # send的使用
 def result():
     print('开始执行....')
@@ -36,10 +38,11 @@ def result():
     print('接收send传回的值：', val)
     yield 33
 
+
 g = result()
 h = g.__next__()
 print(h)
-h =g.send('发送给yield')
+h = g.send('发送给yield')
 print(h)
 
 """通过yield自定义range迭代模式"""
