@@ -57,7 +57,7 @@ id = ''.join(str(i) for i in random.sample(range(0, 11), j))
 
 """随机生成字符串"""
 string = ''.join(i for i in random.sample(
-    'zyxwvutsrqponmlkjihgfedcbaABCDEFGHIJKLMNOPQRSTUVWX', 5))
+    'zyxwvutsrqponmlkjihgfedcbaABCDEFGHIJKLMNOPQRSTUVWX', random.randint(3, 5)))
 print(string)
 
 parameter = ''.join(str(i)
