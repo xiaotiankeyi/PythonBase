@@ -1,4 +1,7 @@
-"""创建一个列表，往里面添加10个元素"""
+"""
+    创建一个列表，往里面添加10个元素
+    列表推导式,更好的生成列表
+"""
 
 
 def create():
@@ -18,21 +21,11 @@ def create():
                 total.append(i * x)
     print(total)
     """列表推导式的表达式方式"""
-    count = [
-        i *
-        x for i in range(
-            1,
-            10) for x in range(
-            10,
-            20) if (
-                i *
-                x) %
-        2 == 0 and (
-                i *
-                x) > 100]
+    count = [i * x for i in range(1, 10) for x in range(10, 20) if (i * x) % 2 == 0 and (i * x) > 100]
     print(count)
 
-
+    list2 = [i for i in range(11) if i % 2 == 0]
+    print(list2)
 # create()
 
 

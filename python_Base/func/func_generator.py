@@ -1,6 +1,8 @@
 # 生成器
 """
 概念：
+    大白话：记录一个算法,可以一边循环,一边计算的一种机制
+
     生成器是能自动实现迭代器的协议，迭代器协议是必须提供一个next()方法
     举例：生成10个数字，第一个取1，第二个取2。。每个数字只能取一次。。。
     好处：可以省内存,效率高,节缩时间
@@ -11,8 +13,9 @@
 
 n = (i for i in range(10))
 print(type(n))
-# m = n
-# print(m.__next__())
+print('调用方式1:', next(n))
+print('调用方式2:', n.__next__())
+
 for i in n:
     print(i)
 
@@ -21,14 +24,15 @@ for i in n:
 def accept():
     for i in range(10):
         yield "鸡蛋%s" % i
-    print("结束")
+    pass
 
 
 all = accept()
 print(all)
-print(all.__next__())
 print(next(all))
 print(next(all))
+
+print("*" * 60)
 
 
 # send的使用

@@ -1,4 +1,15 @@
-"""自制迭代器"""
+"""
+    自制迭代器Iterator,
+    特点：能被next访问,并不断返回下一个元素对象
+    __iter__作用是可以让具备可迭代性的元素变为迭代器
+"""
+
+from collections import Iterable, Iterator
+
+num = 100
+if isinstance(num, Iterable):
+    """判断num变量是不是可迭代性"""
+    pass
 
 
 class Foo:
@@ -19,12 +30,14 @@ class Foo:
 
 f = Foo(1, 5)
 
+if isinstance(f, Iterator):
+    """判断是不是迭代器"""
 
-# print(f.__next__())
-# print(f.__next__())
+    print(f.__next__())
+    print(f.__next__())
 
-# for i in Foo(1,5):
-#     print(i)
+    # for i in Foo(1,5):
+    #     print(i)
 
 
 class Range:
