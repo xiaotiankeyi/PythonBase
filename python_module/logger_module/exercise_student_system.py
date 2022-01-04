@@ -1,11 +1,9 @@
 """
 ........学生系统2.0版本......
 """
-import time
-# import logging_test
-from python_module.logger_module import realize_logging
+from logging_dome import logging_cfg
 
-# logger = logging.getLogger("测试")
+logger = logging_cfg("学生系统")
 
 
 def handle():
@@ -27,12 +25,15 @@ def handle():
         '5': '显示学生',
         '6': '退出系统'
     }
+    dickey = [k for k in dic.keys()]
+    print(dickey)
     student = []
     while True:
         print("\t\t请输入需要进行操作的序号")
         num = input(">>>>>>> ").strip()
-        logger.info("用户选择的操作是·{}>>>>{}".format(num, dic[num]))
-        if num.isdecimal():
+        if num.isdecimal() and num in dickey:
+            logger.info("用户选择的操作是·{}>>>>{}".format(num, dic[num]))
+
             num = int(num)
             if num == 1:
                 collect = {}
@@ -82,19 +83,19 @@ def handle():
                     print("请输入要查找学生的名字或[q]退出")
                     seek_name = input(">>>>> ").strip()
                     logger.info("用户输入信息为·{}".format(seek_name))
-                    for n in student:
-                        if n["name"] == seek_name:
-                            print("姓名\t年龄\t性别")
-                            print(
-                                "%s\t\t%s\t\t%s" %
-                                (n["name"], n["age"], n["sex"]))
-                            tag = False
-                            break
-                        elif seek_name == "q":
-                            tag = False
-                            break
-                    else:
-                        print("...没有你要查找的学生,请重新输入 ")
+                    if all(seek_name) and seek_name != 'q':
+                        for n in student:
+                            if n["name"] == seek_name:
+                                print("姓名\t年龄\t性别")
+                                print(
+                                    "%s\t\t%s\t\t%s" %
+                                    (n["name"], n["age"], n["sex"]))
+                                break
+                            else:
+                                print("...没有你要查找的学生,请重新输入 ")
+                    elif seek_name == "q":
+                         tag = False
+
 
             elif num == 5:
                 print("\t表中信息如下>>>>")
@@ -116,6 +117,4 @@ def handle():
 
 
 if __name__ == "__main__":
-    # logging_test.load_my_logging_cfg()    #第一种日志格式
-    logger = realize_logging.handle()  # 第二种日志格式
     handle()

@@ -4,7 +4,7 @@ logging配置
 
 import os
 import logging.config
-
+import logging
 # 定义三种日志输出格式 开始
 
 standard_format = '[%(asctime)s],[%(threadName)s:%(thread)d],[task_id:%(name)s],[%(filename)s:%(lineno)d]' \
@@ -48,13 +48,13 @@ LOGGING_DIC = {
         # 打印到终端的日志
         'console': {
             'level': 'DEBUG',
-            'class': 'output_log.StreamHandler',  # 打印到屏幕
+            'class': 'logging.StreamHandler',  # 打印到屏幕
             'formatter': 'simple'
         },
         # 打印到文件的日志,收集info及以上的日志
         'default': {
             'level': 'DEBUG',
-            'class': 'output_log.handlers.RotatingFileHandler',  # 保存到文件
+            'class': 'logging.handlers.RotatingFileHandler',  # 保存到文件
             'mode': 'w',
             'formatter': 'standard',
             'filename': logfile_path,  # 日志文件
@@ -75,13 +75,13 @@ LOGGING_DIC = {
 }
 
 
-def load_my_logging_cfg():
+def logging_cfg(log_name):
     logging.config.dictConfig(LOGGING_DIC)  # 导入上面定义的logging配置
-    # logger = output_log.getLogger('测试')  # 生成一个log实例
+    logger = logging.getLogger(log_name)  # 生成一个log实例
     # logger.info('It works!')  # 记录该文件的运行状态
-
+    return logger
 
 if __name__ == '__main__':
-    load_my_logging_cfg()
+    logging_cfg("log_name")
 
 ##logging配置文件

@@ -14,7 +14,7 @@ debug =10
 import logging
 def handle():
     # 1、定义logger对象：负责产生日志，然后交给Filter过滤，然后在交给不同的Handler输出
-    logger = logging.getLogger()
+    logger = logging.getLogger(__name__)
     # logger.setLevel("DEBUG")
 
     # 2、Filter对象：不常用，略
@@ -29,7 +29,7 @@ def handle():
         "%(message)s", datefmt='%Y-%m-%d %H:%M:%S %p', )
 
     output_2 = logging.Formatter('%(asctime)s, %(levelname)s :  %(message)s',
-                                 datefmt='%Y-%m-%d %H:%M:%S %p', )
+                                      datefmt='%Y-%m-%d %H:%M:%S %p', )
 
     # 5、为Handler对象绑定格式
     h1.setFormatter(output_1)

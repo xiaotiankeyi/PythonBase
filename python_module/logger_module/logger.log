@@ -1,5 +1,14 @@
-2019-11-19 18:00:35 PM\realize_logging\DEBUG\10\MainThread:97100\realize_logging.py:48: debug
-2019-11-19 18:00:35 PM\realize_logging\INFO\20\MainThread:97100\realize_logging.py:49: info
-2019-11-19 18:00:35 PM\realize_logging\WARNING\30\MainThread:97100\realize_logging.py:50: warning
-2019-11-19 18:00:35 PM\realize_logging\ERROR\40\MainThread:97100\realize_logging.py:51: error
-2019-11-19 18:00:35 PM\realize_logging\CRITICAL\50\MainThread:97100\realize_logging.py:52: critical
+2021-12-28 10:32:38 AM\call_logging\DEBUG\10\MainThread:4611704320\call_logging.py:12: start range... time:1640658758.481786
+2021-12-28 10:32:38 AM\call_logging\INFO\20\MainThread:4611704320\call_logging.py:13: 中文测试开始。。。
+2021-12-28 10:32:38 AM\call_logging\DEBUG\10\MainThread:4611704320\call_logging.py:15: i:0
+2021-12-28 10:32:38 AM\call_logging\DEBUG\10\MainThread:4611704320\call_logging.py:15: i:1
+2021-12-28 10:32:38 AM\call_logging\DEBUG\10\MainThread:4611704320\call_logging.py:15: i:2
+2021-12-28 10:32:39 AM\call_logging\DEBUG\10\MainThread:4611704320\call_logging.py:15: i:3
+2021-12-28 10:32:39 AM\call_logging\DEBUG\10\MainThread:4611704320\call_logging.py:15: i:4
+2021-12-28 10:32:39 AM\call_logging\DEBUG\10\MainThread:4611704320\call_logging.py:15: i:5
+2021-12-28 10:32:39 AM\call_logging\DEBUG\10\MainThread:4611704320\call_logging.py:15: i:6
+2021-12-28 10:32:39 AM\call_logging\DEBUG\10\MainThread:4611704320\call_logging.py:15: i:7
+2021-12-28 10:32:40 AM\call_logging\DEBUG\10\MainThread:4611704320\call_logging.py:15: i:8
+2021-12-28 10:32:40 AM\call_logging\DEBUG\10\MainThread:4611704320\call_logging.py:15: i:9
+2021-12-28 10:32:40 AM\call_logging\DEBUG\10\MainThread:4611704320\call_logging.py:18: over range... time:1640658760.5176861
+2021-12-28 10:32:40 AM\call_logging\INFO\20\MainThread:4611704320\call_logging.py:19: 中文测试结束。。。
