@@ -8,13 +8,15 @@ def timmer(func):  # 第一步，目前形参是orange
     print('函数名称1:', func.__name__)
 
     def wrapper(*args, **kwargs):
-
+        print('值1', args)
+        print('值2', kwargs['age'])
         start_time = time.time()  # 第五步
         ret = func(*args, **kwargs)  # 第六步，运行orange
         stop_time = time.time()  # 第九步
 
         # print("运行的时间是%s " % (stop_time - start_time))  # 第十步
         # return ret  # "ret接收orange运行后的返回值"
+        print('orange运行后的返回值--->', ret)
 
         return "运行的时间是%s " % (stop_time - start_time)
 
@@ -33,5 +35,5 @@ def orange(name, age):
 
 if __name__ == "__main__":
     result = orange("jack", age=22)
-    print(result)
+    print('接收了包装器的返回值:', result)
     pass
