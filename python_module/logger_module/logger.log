@@ -1,5 +1,5 @@
 2021-12-28 10:32:38 AM\call_logging\DEBUG\10\MainThread:4611704320\call_logging.py:12: start range... time:1640658758.481786
-2021-12-28 10:32:38 AM\call_logging\INFO\20\MainThread:4611704320\call_logging.py:13: 中文测试开始。。。
+2021-12-28 10:32:38 AM\call_logging\INFO\20\MainThread:4611704320\call_logging.py:13: 中文测试开始,,,
 2021-12-28 10:32:38 AM\call_logging\DEBUG\10\MainThread:4611704320\call_logging.py:15: i:0
 2021-12-28 10:32:38 AM\call_logging\DEBUG\10\MainThread:4611704320\call_logging.py:15: i:1
 2021-12-28 10:32:38 AM\call_logging\DEBUG\10\MainThread:4611704320\call_logging.py:15: i:2
@@ -11,4 +11,4 @@
 2021-12-28 10:32:40 AM\call_logging\DEBUG\10\MainThread:4611704320\call_logging.py:15: i:8
 2021-12-28 10:32:40 AM\call_logging\DEBUG\10\MainThread:4611704320\call_logging.py:15: i:9
 2021-12-28 10:32:40 AM\call_logging\DEBUG\10\MainThread:4611704320\call_logging.py:18: over range... time:1640658760.5176861
-2021-12-28 10:32:40 AM\call_logging\INFO\20\MainThread:4611704320\call_logging.py:19: 中文测试结束。。。
+2021-12-28 10:32:40 AM\call_logging\INFO\20\MainThread:4611704320\call_logging.py:19: 中文测试结束,,,

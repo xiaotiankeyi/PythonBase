@@ -34,13 +34,13 @@ def index():
 
 
 """不使用语法堂的表现形式"""
-# ret = welcome(index)    #运行结束，获取login地址在赋值给ret
+# ret = welcome(index)    #运行结束,获取login地址在赋值给ret
 # ret()       #运行login
 
 
 @welcome
 def stopping(name):
-    print("这个%s的购物车。。。。" % name)
+    print("这个%s的购物车,,,," % name)
 
 
 """不使用语法堂的表达形式"""
@@ -50,7 +50,7 @@ def stopping(name):
 
 @welcome
 def oneself(name):
-    print("这是%s的个人中心。。。" % name)
+    print("这是%s的个人中心,,," % name)
 
 
 index()

@@ -1,8 +1,8 @@
 # class的组合
 """
-概念：大类中包含小类
-    使用场景：当类之间有显著的不同，并且较小的类是较大的类所需要的组件时，用组合
-    2、将另外一个对象作为自己的属性成员（自己的一个属性来自于另外一个对象），这就是组合
+概念:大类中包含小类
+    使用场景:当类之间有显著的不同,并且较小的类是较大的类所需要的组件时,用组合
+    2、将另外一个对象作为自己的属性成员（自己的一个属性来自于另外一个对象）,这就是组合
 """
 
 
@@ -43,9 +43,9 @@ while True:
     school_obj = menu[choice]
     print(school_obj)
 
-    name = input('课程名>>： ')
-    price = input('课程费用>>： ')
-    period = input('课程周期>>： ')
+    name = input('课程名>>: ')
+    price = input('课程费用>>: ')
+    period = input('课程周期>>: ')
 
     new_course = Course(name, price, period, school_obj)
     print(

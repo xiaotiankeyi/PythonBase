@@ -6,7 +6,7 @@ print(number)
 # ____type()___看看是什么数字类型
 print(type(number), number)
 
-# ____bit_length____当前数字的二进制，至少用几位来表示
+# ____bit_length____当前数字的二进制,至少用几位来表示
 age = 2121
 num = age.bit_length()
 print(num)

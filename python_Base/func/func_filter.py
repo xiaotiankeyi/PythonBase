@@ -24,4 +24,4 @@ print(strip(lambda x: x.startswith("sb"), people))
 """第三种方法"""
 network = filter(lambda n: not n.startswith("sb"), people)
 # print(list(network))
-"""filter对获取的值做bool判断，，当字符串是以'sb'开头的就不添加进列表array,当字符串不是以'sb'开头就添加进列表array"""
+"""filter对获取的值做bool判断,,当字符串是以'sb'开头的就不添加进列表array,当字符串不是以'sb'开头就添加进列表array"""

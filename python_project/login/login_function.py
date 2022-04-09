@@ -28,8 +28,8 @@ def login():
     logger.info('欢迎登录')
     tag = True
     while tag:
-        username = input(">>>请输入用户名：").strip()
-        password = input(">>>请输入密码：").strip()
+        username = input(">>>请输入用户名:").strip()
+        password = input(">>>请输入密码:").strip()
         m = hashlib.md5()
         m.update(password.encode("utf8"))
         hash = m.hexdigest()

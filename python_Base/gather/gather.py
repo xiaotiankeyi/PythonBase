@@ -3,7 +3,7 @@
     1、不同元素组成
     2、无序
     3、不能存在重复的
-    4、不可变类型，只能定义(str，int，tuple)
+    4、不可变类型,只能定义(str,int,tuple)
     3、集合支持for循环
 '''
 num = {3, 4, 5, 7, 1, 9, 0, "request", "response"}
@@ -26,7 +26,7 @@ print('返回删除的值',num.pop())
 # ___remove___指定字符删除,不存在就报error
 num.remove(2)
 
-# ___discard___指定字符删除，不存在不会受到影响
+# ___discard___指定字符删除,不存在不会受到影响
 num.discard("request")
 
 # ___set___集合的去重操作

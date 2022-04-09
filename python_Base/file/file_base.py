@@ -58,14 +58,14 @@ with open('shopping.txt') as f:
         text.append(goods_info)
     print("商品", text)
 
-# 1.总共花了多少钱：
+# 1.总共花了多少钱:
 total = 0
 for item in text:
     # print(item)
     total += item['price'] * item['count']
 print("加起来一共花了 %s" % total)
 
-# 3.求单价大于10000的商品信息，格式同上
+# 3.求单价大于10000的商品信息,格式同上
 """列表推导式表达"""
 info = [item for item in text if item['price'] > 10000]
 print("价格大于10000的商品有", info)

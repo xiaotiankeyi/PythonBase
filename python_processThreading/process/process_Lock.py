@@ -1,5 +1,5 @@
 # 进程Lock同步锁
-# 作用,以使用锁来确保一次只有一个进程打印到标准输出,不使用锁的情况下，来自于多进程的输出很容易产生混淆。
+# 作用,以使用锁来确保一次只有一个进程打印到标准输出,不使用锁的情况下,来自于多进程的输出很容易产生混淆,
 import multiprocessing
 from multiprocessing import Process, Lock
 import time

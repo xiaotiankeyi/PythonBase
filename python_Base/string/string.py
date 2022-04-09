@@ -21,7 +21,7 @@ print(coding.endswith('d'))
 # ___startswith___已什么开头
 print(coding.startswith('P'))
 
-# ___find___查找'ed'的索引，在13至16个字符之间查找.....
+# ___find___查找'ed'的索引,在13至16个字符之间查找.....
 print(coding.find('edjj', 13, 16))
 
 test = 'i an {name}, age {a}'
@@ -37,18 +37,18 @@ print(school.replace('_', ',', 2))
 telephone = "181-7274-5976"
 print(telephone.replace(telephone[0:9], "*" * 9))
 
-# ___title___先把'_'替换为','。。在每个单词的(首字母大写)
+# ___title___先把'_'替换为',',,在每个单词的(首字母大写)
 print(school.replace('_', ',').title())
 
 list = ['root', 'x', '0', '0', '', '/root', '/bin/bash']
-# ___join___字符串被插入到每个给定字符串之间。。如':'代替了','
+# ___join___字符串被插入到每个给定字符串之间,,如':'代替了','
 list_1 = ':'.join(list)
 print(type(list_1), '\t\t', list_1)
 a = ','
 b = '23342423'
 print(a.join(b))
 
-# ___expandtabs___断句。。当字符串中有'\t'时，不够时'\t'补齐，
+# ___expandtabs___断句,,当字符串中有'\t'时,不够时'\t'补齐,
 message = 'username\te_mail\tpassword\njack\tasdns@163.com\t123456\ntom\tasdns@163.com\t123456'
 print(message.expandtabs(10))
 
@@ -61,7 +61,7 @@ msg_1 = 'net'
 print(msg_1.upper())
 
 # ------------------------------------------------------------
-'''最常用的字符串操作方法。。。。
+'''最常用的字符串操作方法,,,,
 join
 split
 find

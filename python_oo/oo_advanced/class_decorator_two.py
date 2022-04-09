@@ -1,4 +1,4 @@
-# 实现类装饰器，为函数增加新的功能
+# 实现类装饰器,为函数增加新的功能
 
 class Family(object):
     def __init__(self, func):

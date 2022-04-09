@@ -8,7 +8,7 @@ class Foo(object):
 
     def __repr__(self):
         # objList = [obj, obj1]打印的是return值
-        return f'在打印类的时候，控制类的输出......'
+        return f'在打印类的时候,控制类的输出......'
 
 
 if __name__ == "__main__":

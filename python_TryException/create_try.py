@@ -7,7 +7,7 @@ class Error(BaseException):
 
 if __name__ == "__main__":
     try:
-        # 知识点：主动抛出异常，就是实例化一个异常类
+        # 知识点:主动抛出异常,就是实例化一个异常类
         accept = input("please input: ")
         if len(accept) < 5:
             raise Error(len(accept), 5)
@@ -18,7 +18,7 @@ if __name__ == "__main__":
         print("The end of the")
 
     try:
-        # 知识点：主动抛出异常，就是实例化一个异常类
+        # 知识点:主动抛出异常,就是实例化一个异常类
         accept = input("please input: ")
         if not isinstance(accept, str):
             raise Error(type(accept), str)
@@ -27,4 +27,4 @@ if __name__ == "__main__":
     else:
         print("The end of the")
     finally:
-        print('我都会执行。。。')
+        print('我都会执行,,,')

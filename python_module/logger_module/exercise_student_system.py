@@ -38,8 +38,8 @@ def handle():
             if num == 1:
                 collect = {}
 
-                name = input("请输入要添加学生的名字：").strip()
-                age = input("请输入要添加的学生年龄：").strip()
+                name = input("请输入要添加学生的名字:").strip()
+                age = input("请输入要添加的学生年龄:").strip()
                 sex = input("请输入要添加的学生性别: ").strip()
 
                 collect["name"] = name

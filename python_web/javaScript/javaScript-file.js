@@ -1,2 +1,2 @@
-alert("文件导入，hello world");
+alert("文件导入,hello world");
 

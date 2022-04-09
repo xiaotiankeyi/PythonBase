@@ -16,8 +16,8 @@ body{
     display: block;
 }
 .header-fix {
-    position: fixed;            /*绝对定位，相对于浏览器窗口进行定位*/
-    /*position:absolute;*/      /*绝对定位，相对于 static 定位以外的第一个父元素进行定位。*/
+    position: fixed;            /*绝对定位,相对于浏览器窗口进行定位*/
+    /*position:absolute;*/      /*绝对定位,相对于 static 定位以外的第一个父元素进行定位,*/
     width: 100%;        /*宽度*/
     top: 0;
     z-index: 53;    /*设置图像的 z-index*/
@@ -47,7 +47,7 @@ header{
     clear: both;        /*图像的左侧和右侧均不允许出现浮动元素*/
     /*visibility: hidden;     !*使元素不可见*!*/
 }
-/*.clearfix:hover{        !*选择鼠标指针浮动在其上的元素，并设置其样式：*!*/
+/*.clearfix:hover{        !*选择鼠标指针浮动在其上的元素,并设置其样式:*!*/
 /*        color: red;*/
 /*}*/
 header .logo-icon{
@@ -71,7 +71,7 @@ header .logo-con .logo-txt{
     margin-left: 12px;
     width: 112px;
     height: 22px;
-    position: relative;     /*	生成相对定位的元素，相对于其正常位置进行定位*/
+    position: relative;     /*	生成相对定位的元素,相对于其正常位置进行定位*/
     top: -7px;
 }
 nav{
@@ -148,7 +148,7 @@ header .publish-btn {
     border-radius: 2px;
     border: 1px solid #f8aa00;
     cursor: pointer;                    /*光标样式*/
-    transition: all .2s ease-in-out;            /*将鼠标悬停在一个 div 元素上，逐步改变表格的宽度*/
+    transition: all .2s ease-in-out;            /*将鼠标悬停在一个 div 元素上,逐步改变表格的宽度*/
     background-color: #f8aa00;
     color: #fff;
 }
@@ -185,7 +185,7 @@ header .search .search-icon{
     top: 8px;
     right: 12px;
     cursor: pointer;
-    background-size: 100%;      /*指定背景图像的大小：*/
+    background-size: 100%;      /*指定背景图像的大小:*/
     background-image: url("../../images/search-7acb7b9349.png");
 }
 

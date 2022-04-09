@@ -19,10 +19,10 @@
                    // 规定请求的类型（GET 或 POST）
                    type:'post',
 
-                   // 规定发送请求的 URL。默认是当前页面
+                   // 规定发送请求的 URL,默认是当前页面
                    url:"/string2/",
 
-                   // 布尔值，表示请求是否异步处理。默认是 true
+                   // 布尔值,表示请求是否异步处理,默认是 true
                    async:true,
 
                    // 预期的服务器响应的数据类型
@@ -35,13 +35,13 @@
                    contentType:"application/json;charset=utf-8",
                    data:data,
 
-                   // 布尔值，表示浏览器是否缓存被请求页面。默认是true
+                   // 布尔值,表示浏览器是否缓存被请求页面,默认是true
                    cache: false,
 
-                   // 布尔值，规定通过请求发送的数据是否转换为查询字符串。默认是true
+                   // 布尔值,规定通过请求发送的数据是否转换为查询字符串,默认是true
                    processData:true,
 
-                   // 发送请求前运行的函数。
+                   // 发送请求前运行的函数,
                    // beforeSend:beforeSend,
 
                    // 设置本地的请求超时时
@@ -68,7 +68,7 @@
                        console.log(error)
                    },
 
-                   // 请求完成时运行的函数（在请求成功或失败之后均调用，即在 success 和 error 函数之后
+                   // 请求完成时运行的函数（在请求成功或失败之后均调用,即在 success 和 error 函数之后
                    complete:function (xhr,status){
                        // console.log(status)
                        // console.log(xhr)
@@ -104,9 +104,9 @@
 </head>
     <body>
         <form id="say">
-            用户名：<input type="text" id="name">
+            用户名:<input type="text" id="name">
             <br>
-            密码：<input type="text" id="pwd">
+            密码:<input type="text" id="pwd">
         </form>
         <br>
         <input type="submit" value="提交">

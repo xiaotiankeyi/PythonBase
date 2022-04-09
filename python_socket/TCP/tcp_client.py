@@ -19,10 +19,10 @@ while True:
 
     # 解决粘包
     length_data = tcp_client.recv(4)
-    # print('输出：', length_data)
+    # print('输出:', length_data)
 
     length = struct.unpack('i', length_data)[0]
-    # print('输出二：', length)
+    # print('输出二:', length)
 
     recv_size = 0
     recv_msg = b''

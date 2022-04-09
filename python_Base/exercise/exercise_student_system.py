@@ -3,7 +3,7 @@ import os
 
 from python_Base.exercise import exercise_student_modify  # 调用同级目录下的exercise来实现修改功能
 
-# 定一个列表，用来存储所有的学生信息(每个学生是一个字典)
+# 定一个列表,用来存储所有的学生信息(每个学生是一个字典)
 info_list = []
 
 
@@ -31,9 +31,9 @@ def add_new_info():
     for temp_info in info_list:
         if temp_info['name'] == new_name:
             print("此用户名已经被占用,请重新输入------")
-            return add_new_info()  # 如果一个函数只有return就相当于让函数结束，没有返回值
+            return add_new_info()  # 如果一个函数只有return就相当于让函数结束,没有返回值
 
-    # 定义一个字典，用来存储用户的学生信息(这是一个字典)
+    # 定义一个字典,用来存储用户的学生信息(这是一个字典)
     info = {}
 
     # 向字典中添加数据及定义keys
@@ -50,9 +50,9 @@ def del_info():
     """删除学生信息"""
     global info_list
 
-    del_num = int(input("请输入要删除的序号： "))
+    del_num = int(input("请输入要删除的序号: "))
     if 0 <= del_num < len(info_list):
-        del_flag = input("你确定要删除么?yes or no： ")
+        del_flag = input("你确定要删除么?yes or no: ")
         if del_flag == "yes":
             del info_list[del_num]
     else:
@@ -80,7 +80,7 @@ def amend():
 
 def search_info():
     """查询学生信息"""
-    search_name = input("请输入要查询的学生姓名： ")
+    search_name = input("请输入要查询的学生姓名: ")
     for temp_info in info_list:
         if temp_info['name'] == search_name:
             print("查询到的信息如下:")
@@ -135,7 +135,7 @@ def main():
         print_menu()
 
         # 2. 获取用户的选择
-        num = input("请输入要进行的操作(数字)： ")
+        num = input("请输入要进行的操作(数字): ")
 
         # 3. 根据用户选择,做相应的事情
         if num == "1":

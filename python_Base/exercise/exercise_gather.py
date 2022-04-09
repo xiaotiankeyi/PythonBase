@@ -1,7 +1,7 @@
 # 集合
 """
 一.关系运算
-　　有如下两个集合，pythons是报名python课程的学员名字集合，linuxs是报名linux课程的学员名字集合
+　　有如下两个集合,pythons是报名python课程的学员名字集合,linuxs是报名linux课程的学员名字集合
 　　pythons={'alex','egon','yuanhao','wupeiqi','gangdan','biubiu'}
 　　linuxs={'wupeiqi','oldboy','gangdan'}"""
 

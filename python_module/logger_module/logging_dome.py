@@ -60,14 +60,14 @@ LOGGING_DIC = {
             'filename': logfile_path,  # 日志文件
             'maxBytes': 1024 * 1024 * 5,  # 日志大小 5M
             'backupCount': 5,
-            'encoding': 'utf-8',  # 日志文件的编码，再也不用担心中文log乱码了
+            'encoding': 'utf-8',  # 日志文件的编码,再也不用担心中文log乱码了
         },
     },
     # 产生日志的对象
     'loggers': {
         # output_log.getLogger(__name__)拿到的logger配置
         '': {
-            'handlers': ['default', 'console'],  # 这里把上面定义的两个handler都加上，即log数据既写入文件又打印到屏幕
+            'handlers': ['default', 'console'],  # 这里把上面定义的两个handler都加上,即log数据既写入文件又打印到屏幕
             'level': 'DEBUG',
             'propagate': True,  # 向上（更高level的logger）传递
         },

@@ -12,7 +12,7 @@ tcp_server.bind(ip_port)
 tcp_server.listen(back_log)     # 设置最大链接数
 
 while True:
-    conn, addr = tcp_server.accept()    # 等待接收socket连接，conn新的套节字用于数据的收发
+    conn, addr = tcp_server.accept()    # 等待接收socket连接,conn新的套节字用于数据的收发
     print('新的客户端链接', addr)
     while True:
         # 收
@@ -22,7 +22,7 @@ while True:
                 break
             print('收到客户端的命令', cmd)
 
-            # 执行命令，得到命令的运行结果cmd_res
+            # 执行命令,得到命令的运行结果cmd_res
             res = subprocess.Popen(cmd.decode('utf-8'), shell=True,
                                    stderr=subprocess.PIPE,
                                    stdout=subprocess.PIPE,

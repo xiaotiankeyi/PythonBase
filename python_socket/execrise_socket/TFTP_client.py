@@ -1,4 +1,4 @@
-# struct模块可以按照指定格式将python数据转换为字符串，该字符串为字节流
+# struct模块可以按照指定格式将python数据转换为字符串,该字符串为字节流
 # pack()包装字节流, unpack()解析字节流, calcsize()计算给定的格式占用多少字节
 
 from socket import *

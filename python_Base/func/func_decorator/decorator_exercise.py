@@ -1,6 +1,6 @@
 """自制装饰器"""
 
-"""实现判断执行的函数是否有返回值，并且获取其返回值...."""
+"""实现判断执行的函数是否有返回值,并且获取其返回值...."""
 
 
 def create(function):
@@ -9,21 +9,21 @@ def create(function):
         if v is None:  # 这个函数就是use在运行
             print('use没有返回值')
         else:
-            return '有返回值,且返回的值为：%s' % v
+            return '有返回值,且返回的值为:%s' % v
 
     return add
 
 
-@create  # 处理逻辑为：use = create(use)
+@create  # 处理逻辑为:use = create(use)
 def use():  # use()
     def output():
-        # print("最后输出结果为。。。")
+        # print("最后输出结果为,,,")
         return '哈哈'
 
     return output()
 
 
-print(use())  # 通过return add我获取了函数add的地址，现在运行add
+print(use())  # 通过return add我获取了函数add的地址,现在运行add
 
 """实现判断传入的参数有哪些类型"""
 

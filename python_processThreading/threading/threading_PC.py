@@ -1,4 +1,4 @@
-# 生产者消费者模式，保持相互之间的平衡
+# 生产者消费者模式,保持相互之间的平衡
 
 from threading import Thread
 from queue import Queue

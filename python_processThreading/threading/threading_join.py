@@ -1,5 +1,5 @@
 # join
-# 主线程不等子线程，会先提前结束运行，可以通过join等待子进程
+# 主线程不等子线程,会先提前结束运行,可以通过join等待子进程
 import threading
 from threading import Thread
 from time import sleep, time
@@ -33,6 +33,6 @@ if __name__ == "__main__":
 
     # 结束计时
     date_end = time() - date_start
-    print('所用时间：{}'.format(date_end))
+    print('所用时间:{}'.format(date_end))
 
     print('主线程:{}'.format(os.getpid()))

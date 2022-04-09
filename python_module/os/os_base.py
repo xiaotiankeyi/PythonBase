@@ -9,7 +9,7 @@ print(os.getcwd())
 """可生成多层递归目录"""
 # os.makedirs("dirname1/dirname2")
 
-"""可递归删除空目录,上级目录也为空也就删除，以此类推"""
+"""可递归删除空目录,上级目录也为空也就删除,以此类推"""
 time.sleep(2)
 # os.removedirs(r"C:/Users/admin/PycharmProjects/python/python_module/os/dirname1/dirname2")
 
