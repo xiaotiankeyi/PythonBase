@@ -5,25 +5,25 @@ warning =30
 info = 20
 debug =10
 '''
-"""先定义一个操作实例(logger对象)，在定义日志输出方式(Handler对象)，在定义日志输出格式(Formatter对象)，
-在为输出方式绑定输出格式(Handler.setFormatter(Formatter对象))，然后添加到实例中(logger.addHandler(Handler对象+Formatter对象)"""
+"""先定义一个操作实例(logger对象),在定义日志输出方式(Handler对象),在定义日志输出格式(Formatter对象),
+在为输出方式绑定输出格式(Handler.setFormatter(Formatter对象)),然后添加到实例中(logger.addHandler(Handler对象+Formatter对象)"""
 
 
 
 
 import logging
 def handle():
-    # 1、定义logger对象：负责产生日志，然后交给Filter过滤，然后在交给不同的Handler输出
+    # 1、定义logger对象:负责产生日志,然后交给Filter过滤,然后在交给不同的Handler输出
     logger = logging.getLogger(__name__)
     # logger.setLevel("DEBUG")
 
-    # 2、Filter对象：不常用，略
+    # 2、Filter对象:不常用,略
 
-    # 3、Handler对象：接收logger传来的日志，然后控制输出
+    # 3、Handler对象:接收logger传来的日志,然后控制输出
     h1 = logging.FileHandler('logger.log', 'w', encoding='utf8')  # 打印到文件
     # h2 = output_log.StreamHandler()  # 打印到终端
 
-    # 4、Formatter对象：日志格式
+    # 4、Formatter对象:日志格式
     output_1 = logging.Formatter(
         r"%(asctime)s\%(module)s\%(levelname)s\%(levelno)s\%(threadName)s:%(thread)d\%(filename)s:%(lineno)d: "
         "%(message)s", datefmt='%Y-%m-%d %H:%M:%S %p', )

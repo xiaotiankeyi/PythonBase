@@ -14,7 +14,7 @@ class Application(Frame):
         self.createWidget()
 
     def createWidget(self):
-        """创建Checkbutton_多选标签，选中还回1，不选中还回0"""
+        """创建Checkbutton_多选标签,选中还回1,不选中还回0"""
 
         self.tomato = IntVar()
         self.r1 = Checkbutton(

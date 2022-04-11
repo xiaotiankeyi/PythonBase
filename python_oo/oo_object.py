@@ -15,7 +15,7 @@ class PePole(object):
 
     def Features(self):
         # return '%s会走,会跑,会吃,会睡觉' % self.user
-        print('%s的%s是他是个人，他会走,会跑,会吃,会睡觉' % (self.user, self.status,))
+        print('%s的%s是他是个人,他会走,会跑,会吃,会睡觉' % (self.user, self.status,))
 
     def trait(self):
         print("{}的性别是{}".format(self.user, self.sex))

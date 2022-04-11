@@ -1,8 +1,8 @@
-# 反射，与及对字典的操作
-# 概念：1、反射底层操作就是操作__dict__
+# 反射,与及对字典的操作
+# 概念:1、反射底层操作就是操作__dict__
 # 自定义__setattr__现实对传入参数的验证
 # 反射就是对hasattr和getattr的应用
-# 注意，hasattr的应用，查找不存在的函数本来返回false，但是如果自定义了__getattr__就不报错，结果返回了true
+# 注意,hasattr的应用,查找不存在的函数本来返回false,但是如果自定义了__getattr__就不报错,结果返回了true
 
 
 class Chinese:
@@ -40,13 +40,13 @@ if __name__ == "__main__":
     people = Chinese("1.65m", 62)
     print(people.__dict__)
 
-    # hasattr判断对象people是否有相应的实例属性或是函数属性，有就返回true  # 同样适用于类
+    # hasattr判断对象people是否有相应的实例属性或是函数属性,有就返回true  # 同样适用于类
     print(hasattr(people, 'height'))
     print(hasattr(people, 'Features'))
 
-    # getattr判断对象people是否有相应的实例属性或是函数属性，有就返回value，或是返回函数地址
+    # getattr判断对象people是否有相应的实例属性或是函数属性,有就返回value,或是返回函数地址
     print(getattr(people, 'height'))        # 有就返回value
-    print(getattr(people, 'Features1', ))  # 检查函数方法，有就返回函数地址，没找到就返回错误
+    print(getattr(people, 'Features1', ))  # 检查函数方法,有就返回函数地址,没找到就返回错误
 
     # 为实例对象添加实例属性或是修改属性
     setattr(people, 'name', 'jack')

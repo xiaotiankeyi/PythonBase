@@ -10,7 +10,7 @@ def strip():
         print('请输入纯数字.......')
 
 
-'''输入一个参数，计算出索引和显示出索引对应的字符'''
+'''输入一个参数,计算出索引和显示出索引对应的字符'''
 
 
 def splat():
@@ -19,7 +19,7 @@ def splat():
         print(item, test[item])
 
 
-"""开发敏感过滤器。。出现敏感词汇后替换成*****显示"""
+"""开发敏感过滤器,,出现敏感词汇后替换成*****显示"""
 
 
 def character():
@@ -75,7 +75,7 @@ def tables():
 
 '''
 分页显示内容:
-        a.通过for循环创建301条数据,数据类型不限。。。如
+        a.通过for循环创建301条数据,数据类型不限,,,如
             alex1   alex1@163.com   pad1
         b.提示用户输入页面,在显示输入页面的内容......
         (每一页只显示10条内容)
@@ -106,7 +106,7 @@ def group():
         print(item.replace(":", "="), type(item))
 
 
-"""2 统计s='hello alex alex say hello sb sb'中每个单词的个数,结果如：{'hello': 2, 'alex': 2, 'say': 1, 'sb': 2}"""
+"""2 统计s='hello alex alex say hello sb sb'中每个单词的个数,结果如:{'hello': 2, 'alex': 2, 'say': 1, 'sb': 2}"""
 
 
 def stop():

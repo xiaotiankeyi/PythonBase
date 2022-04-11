@@ -15,7 +15,7 @@ def foo(q1):
 if __name__ == '__main__':
     # 主进程运行部分
     print("主进程", os.getpid())
-    q1, q2 = Pipe()  # p1传递给子线程，p2主进程运行
+    q1, q2 = Pipe()  # p1传递给子线程,p2主进程运行
     q2.send('主进程添加了{}'.format(os.getpid()))
 
     # 子进程运行部分

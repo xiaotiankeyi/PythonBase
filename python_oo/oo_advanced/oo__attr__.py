@@ -1,8 +1,8 @@
 # getattr/setattr应用
 """
-    概念：
+    概念:
         1、python内置的方法
-        2、在不自己设定的时候，python就执行默认的设定
+        2、在不自己设定的时候,python就执行默认的设定
 """
 
 class Chinese(object):

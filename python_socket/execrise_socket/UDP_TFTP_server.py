@@ -51,7 +51,7 @@ def UDP_server():
             response_card, flieNum_card = struct.unpack(
                 "!HH", recvdata[:4])  # 获取确认包的操作码和块编号
             if response_card != 4 or flieNum_card != file_card:
-                print("文件传输错误。。。。")
+                print("文件传输错误,,,,")
                 break
 
     f.close()

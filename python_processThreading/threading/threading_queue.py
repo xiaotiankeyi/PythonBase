@@ -1,10 +1,10 @@
-# 概念： 针对多线性应用，队列是一种数据结构，
+# 概念: 针对多线性应用,队列是一种数据结构,
 
 import queue  # 线程队列
 
 
 def one():
-    q = queue.Queue(4)  # 三种储存取值模式，先进先出
+    q = queue.Queue(4)  # 三种储存取值模式,先进先出
 
     # 方法
     # print(q.qsize())  # 队列大小
@@ -17,7 +17,7 @@ def one():
     q.put({"name": "yuan"})
 
     for i in range(4):
-        # q.get(block=False)   读取数据，队列为空时不报错
+        # q.get(block=False)   读取数据,队列为空时不报错
         data = q.get(block=True, timeout=2)
         # data = q.get_nowait()   #队列为空时报错
         print(data)
@@ -37,7 +37,7 @@ def two():
 
 
 def three():
-    # 优先级，根据设定好的索引取值
+    # 优先级,根据设定好的索引取值
     f = queue.PriorityQueue()
     f.put((1, 12))
     f.put((3, "hello"))

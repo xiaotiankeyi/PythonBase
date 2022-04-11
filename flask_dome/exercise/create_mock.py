@@ -5,7 +5,7 @@ import pymysql
 
 from hashlib_password import encryption
 
-server = flask.flask(__name__)  # 把当前这个python文件，当做一个服务，定义Server(启动服务)
+server = flask.flask(__name__)  # 把当前这个python文件,当做一个服务,定义Server(启动服务)
 
 
 def my_db(sql):
@@ -30,10 +30,10 @@ def my_db(sql):
     return res
 
 
-@server.route('/index/', methods=['get'])  # 接口装饰器，get请求
+@server.route('/index/', methods=['get'])  # 接口装饰器,get请求
 def index():
     res = {'msg': '这是我开发的第一个接口', 'msg_code': 0}  # 定义一个字典
-    # 将字典转化成json串，ensure_ascii=False将unicode转成十进制
+    # 将字典转化成json串,ensure_ascii=False将unicode转成十进制
     return json.dumps(res, ensure_ascii=False)
 
 
@@ -67,7 +67,7 @@ def reg():
             my_db(insert_sql)
             res = {'msg': '注册成功！', 'msg_code': 0}
     else:
-        res = {'msg': '必填字段未填，请查看接口文档！', 'msg_code': 1001}
+        res = {'msg': '必填字段未填,请查看接口文档！', 'msg_code': 1001}
         # 1001必填字段未填
     return json.dumps(res, ensure_ascii=False)
 
@@ -145,8 +145,8 @@ def select():
 
 
 server.run(port=7777, debug=True, host='localhost')
-# 启动服务。debug=True，改了代码之后，不用重启它会自动帮你重启redis
-# host=0.0.0.0表示别人访问的时候，用你的ip就可以访问了。
+# 启动服务,debug=True,改了代码之后,不用重启它会自动帮你重启redis
+# host=0.0.0.0表示别人访问的时候,用你的ip就可以访问了,
 
 if __name__ == "__main__":
     # sql = "SELECT * FROM my_user;"

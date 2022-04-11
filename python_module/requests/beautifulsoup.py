@@ -21,9 +21,9 @@ def test_login():
     soup = BeautifulSoup(html, 'html.parser')
 
     print(soup)
-    print('获取文本值：', soup.find('a', id='logout').get_text())
-    print('通过ID属性搜索a标签：', soup.find_all('a', id='logout'))
-    print('通过class属性来搜索span标签：', soup.find_all(
+    print('获取文本值:', soup.find('a', id='logout').get_text())
+    print('通过ID属性搜索a标签:', soup.find_all('a', id='logout'))
+    print('通过class属性来搜索span标签:', soup.find_all(
         'span', class_='gensmall')[0].string)
 
     # for item in soup.find_all('a'):

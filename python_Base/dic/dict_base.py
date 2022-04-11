@@ -1,10 +1,10 @@
 '''
 dict概念:
-        ___values的可以是任何值、任何对象。。
-        ___dict是无序的。。。
+        ___values的可以是任何值、任何对象,,
+        ___dict是无序的,,,
         ___dict支持del删除
         ___支持(in)判断方法
-        ___key键不可变，一般是唯一的,用(数字,字符串，元祖)充当
+        ___key键不可变,一般是唯一的,用(数字,字符串,元祖)充当
 '''
 
 
@@ -16,7 +16,7 @@ def handle():
     v = dict.fromkeys(['a', 's', 'v'], 32)
     print(v)
 
-    # ___get___根据key在字典中找values值，，找不到不报错、、、返回None
+    # ___get___根据key在字典中找values值,,找不到不报错、、、返回None
     print(my_dict.get('sds'))
 
     """删除字典"""

@@ -1,9 +1,9 @@
-# 概念：包装，对现有的属性进行重新设定
+# 概念:包装,对现有的属性进行重新设定
 
 
-class List(list):  # 继承list所有的属性，也可以派生出自己新的list方法，比如对append重新定义和mid
+class List(list):  # 继承list所有的属性,也可以派生出自己新的list方法,比如对append重新定义和mid
     def append(self, p_object):
-        """派生自己的append：加上类型检查"""
+        """派生自己的append:加上类型检查"""
         if not isinstance(p_object, int):
             """判断要添加的参数是不是int类型"""
             raise TypeError('must be int')
@@ -21,7 +21,7 @@ l = List([1, 2, 3, 4, 6, 3, 78])
 l.append(5)
 print(l)
 
-# l.append('1111111')  # 报错，必须为int类型
+# l.append('1111111')  # 报错,必须为int类型
 
 print(l.mid())
 

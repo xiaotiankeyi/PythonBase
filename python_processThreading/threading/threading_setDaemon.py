@@ -1,5 +1,5 @@
 """关于setDaemon(守护线程)
-需求：主线程完成了，子线程不管你完成没完成也结束，所以子线程要设置为守护线程
+需求:主线程完成了,子线程不管你完成没完成也结束,所以子线程要设置为守护线程
 """
 import threading
 from time import ctime, sleep
@@ -32,5 +32,5 @@ if __name__ == '__main__':
     for t in threads:
         t.start()
 
-    print("\n主线程关闭：all over %s" % ctime())  # 属于主线程的内容
+    print("\n主线程关闭:all over %s" % ctime())  # 属于主线程的内容
     pass

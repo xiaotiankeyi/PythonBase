@@ -9,7 +9,7 @@ class Chinese:
         self.area = area
 
     def Features(self):
-        return '父类方法，他的体重是%skg，身高是%sm' % (self.weight, self.height)
+        return '父类方法,他的体重是%skg,身高是%sm' % (self.weight, self.height)
 
     def run(self):
         print('父类的方法.......')
@@ -25,7 +25,7 @@ class Countries(Chinese):
         self.sex = sex
 
     def update(self):
-        return '%s所在的国家是%s，这个国家的面积是%s，' % (self.name, self.state, self.area,)
+        return '%s所在的国家是%s,这个国家的面积是%s,' % (self.name, self.state, self.area,)
 
     def run(self):
         Chinese.run(self)       # 调用父类的实例方法

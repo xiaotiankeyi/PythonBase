@@ -1,6 +1,6 @@
 """
     自制迭代器Iterator,
-    特点：能被next访问,并不断返回下一个元素对象
+    特点:能被next访问,并不断返回下一个元素对象
     __iter__作用是可以让具备可迭代性的元素变为迭代器
 """
 
@@ -64,7 +64,7 @@ class Range:
 
 
 class Addition:
-    """自制生成器来实现自定义迭代器规则，加上yield实现"""
+    """自制生成器来实现自定义迭代器规则,加上yield实现"""
 
     def __init__(self, n, stop, step):
         self.n = n

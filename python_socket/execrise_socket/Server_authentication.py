@@ -42,7 +42,7 @@ class Handler(BaseRequestHandler):
                 data = self.request.recv(1024)
                 if not data:
                     break
-                print('接收到客户端发来的消息是：', data.decode("utf8"))
+                print('接收到客户端发来的消息是:', data.decode("utf8"))
 
                 self.request.sendall(data.upper())
             except Exception as e:

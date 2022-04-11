@@ -31,7 +31,7 @@ if __name__ == "__main__":
     print(hasattr(b1, 'name'))
     print(hasattr(b1, 'sell_house'))
 
-    print(hasattr(b1, 'collection'))    # 注意不存在函数方法，正确输出是False，但由于自定义了__getattr__结果变为了True,原因不明
+    print(hasattr(b1, 'collection'))    # 注意不存在函数方法,正确输出是False,但由于自定义了__getattr__结果变为了True,原因不明
 
     # 获取属性
     n = getattr(b1, 'name')
@@ -47,7 +47,7 @@ if __name__ == "__main__":
     setattr(b1, 'sb', True)
     setattr(b1, 'show_name', lambda self: self.name + 'sb')     # 为实例对象添加了一个实例函方法
     print(b1.__dict__)
-    print('调用后面添加的实例方法：', b1.show_name(b1))
+    print('调用后面添加的实例方法:', b1.show_name(b1))
 
     # #删除属性
     delattr(b1, 'addr')

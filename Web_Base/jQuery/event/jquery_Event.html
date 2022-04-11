@@ -34,30 +34,30 @@
 				});
 
 				$("button").bind({
-					// bind() 方法为被选元素添加一个或多个事件处理程序，并规定事件发生时运行的函数。
+					// bind() 方法为被选元素添加一个或多个事件处理程序,并规定事件发生时运行的函数,
 					mouseover: function() {
-						// 当鼠标指针位于元素上方时时，改变元素的背景色
+						// 当鼠标指针位于元素上方时时,改变元素的背景色
 						$("body").css("background-color", "red");
 					},
 					mouseout: function() {
-						// 当鼠标从元素上移开时，改变元素的背景色
+						// 当鼠标从元素上移开时,改变元素的背景色
 						$("body").css("background-color", "#FFFFFF");
 					}
 				});
 
 				$(".field").change(function() {
-					// 当元素的值发生改变时，会发生 change 事件
-					// 该事件仅适用于文本域（text field），以及 textarea 和 select 元素。
+					// 当元素的值发生改变时,会发生 change 事件
+					// 该事件仅适用于文本域（text field）,以及 textarea 和 select 元素,
 					$(this).css("background-color", "#FFFFCC");
 				});
 
 				$("img").error(function() {
-					// 当元素遇到错误（没有正确载入）时，发生 error 事件
+					// 当元素遇到错误（没有正确载入）时,发生 error 事件
 					$("img").replaceWith("<p><b>图片未加载！</b></p>");
 				});
 
 				$("form").submit(function() {
-					// 当提交表单时， 会发生 submit 事件, 该事件只适用于表单元素。
+					// 当提交表单时, 会发生 submit 事件, 该事件只适用于表单元素,
 					alert("Submitted");
 				});
 			})

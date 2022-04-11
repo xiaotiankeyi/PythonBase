@@ -25,5 +25,5 @@ if __name__ == "__main__":
         t.join()
 
     date_end = time() - date_start
-    print('时间是：{}'.format(date_end))
+    print('时间是:{}'.format(date_end))
     print('主线程是:{}'.format(os.getpid()))

@@ -9,7 +9,7 @@ server = socket(AF_INET, SOCK_DGRAM)
 server.bind(ip_addr)  # 绑定IP地址
 
 
-# 接收客户端发来的"string"，然后转化为大写在发送回客户端
+# 接收客户端发来的"string",然后转化为大写在发送回客户端
 addr = ""
 
 

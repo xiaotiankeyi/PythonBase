@@ -9,20 +9,20 @@ from flask import request
 # html_dir = os.path.join(base_dir + '/python_web/')
 # print(html_dir)
 
-server = flask.Flask(__name__)  # 把当前这个python文件，当做一个服务，定义Server(启动服务)
+server = flask.Flask(__name__)  # 把当前这个python文件,当做一个服务,定义Server(启动服务)
 
 
-@server.route('/index/', methods=['get'])  # 接口装饰器，get请求
+@server.route('/index/', methods=['get'])  # 接口装饰器,get请求
 def index():
     return render_template("ajax.html")
 
 
-@server.route('/index2/', methods=['get'])  # 接口装饰器，get请求
+@server.route('/index2/', methods=['get'])  # 接口装饰器,get请求
 def index2():
     return render_template("ajax_two.html")
 
 
-@server.route('/index3/', methods=['get'])  # 接口装饰器，get请求
+@server.route('/index3/', methods=['get'])  # 接口装饰器,get请求
 def index3():
     return render_template("ajax_three.html")
 

@@ -15,7 +15,7 @@ def run_handle():
                      "2:注册" + "\n"
                               "3:退出"
         )
-        num = input("请输入所要操作的功能的序号：").strip()
+        num = input("请输入所要操作的功能的序号:").strip()
         if num.isdecimal():
             if num == "1":
                 login_function.login()

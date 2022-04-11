@@ -18,7 +18,7 @@ x = generator()
 def result():
     print('开始执行....')
     val = yield 44
-    print('接收send传回的值：', val)
+    print('接收send传回的值:', val)
     yield 33
 
 

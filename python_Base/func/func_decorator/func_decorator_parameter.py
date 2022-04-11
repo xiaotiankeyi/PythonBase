@@ -4,14 +4,14 @@ import time
 """装饰器的框架,创建一个统计函数运行时间的功能"""
 
 
-def timmer(func):  # 第一步，目前形参是orange
+def timmer(func):  # 第一步,目前形参是orange
     print('函数名称1:', func.__name__)
 
     def wrapper(*args, **kwargs):
         print('值1', args)
         print('值2', kwargs['age'])
         start_time = time.time()  # 第五步
-        ret = func(*args, **kwargs)  # 第六步，运行orange
+        ret = func(*args, **kwargs)  # 第六步,运行orange
         stop_time = time.time()  # 第九步
 
         # print("运行的时间是%s " % (stop_time - start_time))  # 第十步
@@ -20,7 +20,7 @@ def timmer(func):  # 第一步，目前形参是orange
 
         return "运行的时间是%s " % (stop_time - start_time)
 
-    return wrapper  # 第二步，返回wrapper地址
+    return wrapper  # 第二步,返回wrapper地址
 
 
 """@表示语法堂,@后面加上装饰器>>>>相当于orange = timmer(orange)"""

@@ -13,7 +13,7 @@ def accept():
 
     while True:
         data, addr = client.recvfrom(accept_size)
-        print("\n接收到服务器信息是：", data.decode("utf8"))
+        print("\n接收到服务器信息是:", data.decode("utf8"))
         # print(addr)
 
         # client.close()
@@ -24,7 +24,7 @@ def send():
     # print('线程二:', t2.ident)
 
     while True:
-        # sendto发送数据，发送数据需要转变为字节流encode
+        # sendto发送数据,发送数据需要转变为字节流encode
         val = str(input("请客户端输入发送字母:")).strip()
         client.sendto(val.encode('utf-8'), ip_addr)
 

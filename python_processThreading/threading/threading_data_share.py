@@ -18,7 +18,7 @@ def inputValue(n):
 
 if __name__ == "__main__":
     n = 100
-    print('主线程：{}的n是{}'.format(os.getpid(), n), )  # 主线程查看结果为10,取的值是本身为改变的值
+    print('主线程:{}的n是{}'.format(os.getpid(), n), )  # 主线程查看结果为10,取的值是本身为改变的值
 
     t = Thread(target=inputValue, args=(n,))
     t.start()
@@ -28,4 +28,4 @@ if __name__ == "__main__":
     t1.start()
     t1.join()
 
-    print('主线程：{}的n是{}'.format(os.getpid(), n), )  # 主线程查看结果为10, 取得值是子线程改变后里的值
+    print('主线程:{}的n是{}'.format(os.getpid(), n), )  # 主线程查看结果为10, 取得值是子线程改变后里的值

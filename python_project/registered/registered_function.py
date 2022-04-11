@@ -15,9 +15,9 @@ logger = The_log.logger()
 
 def registered():
     logger.info('\t\t欢迎来到注册首页')
-    username = input('>>>请输入用户名： ').strip()
-    password = input('>>>请输入密码： ').strip()
-    telephone = input('>>>请输入电话号码： ').strip()
+    username = input('>>>请输入用户名: ').strip()
+    password = input('>>>请输入密码: ').strip()
+    telephone = input('>>>请输入电话号码: ').strip()
     m = hashlib.md5()
     m.update(password.encode('utf8'))
     hash = m.hexdigest()

@@ -6,7 +6,7 @@ accept_size = 1024
 
 client = socket(AF_INET, SOCK_DGRAM)
 
-# 输入一个"string"，发送给服务端
+# 输入一个"string",发送给服务端
 
 
 def echo():

@@ -21,7 +21,7 @@ def openPyxl_way():
     wb = fp['APIcase']
     # print(wb)
 
-    '''对当前选中的表单进行操作。。。。。。。。。。。。。。。。'''
+    '''对当前选中的表单进行操作,,,,,,,,,,,,,,,,'''
 
     ws = fp.active
     '''查看第一列的标头'''
@@ -65,7 +65,7 @@ def openPyxl_way():
     for o in ws.iter_rows(min_row=1, max_row=3, min_col=7, max_col=8):
         for l in o:
             all_value.append(l.value)
-    print('1-3行,7-8列的数据为：', all_value)
+    print('1-3行,7-8列的数据为:', all_value)
 
     '''查看行和列的总数'''
     all_row_column = '{}行, {}列'.format(ws.max_row, ws.max_column)
@@ -83,7 +83,7 @@ def pdWay():
     row = df.loc[0].values
     # print(row)
 
-    # 2：读取指定的多行，数据会存在嵌套的列表里面
+    # 2:读取指定的多行,数据会存在嵌套的列表里面
     more_row = df.loc[[0, 1]].values
     # print(more_row)
 

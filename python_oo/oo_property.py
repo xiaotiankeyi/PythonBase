@@ -1,17 +1,17 @@
 # 静态属性@property
 
 """
-    概念：静态属性其实就是数据属性，把class的函数属性封装成数据属性的形式，在外部调用的时候感受不到运行逻辑
-    作用及实例操作：1.可以访问到实例(对象)自身的数据属性,也可以访问类的数据属性及函数属性
-                 2.与所定义的属性配合getter/setter使用，这样可以防止属性被修改。
-    我们可以使用@property装饰器来创建只读属性，@property装饰器会将方法转换为相同名称的只读属性,
-    可以与所定义的属性配合使用，这样可以防止属性被修改。
-    Property对象有三个方法，getter(), setter()和delete()，
+    概念:静态属性其实就是数据属性,把class的函数属性封装成数据属性的形式,在外部调用的时候感受不到运行逻辑
+    作用及实例操作:1.可以访问到实例(对象)自身的数据属性,也可以访问类的数据属性及函数属性
+                 2.与所定义的属性配合getter/setter使用,这样可以防止属性被修改,
+    我们可以使用@property装饰器来创建只读属性,@property装饰器会将方法转换为相同名称的只读属性,
+    可以与所定义的属性配合使用,这样可以防止属性被修改,
+    Property对象有三个方法,getter(), setter()和delete(),
 """
 
 
 class PePole(object):
-    """通过@property装饰器，实现对_age实例属性的约束，使其智能输入大于0小于100的数"""
+    """通过@property装饰器,实现对_age实例属性的约束,使其智能输入大于0小于100的数"""
 
     def __init__(self, name, age, sex, height, weight):
         self.user = name
@@ -43,19 +43,19 @@ class PePole(object):
             self._age = value
             print('修改成功！！')
         else:
-            print('修改失败。。。。score must between 0 ~ 100!')
+            print('修改失败,,,,score must between 0 ~ 100!')
 
 
 people = PePole('jack', 22222, '男', 1.65, 62)
 
 print(people.__dict__)
 print(people.Features())  # 实例对象访问实例方法
-print(people.trait)  # 加了@property后，可以像调用属性的形式来调用方法,后面不需要加()
+print(people.trait)  # 加了@property后,可以像调用属性的形式来调用方法,后面不需要加()
 
 print(people.user)
-print('该方法转化的为静态属性,只读：', people.get_age)
+print('该方法转化的为静态属性,只读:', people.get_age)
 people.set_age = 33  # 当对其修改时会做判断处理了
-print('修改后在查看：', people.get_age)
+print('修改后在查看:', people.get_age)
 
 
 class Celsius:

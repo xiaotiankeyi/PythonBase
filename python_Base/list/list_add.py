@@ -22,6 +22,6 @@ print(nums)
 number = [count * 2 for count in range(1, 7)]
 print(number)
 
-# ___计算出(0-50)之间的偶数,在计算出整个列表的长度，，再查找索引为(22)的数
+# ___计算出(0-50)之间的偶数,在计算出整个列表的长度,,再查找索引为(22)的数
 even = [i for i in range(0, 50, 2)]
 print(len(even), even[22])

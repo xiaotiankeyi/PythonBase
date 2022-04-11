@@ -1,12 +1,12 @@
 # 继承单继承和·多继承
 """
-    python三大特性：继承\\多态\\封装
-    概念：
+    python三大特性:继承\\多态\\封装
+    概念:
         1、单继承、多继承
         2、子类可以继承父类的实例属性和实例方法及数据属性
         3、当子类中的数据属性和父类出现重名时,在调用时先在自身寻找
         4、两个概念 派生\\继承
-    使用场景：当类之间有很多相同的功能，提取这些公共的功能做成基类，用继承较好
+    使用场景:当类之间有很多相同的功能,提取这些公共的功能做成基类,用继承较好
 """
 
 
@@ -28,11 +28,11 @@ class Countries(Chinese):
         self.state = state
 
     def update(self):
-        return '%s所在的国家是%s，他的身高是%s,体重为%s,' % (
+        return '%s所在的国家是%s,他的身高是%s,体重为%s,' % (
             self.name, self.state, self.height, self.weight)
 
     def alter(self):
-        """和父类的数据属性出现重名命的值，优先调用自身的值"""
+        """和父类的数据属性出现重名命的值,优先调用自身的值"""
         print(self.height)
 
 
@@ -44,7 +44,7 @@ print(accept.alter())
 
 # print(accept.update(), accept.Features())
 # print(accept.Features())
-# print(accept.height)      #通过子类生成的对象去访问父类的数据属性。。。。
+# print(accept.height)      #通过子类生成的对象去访问父类的数据属性,,,,
 # print(accept.area)
 
 

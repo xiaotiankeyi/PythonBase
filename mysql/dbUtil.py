@@ -40,7 +40,7 @@ class DBUitl(object):
             self.close()
 
     def DML(self, sql, *args):
-        """修改数据库中的数据，包括插入(INSERT)、更新(UPDATE)和删除(DELETE)"""
+        """修改数据库中的数据,包括插入(INSERT)、更新(UPDATE)和删除(DELETE)"""
         try:
             count = self.conn.execute(sql, args)
             self.connection.commit()

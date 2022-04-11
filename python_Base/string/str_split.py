@@ -6,10 +6,10 @@ info = 'root:x:0:0::/root:/bin/bash'
 # ___显示索引为(1\2\3\4)的字符
 print(info[0] + info[1] + info[2] + info[3])
 
-# ___split___以冒号为切割，，在以[列表__list__]形式输入
+# ___split___以冒号为切割,,在以[列表__list__]形式输入
 user = info.split(':')
 print(user)
-# ___切割成功后，查找出'/bin/bash'的索引，，再显示列表中索引为(6)的字符
+# ___切割成功后,查找出'/bin/bash'的索引,,再显示列表中索引为(6)的字符
 print(user.index('/bin/bash'), user[6])
 
 english = 'price configure mock redis pinpoint share'

@@ -71,7 +71,7 @@ for i, v in enumerate(str, 1):
 
 # 判断是不是质数
 """
-num = int(input('请输入一个数字：'))
+num = int(input('请输入一个数字:'))
 if num > 1:
     for i in range(2, num):
         print(i)
@@ -82,7 +82,7 @@ if num > 1:
     else:
         print(num, "是质数")
 else:
-    print('不是质数。')
+    print('不是质数,')
 
 
 # 九九乘法表
@@ -98,7 +98,7 @@ def fanzhuan(list):
     a = []
     i = len(list)
     while i > 0:
-        a.append(list[i - 1])  # 生成一个新的列表，原列表的最后一位成为第一位
+        a.append(list[i - 1])  # 生成一个新的列表,原列表的最后一位成为第一位
         i -= 1  # 依次向前进一位
     return a
 

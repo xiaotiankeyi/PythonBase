@@ -12,7 +12,7 @@ def handle():
     collection = {item for item in my_dict.keys()}
     print(collection)
 
-    # __values___获取values值。。。
+    # __values___获取values值,,,
     for item in my_dict.values():
         print(item)
     collection = {item for item in my_dict.values()}

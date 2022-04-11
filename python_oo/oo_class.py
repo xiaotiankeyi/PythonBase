@@ -1,6 +1,6 @@
 """
-1、数据属性 -----属于class的属性，也属于"类对象"的属性
-2、函数属性 ---- 属于class的属性，"实例对象"可以调用类的函数属性
+1、数据属性 -----属于class的属性,也属于"类对象"的属性
+2、函数属性 ---- 属于class的属性,"实例对象"可以调用类的函数属性
 """
 import types
 
@@ -36,7 +36,7 @@ Edit()
 def like(self, foods):  # 先定义一个方法,并且调用新增加的数据属性
     print('>>>>>>>%s喜欢吃%s' % (self.name, foods))
 
-# 为实例对象增加方法，只属于对象所有people
+# 为实例对象增加方法,只属于对象所有people
 people.like = types.MethodType(like, people)
 people.like("苹果")
 

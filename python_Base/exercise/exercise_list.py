@@ -23,8 +23,8 @@ def string():
 
 string()
 
-"""定义 purify 函数，传一 list 参数；去除该 list 中所有的偶数（该list中全为int元素）
-　　　　如： purify([3,1,5,2,6,1,4])  会 return [2,6,4]"""
+"""定义 purify 函数,传一 list 参数；去除该 list 中所有的偶数（该list中全为int元素）
+　　　　如: purify([3,1,5,2,6,1,4])  会 return [2,6,4]"""
 
 
 def purify(parameter):
@@ -44,7 +44,7 @@ def purify(parameter):
 
 value = purify("619347420842")
 print(value)
-"""1. 有列表data=['alex',49,[1900,3,18]]，分别取出列表中的名字，年龄，出生的年，月，日赋值给不同的变量"""
+"""1. 有列表data=['alex',49,[1900,3,18]],分别取出列表中的名字,年龄,出生的年,月,日赋值给不同的变量"""
 
 
 def values():

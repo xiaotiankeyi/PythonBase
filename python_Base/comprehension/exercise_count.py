@@ -9,7 +9,7 @@ with open(path, 'r+', encoding='utf8') as f:
     """转化为集合去重复操作"""
     words_index = set(words)
 
-    """列表单词为key，出现次数为values"""
+    """列表单词为key,出现次数为values"""
     count_dict = {index: words.count(index) for index in words_index}
     """上面的字典推导式表现形式为...."""
     # dict = {}
@@ -34,7 +34,7 @@ def Sum():
             collection.append(rad_word.lower())
         print(collection)
 
-    """列表单词为key，出现次数为values"""
+    """列表单词为key,出现次数为values"""
     dict = {}
     for i in collection:
         dict[i] = collection.count(i)
