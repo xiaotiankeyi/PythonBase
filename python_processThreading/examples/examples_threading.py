@@ -1,5 +1,4 @@
 import threading
-from unittest import result
 import requests
 import os
 import time
@@ -15,7 +14,7 @@ urls = [
 def craw(url):
     data = requests.get(url=url)
     data = data.text
-    t_name = threading.currentThread()
+    t_name = threading.currentThread()  # 线程名称
     print((os.getpid(), t_name, url, len(data)))
 
 def singleThreading():
