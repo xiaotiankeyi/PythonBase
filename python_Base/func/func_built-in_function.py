@@ -16,7 +16,7 @@ print(accept)
 n = eval("3 * 4")
 print(n)
 
-# ______pow() 方法返回 xy（x的y次方） 的值,,,计算x值得平方
+# ______pow() 方法返回 xy(x的y次方) 的值,,,计算x值得平方
 
 print("math.pow(100, 2)", math.pow(100, 2))
 # 内置用法
@@ -55,7 +55,7 @@ tmplist = filter(is_odd, [1, 2, 3, 4, 5, 6, 7, 8, 9, 10])
 new_list = list(tmplist)
 print(new_list)
 
-# ______chr() 用一个范围在 range（256）内的（就是0～255）整数作参数,返回一个对应的字符,
+# ______chr() 用一个范围在 range(256)内的(就是0～255)整数作参数,返回一个对应的字符,
 print(chr(71))
 
 
@@ -98,7 +98,7 @@ zipped = zip(a, b)
 zipped = list(zipped)
 print(zipped)
 
-# _____hash() 用于获取取一个对象（字符串或者数值等）的哈希值,
+# _____hash() 用于获取取一个对象(字符串或者数值等)的哈希值,
 print(hash('test'))
 print(hash(23))
 

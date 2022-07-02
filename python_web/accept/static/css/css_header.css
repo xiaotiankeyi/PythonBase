@@ -109,7 +109,7 @@ div.header{
     margin-left: 10px;
     background-color: #f5f5f5;
     border: none;
-    outline: 0;     /*outline （轮廓）是绘制于元素周围的一条线*/
+    outline: 0;     /*outline (轮廓)是绘制于元素周围的一条线*/
     font-size: 14px;
 }
 

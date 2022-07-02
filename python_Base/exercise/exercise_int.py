@@ -1,5 +1,5 @@
 '''
-定义 multiple 函数,传可变参数（该参数全为float）,return 所有可变参数相乘的积,无参数则返回 None；
+定义 multiple 函数,传可变参数(该参数全为float),return 所有可变参数相乘的积,无参数则返回 None；
 如:multiple(3,2) return 6；multiple(3.5,2) return 7.0；multiple(3.5,2,3) return 21.0；multiple(3,2,0,3,) return 0；
 '''
 

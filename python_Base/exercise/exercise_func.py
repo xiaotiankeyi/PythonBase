@@ -8,7 +8,7 @@ def count(accept):
     return sum
 
 
-"""写函数,判断用户传入的对象（字符串、列表、元组）长度是否大于10,,,并计算出个数"""
+"""写函数,判断用户传入的对象(字符串、列表、元组)长度是否大于10,,,并计算出个数"""
 
 
 def extent(accept):
@@ -48,7 +48,7 @@ def check_str(msg):
 # res=check_str('hello name:aSB passowrd:alex3714')
 # print(res)
 
-"""写函数,检查用户传入的对象（字符串、列表、元组）的每一个元素是否含有空内容,"""
+"""写函数,检查用户传入的对象(字符串、列表、元组)的每一个元素是否含有空内容,"""
 
 
 def examine(paras):

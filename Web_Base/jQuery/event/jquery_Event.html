@@ -47,12 +47,12 @@
 
 				$(".field").change(function() {
 					// 当元素的值发生改变时,会发生 change 事件
-					// 该事件仅适用于文本域（text field）,以及 textarea 和 select 元素,
+					// 该事件仅适用于文本域(text field),以及 textarea 和 select 元素,
 					$(this).css("background-color", "#FFFFCC");
 				});
 
 				$("img").error(function() {
-					// 当元素遇到错误（没有正确载入）时,发生 error 事件
+					// 当元素遇到错误(没有正确载入)时,发生 error 事件
 					$("img").replaceWith("<p><b>图片未加载！</b></p>");
 				});
 

@@ -69,7 +69,7 @@ LOGGING_DIC = {
         '': {
             'handlers': ['default', 'console'],  # 这里把上面定义的两个handler都加上,即log数据既写入文件又打印到屏幕
             'level': 'DEBUG',
-            'propagate': True,  # 向上（更高level的logger）传递
+            'propagate': True,  # 向上(更高level的logger)传递
         },
     },
 }

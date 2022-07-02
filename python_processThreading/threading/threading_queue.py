@@ -1,55 +1,63 @@
 # 概念: 针对多线性应用,队列是一种数据结构,
 
-import queue  # 线程队列
+import queue
+import threading
+import time
 
+exitFlag = 0
 
-def one():
-    q = queue.Queue(4)  # 三种储存取值模式,先进先出
+class myThread(threading.Thread):
+    def __init__(self, threadID, name, q):
+        # threading.Thread.__init__(self)
+        super().__init__()
+        self.threadID = threadID
+        self.name = name
+        self.q = q
+    def run(self):
+        print ("开启线程：" + self.name)
+        process_data(self.name, self.q)
+        print ("退出线程：" + self.name)
 
-    # 方法
-    # print(q.qsize())  # 队列大小
-    # print(q.empty())  # 是否为空
-    # print(q.full())  # 是否满
+def process_data(threadName, q):
+    while not exitFlag:
+        queueLock.acquire()
+        if not workQueue.empty():
+            data = q.get()
+            queueLock.release()
+            print ("%s processing %s" % (threadName, data))
+        else:
+            queueLock.release()
+        time.sleep(1)
 
-    # 存放数据
-    q.put('12')
-    q.put("hello")
-    q.put({"name": "yuan"})
+threadList = ["Thread-1", "Thread-2", "Thread-3"]
+nameList = ["One", "Two", "Three", "Four", "Five"]
+queueLock = threading.Lock()
+# workQueue = queue.Queue(10)   # 先进先出模式
+workQueue = queue.LifoQueue(10)     # 先进后出模式
+threads = []
+threadID = 1
 
-    for i in range(4):
-        # q.get(block=False)   读取数据,队列为空时不报错
-        data = q.get(block=True, timeout=2)
-        # data = q.get_nowait()   #队列为空时报错
-        print(data)
-        print("----------")
+# 创建新线程
+for tName in threadList:
+    thread = myThread(threadID, tName, workQueue)
+    thread.start()
+    threads.append(thread)
+    threadID += 1
 
+# 填充队列
+queueLock.acquire()
+for word in nameList:
+    workQueue.put(word)
+queueLock.release()
 
-def two():
-    a = queue.LifoQueue()  # 先进后出模式
-    a.put(12)
-    a.put("hello")
-    a.put({"name": "yuan"})
+# 等待队列清空
+while not workQueue.empty():
+    pass
 
-    for i in range(4):
-        data = a.get(block=True, timeout=2)
-        print(data)
-        print("----------")
+# 通知线程是时候退出
+exitFlag = 1
 
-
-def three():
-    # 优先级,根据设定好的索引取值
-    f = queue.PriorityQueue()
-    f.put((1, 12))
-    f.put((3, "hello"))
-    f.put((2, {"name": "yuan"}))
-
-    for i in range(4):
-        data = f.get(block=True, timeout=2)
-        print(data)
-        print("----------")
-
-
-if __name__ == "__main__":
-    # one()
-    # two()
-    three()
+# 等待所有线程完成
+for t in threads:
+    t.join()
+print ("退出主线程")

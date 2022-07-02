@@ -8,6 +8,7 @@
 """
 import threading  # 线程
 import time
+import os
 
 
 def Hi(num):
@@ -16,16 +17,20 @@ def Hi(num):
 
 
 if __name__ == '__main__':
+    threads = []
+
     t1 = threading.Thread(target=Hi, args=(10,))  # 创建了一个线程对象t1
-    t1.start()
-
-    # t1.join()  # t1没完成就不运行主线程,
-
     t2 = threading.Thread(target=Hi, args=(9,))  # 创建了一个线程对象t1
-    t2.start()
-    # t2.join()
 
-    print("\nending..........")
+    t1.start()
+    t2.start()
+    threads.append(t1)
+    threads.append(t2)
+
+    for t in threads:
+        t.join()   # 等待所有线程完成完成,在运行主线程,
+
+    print("\nending..........", os.getpid(), os.getppid(), end='\t')
 
 
     def record():
@@ -40,4 +45,4 @@ if __name__ == '__main__':
         """threading module way"""
         threading.activeCount()  # 返回正在运行的线程数
         threading.active_count()  # 统计正在运行的线程数
-pass
+

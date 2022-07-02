@@ -16,7 +16,7 @@ else:
 print("查看来自于那个模块>>>>>", i.__module__)
 
 
-"""动态导入模块（基于反射当前模块成员）应用"""
+"""动态导入模块(基于反射当前模块成员)应用"""
 
 BASE_DIR = os.path.dirname(os.path.dirname(__file__))
 sys.path.append(BASE_DIR)

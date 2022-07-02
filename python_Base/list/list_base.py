@@ -73,15 +73,11 @@ def list_collection():
 quest = ["hi"] * 5
 print(quest)
 
+
 """进行倒序排列和冒泡排序"""
-
-
 def sort():
     # 冒泡排序
     list = [5, 8, 6, 9, 3, 4, 8, 9, 5, 1, 4]
-    list.sort(reverse=False)
-    print(list)
-    # 第二种写法.....
     list_len = len(list)
     for i in range(list_len - 1):
         for j in range(i, list_len):
@@ -90,7 +86,7 @@ def sort():
     print(list)
 
     password_list = ['*#*#', '12345']
-    print(password_list[-1])
+    print('===', password_list[-1])
 
 
 sort()
@@ -103,3 +99,33 @@ for i in f:
     print(i, type(i))
 
 print(dir(list))
+
+list = [5, 8, 6, 9, 3, 4, 8, 9, 5, 1, 4]
+list.sort(reverse=False)
+print(list)
+
+def sort_list(number):
+    # 冒泡排序
+    # 思路, 每相邻的两个数进行比较,如果前边的比后边的数大,则交换这两个数,重复操作,这样的话每一趟会确定一个最大值
+    for j in range(len(number) - 1):
+        for i in range(j, len(number)):
+            if number[j] > number[i]:
+                number[j], number[i] = number[i], number[j]
+    return number
+
+
+def select_sort(number):
+    # 选择排序
+    for j in range(len(number) - 1):
+        min_loc = j
+        for i in range(j + 1, len(number)):
+            if number[i] > number[min_loc]:
+                number[i], number[min_loc] = number[min_loc], number[i]
+    return number
+
+if __name__ == "__main__":
+    sotr_number = sort_list([5, 8, 6, 9, 3, 4, 8, 9, 5, 1, 4])
+    print('==', sotr_number)
+
+    select_number = select_sort([7, 5, 4, 6, 2, 8, 3, 1])
+    print(select_number)

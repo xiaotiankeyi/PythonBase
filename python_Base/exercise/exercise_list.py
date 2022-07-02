@@ -23,7 +23,7 @@ def string():
 
 string()
 
-"""定义 purify 函数,传一 list 参数；去除该 list 中所有的偶数（该list中全为int元素）
+"""定义 purify 函数,传一 list 参数；去除该 list 中所有的偶数(该list中全为int元素)
 　　　　如: purify([3,1,5,2,6,1,4])  会 return [2,6,4]"""
 
 

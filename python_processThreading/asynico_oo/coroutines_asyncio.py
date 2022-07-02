@@ -18,7 +18,7 @@ if __name__ == "__main__":
     # 创建循环事件
     loop = asyncio.get_event_loop()
 
-    # 创建监听事件
+    # 创建监听事件,会阻塞直到事件完成,
     loop.run_until_complete(asyncio.gather(a1, a2))
 
     # 关闭事件循环

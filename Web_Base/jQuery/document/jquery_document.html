@@ -20,13 +20,13 @@
 		</style>
 		<script type="text/javascript">
 			$(document).ready(function() {
-				//文档就绪函数,这是为了防止文档在完全加载（就绪）之前运行 jQuery 代码
+				//文档就绪函数,这是为了防止文档在完全加载(就绪)之前运行 jQuery 代码
 				$("button").click(function() {
 
 					// after() 方法在被选元素后插入指定的内容
 					$("p:first").after("<p>被插入的内容 Hello world!</p>");
 
-					// append() 方法在被选元素的结尾（仍然在内部）插入指定内容
+					// append() 方法在被选元素的结尾(仍然在内部)插入指定内容
 					$("p:first").append("<b>测试append</b>");
 
 					// before() 方法在被选元素前插入指定的内容
