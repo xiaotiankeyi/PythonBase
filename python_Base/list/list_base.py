@@ -68,10 +68,8 @@ def list_collection():
     print(number)
 
     # ____列表重复,,,,
-
-
-quest = ["hi"] * 5
-print(quest)
+    quest = ["hi"] * 5
+    # print(quest)
 
 
 """进行倒序排列和冒泡排序"""
@@ -89,20 +87,21 @@ def sort():
     print('===', password_list[-1])
 
 
-sort()
+# sort()
 
-f = [1,4,5,7,]
-f.remove(4)
-print(f)
-print(f[1])
-for i in f:
-    print(i, type(i))
+def testFunc():
+    f = [1,4,5,7,]
+    f.remove(4)
+    print(f)
+    print(f[1])
+    for i in f:
+        print(i, type(i))
 
-print(dir(list))
+    print(dir(list))
 
-list = [5, 8, 6, 9, 3, 4, 8, 9, 5, 1, 4]
-list.sort(reverse=False)
-print(list)
+    list = [5, 8, 6, 9, 3, 4, 8, 9, 5, 1, 4]
+    list.sort(reverse=False)
+    print(list)
 
 def sort_list(number):
     # 冒泡排序
@@ -123,9 +122,14 @@ def select_sort(number):
                 number[i], number[min_loc] = number[min_loc], number[i]
     return number
 
+a = [10, 20, 30, 40]
+print(id(a))
+print(id(a[0]))
+print(id(a[1]))
+
 if __name__ == "__main__":
     sotr_number = sort_list([5, 8, 6, 9, 3, 4, 8, 9, 5, 1, 4])
-    print('==', sotr_number)
+    # print('==', sotr_number)
 
     select_number = select_sort([7, 5, 4, 6, 2, 8, 3, 1])
-    print(select_number)
+    # print(select_number)

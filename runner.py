@@ -182,5 +182,5 @@ if __name__ == "__main__":
     # print('===', path)
     allfiles = getallfile(path)
 
-    for item in allfiles:
-        print(item)
+    # for item in allfiles:
+        # print(item)
