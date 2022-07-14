@@ -52,6 +52,7 @@ def is_odd(n):
 
 
 tmplist = filter(is_odd, [1, 2, 3, 4, 5, 6, 7, 8, 9, 10])
+tmplist = filter(lambda n: n % 2 == 1, [1, 2, 3, 4, 5, 6, 7, 8, 9, 10])
 new_list = list(tmplist)
 print(new_list)
 
