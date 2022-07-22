@@ -9,12 +9,22 @@
 import threading  # 线程
 import time
 import os
-
+from threading import local
 
 def Hi(num):
     print("hello %d" % num)
     time.sleep(1)
 
+# 特殊的对象
+lqz = local()
+def task(arg):
+    # 对象.val = 1/2/3/4/5
+    lqz.value = arg
+    time.sleep(2)
+    print('——>', lqz.value)
+for i in range(10):
+    t = threading.Thread(target=task,args=(i,))
+    t.start()
 
 if __name__ == '__main__':
     threads = []
