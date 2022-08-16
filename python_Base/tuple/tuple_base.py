@@ -4,7 +4,7 @@ my_tuple = ('name', 'age', 'sex', (23, 5, 1, 6, 54),
             ],
             'request', 'response', {'paras': 'split', 'str': 'replace'})
 print(my_tuple[3][2])
-# print(my_tuple)
+print(my_tuple[::-1])
 # print(my_tuple[1:6])
 # for reception in my_tuple:
 #     print(reception)

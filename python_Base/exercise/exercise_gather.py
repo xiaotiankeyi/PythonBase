@@ -19,3 +19,8 @@ print(pythons - linuxs)
 
 """4. 求出没有同时报这两门课程的学员名字集合..........交叉补集"""
 print(pythons ^ linuxs)
+
+print(type(pythons))
+
+switch = list(pythons)
+print(type(switch))
