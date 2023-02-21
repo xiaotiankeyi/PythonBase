@@ -23,8 +23,10 @@ def string():
 
 string()
 
-"""定义 purify 函数,传一 list 参数；去除该 list 中所有的偶数(该list中全为int元素)
-　　　　如: purify([3,1,5,2,6,1,4])  会 return [2,6,4]"""
+"""
+定义 purify 函数,传一 list 参数；去除该 list 中所有的偶数(该list中全为int元素)
+如: purify([3,1,5,2,6,1,4])  会 return [2,6,4]
+"""
 
 
 def purify(parameter):
@@ -57,3 +59,16 @@ def values():
 
 
 values()
+
+
+def handle(a, li=['1']):
+    # 测试传递可表参数
+    li = []
+    li.append(a)
+    return li
+
+print(handle(2))
+print(handle(3))
+print(handle(4))
+print(handle('a', li=['b']))
+print(handle(5))

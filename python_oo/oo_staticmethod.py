@@ -19,7 +19,7 @@ class Chinese:
 
     def output(self):
         """class中的实例方法调用静态方法"""
-        self.Features(val='体重'+ str(self.weight))
+        self.Features(val='体重' + str(self.weight))
 
     @staticmethod
     def Features(val):

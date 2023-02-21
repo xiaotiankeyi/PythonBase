@@ -6,13 +6,13 @@ try:
 except ValueError as a:
     pass
 
-except Exception as e:      #万能异常捕获
+except Exception as e:  # 万能异常捕获
     pass
 
-else:       #没异常就运行else
+else:  # 没异常就运行else
     pass
 
-finally:    #有没有异常都会运行
+finally:  # 有没有异常都会运行
     pass
 
 """主动触发异常"""

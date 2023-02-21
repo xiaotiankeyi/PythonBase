@@ -57,3 +57,4 @@ print(Chinese.__name__)  # 类名
 print(Chinese.__doc__)  # 类说明,文档
 print(Chinese.__module__)  # 显示当前所在模块
 print(Chinese.__class__)
+

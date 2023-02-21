@@ -24,7 +24,8 @@ class People:
         print('%s是个人他会走,会跑,会吃,会睡觉' % self.user, self.area)
 
     def borrow(self):
-        print('该函数属性需要获取class数据属性的值时,必须通过对(实例)对象来完成对数据属性的调用%s' % People.area)
+        print('该函数属性需要获取class数据属性的值时',
+              '必须通过对(实例)对象来完成对数据属性的调用%s' % People.area)
 
     @classmethod  # 给类用的
     def seek(cls):

@@ -186,7 +186,7 @@ def filter_func(str):
             new_str = new_str + i
         continue
     return new_str
-    
+
 
 if __name__ == "__main__":
     # path = os.path.abspath(__file__)
