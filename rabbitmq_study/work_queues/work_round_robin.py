@@ -1,7 +1,7 @@
 import pika
 import time
 
-# 工作队列模式之——>公平调度
+# 工作队列模模式之——>轮询分发机制
 credentials = pika.PlainCredentials('admin', 'admin')
 # 1、连接rabbitmq服务器连接
 connection = pika.BlockingConnection(pika.ConnectionParameters(
@@ -17,12 +17,9 @@ def callback(ch, method, properties, body):
     print(" [x] Received %r" % body.decode())
     time.sleep(body.count(b'.'))
     print(" [x] Done")
-    # 手动ack消息确认
-    ch.basic_ack(delivery_tag=method.delivery_tag)
 
 
-channel.basic_qos(prefetch_count=1)     # 公平调度,每次向队列取多条消息消费
 channel.basic_consume(queue='task_queue',
-                      on_message_callback=callback, auto_ack=False)
+                      on_message_callback=callback, auto_ack=True)
 
 channel.start_consuming()

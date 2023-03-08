@@ -14,10 +14,12 @@ channel = connection.channel()
 # 2、创建一个名为helloP的队列
 channel.queue_declare(queue='HELLOP')
 # 3、简单模式,向名为helloP队列中插入用户邮箱地址email
-# exchange指定交换机
-channel.basic_publish(exchange='',
+channel.basic_publish(exchange='',      # exchange指定交换机
                       routing_key='HELLOP',
                       body='我真的烦死了',
+                      properties={
+                          "expiration": 2000   # 消息存活时间
+                      }
                       )
 
 print("发送用户邮箱到MQ成功")

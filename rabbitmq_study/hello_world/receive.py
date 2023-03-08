@@ -11,7 +11,11 @@ def main():
     channel = connection.channel()
 
     # 声明队列
-    channel.queue_declare(queue='HELLOP')
+    channel.queue_declare(queue='HELLOP', durable=False,
+                          exclusive=False, auto_delete=False,
+                          arguments={
+                              "x-message-ttl": 50000    # 队列存活时间
+                          })
 
     # 定义一个回调函数，当获得消息时，Pika库调用这个回调函数来处理消息
 
