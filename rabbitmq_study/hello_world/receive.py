@@ -25,6 +25,7 @@ def main():
         # print("==", properties)
         ch.basic_ack(delivery_tag=method.delivery_tag)      # 手动ack
         # print(dir(properties))
+        # print("手动ack:", method.delivery_tag)
         print("receive message", body.decode())
 
     # 消费消息

@@ -63,4 +63,4 @@ func(2, 4, 5, 78, 2, )
 def func(*y, **x):
     print(y, x)
 
-# func(*[1,35,6,2,])
+func(*[1,35,6,2,], **{"name":"jack"})
