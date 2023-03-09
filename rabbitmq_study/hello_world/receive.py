@@ -11,26 +11,27 @@ def main():
     channel = connection.channel()
 
     # 声明队列
-    channel.queue_declare(queue='HELLOP', durable=False,
+    channel.queue_declare(queue='hello', durable=False,
                           exclusive=False, auto_delete=False,
                           arguments={
-                              "x-message-ttl": 50000    # 队列存活时间
+                              "x-message-ttl": 60000    # 队列存活时间
                           })
 
     # 定义一个回调函数，当获得消息时，Pika库调用这个回调函数来处理消息
 
     def callback(ch, method, properties, body):
-        # ch.basic_ack(delivery_tag=method.delivery_tag)      # 手动ack
-        # print("ch表示管道内存地址", ch)
-        # print(method)
-        # print(properties)
+        # print("==ch表示管道内存地址", ch)
+        # print("==", method)
+        # print("==", properties)
+        ch.basic_ack(delivery_tag=method.delivery_tag)      # 手动ack
+        # print(dir(properties))
         print("receive message", body.decode())
 
     # 消费消息
     channel.basic_consume(
-        "HELLOP",
+        "hello",
         callback,  # 回调地址(函数)
-        auto_ack=True   # TRUE自动ack机制,告诉队列完成了
+        auto_ack=False   # TRUE自动ack机制,告诉队列完成了
     )
 
     # 等待消息

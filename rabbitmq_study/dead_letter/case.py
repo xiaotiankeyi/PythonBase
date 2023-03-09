@@ -173,6 +173,7 @@ class RabbitMQClient:
             body):  # 消息的主题,二进制格式
         print(str(body.decode('utf-8')))
         print('接收失败！')
+        # basic_nack(requeue=True)可以将消息重新放回队列中重新消费
         channel.basic_nack(delivery_tag=method.delivery_tag, requeue=True)
         print('将当前消息重新放入队列中')
 

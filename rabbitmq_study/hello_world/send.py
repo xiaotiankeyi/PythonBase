@@ -11,15 +11,18 @@ connection = pika.BlockingConnection(pika.ConnectionParameters(
 # 建立管道
 channel = connection.channel()
 
-# 2、创建一个名为helloP的队列
-channel.queue_declare(queue='HELLOP')
-# 3、简单模式,向名为helloP队列中插入用户邮箱地址email
+# 2、创建一个名为hello的队列,需要和消费者队列保持一致
+# channel.queue_declare(queue='hello', durable=False,
+#                       exclusive=False, auto_delete=False,
+#                       arguments={
+#                           "x-message-ttl": 60000    # 队列存活时间
+#                       })
+
+
 channel.basic_publish(exchange='',      # exchange指定交换机
-                      routing_key='HELLOP',
+                      routing_key='hello',
                       body='我真的烦死了',
-                      properties={
-                          "expiration": 2000   # 消息存活时间
-                      }
+                      properties=None
                       )
 
 print("发送用户邮箱到MQ成功")
