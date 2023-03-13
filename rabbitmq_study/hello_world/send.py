@@ -30,7 +30,7 @@ try:
                           mandatory=True
                           )
 
-    print("发送用户邮箱到MQ成功, %s" % channel)
+    print("发送用户邮箱到MQ成功, %s" % dir(channel))
 except exceptions.UnroutableError as e:
     print('Message was returned', e)
 except exceptions.NackError as e:
