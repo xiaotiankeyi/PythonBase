@@ -11,3 +11,6 @@ for i in listdir:
     if i.endswith('.py'):
         file.append(i)
 print(file)
+
+file = [i for i in listdir if i.endswith(".py")]
+print(file)

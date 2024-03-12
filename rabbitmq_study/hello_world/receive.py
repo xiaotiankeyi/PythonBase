@@ -17,7 +17,7 @@ def main():
                               "x-message-ttl": 60000    # 队列存活时间
                           })
 
-    # 定义一个回调函数，当获得消息时，Pika库调用这个回调函数来处理消息
+    # 定义一个回调函数?当获得消息时?Pika库调用这个回调函数来处理消息
 
     def callback(ch, method, properties, body):
         # print("==ch表示管道内存地址", ch)

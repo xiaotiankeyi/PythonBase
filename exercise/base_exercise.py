@@ -10,7 +10,7 @@ print(b)
 s = 9 // 2
 print(s)
 
-"""如果表达式的操作符有相同的优先级,则运算规则是？____从左到右"""
+"""如果表达式的操作符有相同的优先级,则运算规则是?____从左到右"""
 g = (3 + 1) * (5 + 5)
 print(g)
 
@@ -24,9 +24,14 @@ if x or y and z:  # 这里先运算and,y等于0,返回y的值False,在运算or,x
 else:
     print("no")
 
-"""在bool值中代表False的有(0),([]),({}),(None),(()) """
+"""在bool值中代表False的有0,[],{},None,() """
 v = ()
 print(bool(v))
+print(bool(0))
+print(bool([]))
+print(bool({}))
+print(bool(None))
+print(bool(""))
 
 """以下代码输出为"""
 x = False

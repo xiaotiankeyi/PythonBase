@@ -6,7 +6,7 @@
     线程是最小的执行单位
     线程与线程之间可以共用进程数据,共享的
 """
-import threading  # 线程
+import threading
 import time
 import os
 from threading import local
@@ -38,7 +38,7 @@ if __name__ == '__main__':
     threads.append(t2)
 
     for t in threads:
-        t.join()   # 等待所有线程完成完成,在运行主线程,
+        t.join()   # 等待所有线程完成,再运行主线程,
 
     print("\nending..........", os.getpid(), os.getppid(), end='\t')
 
@@ -47,7 +47,6 @@ if __name__ == '__main__':
         """threading way threading 对象方法"""
         t1.run()  # 用于表示线程活动方法
         t1.start()  # 启动线程活动
-        t1.isAlive()  # 返回线程是否是活动的
         t1.getName()  # 返回线程名
         t1.setName(" ")  # 设置线程名
         t1.setDaemon(True)  # 守护线程

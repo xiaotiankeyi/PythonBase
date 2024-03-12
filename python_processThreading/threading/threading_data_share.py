@@ -13,12 +13,12 @@ def work():
 
 
 def inputValue(n):
-    print(f"通过子线程—>{t.ident}获取主线程的值,需要把值传给子线程{n}")
+    print(f"通过子线程inputValue—>{t.ident}获取主线程的值,需要把值{n}传给子线程work")
 
 
 if __name__ == "__main__":
     n = 100
-    print('主线程:{}的n是{}'.format(os.getpid(), n), )  # 主线程查看结果为10,取的值是本身为改变的值
+    print('主线程:{}的n是{}'.format(os.getpid(), n), )  # 主线程查看结果为100,取的值是本身未改变的值
 
     t = Thread(target=inputValue, args=(n,))
     t.start()

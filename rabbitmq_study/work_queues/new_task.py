@@ -18,7 +18,7 @@ channel.basic_publish(
     routing_key='task_queue',
     body=message,
     properties=pika.BasicProperties(
-        # Server因意外重启，未处理的消息也不会丢失
+        # Server因意外重启?未处理的消息也不会丢失
         delivery_mode=pika.spec.PERSISTENT_DELIVERY_MODE
     ))
 print(" [x] Sent %r" % message)

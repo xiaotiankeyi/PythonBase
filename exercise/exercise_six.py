@@ -13,7 +13,7 @@ for i in str:
         continue
     a += 1
 
-# print(a)
+print(a)
 
 # 记录当前长度
 c = 0

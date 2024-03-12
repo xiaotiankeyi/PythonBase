@@ -1,6 +1,6 @@
 # import datetime
 # import time
-# import os
+import os
 
 # # print(datetime.datetime.now())
 
@@ -198,5 +198,5 @@ if __name__ == "__main__":
     # for item in allfiles:
     # print(item)
     val = filter_func("adhaskj,.,.;;31888  fjksJHJKH")
-
     print(val)
+    print(os.getpid(), os.getppid())

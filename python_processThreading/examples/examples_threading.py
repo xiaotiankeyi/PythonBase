@@ -37,18 +37,10 @@ def manyThreading():
         tobj.join()
 
 if __name__ == "__main__":
-    pass
-    # print(urls)
-
-    # print('start time')
-    # start = time.time()
-    # singleThreading()
-    # stop = time.time()
-    # print('time consuming', stop - start, 's')
-
 
     print('start time')
     start = time.time()
+    # singleThreading()
     manyThreading()
     stop = time.time()
     print('time consuming', stop - start, 's')

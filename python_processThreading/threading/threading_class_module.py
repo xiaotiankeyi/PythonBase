@@ -15,7 +15,7 @@ class Function(Thread):
 
     def run(self):
         sleep(1)
-        print('hello, hao are yuo {}\t'.format(self.value), os.getpid())
+        print('hello, hao are yuo, 当前进程 {}\t'.format(self.value), os.getpid())
 
 
 if __name__ == "__main__":
@@ -33,4 +33,4 @@ if __name__ == "__main__":
     for t in threads:
         t.join()
 
-    print("当前py文件进程:", os.getpid(), os.getppid())
+    print("当前主进程:", os.getppid())

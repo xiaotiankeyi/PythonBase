@@ -9,8 +9,6 @@
 """直接调用本身"""
 
 
-
-
 from time import sleep
 def fi():
     print("from f1")
@@ -52,7 +50,7 @@ def salary(n):
 # res = salary(10)
 # print(res)
 
-"""例二"""
+"""递归例二"""
 
 person_list = ['Tom', 'alex', 'lucy', 'jack', 'zsc']
 
@@ -70,12 +68,12 @@ def ask_way(person_list):
     sleep(3)
     res = ask_way(person_list)
 
-    print('%s问的结果是: %res' % (person, res))
+    print('%s问的结果是: %r,>>' % (person, res))
     return res
 
 
-# res = ask_way(person_list)
-# print(res)
+res = ask_way(person_list)
+print(res)
 
 
 """实现阶乘"""

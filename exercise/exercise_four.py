@@ -27,4 +27,4 @@ def Foo(x):
         return x * Foo(x - 1)
 
 
-print(Foo(20))
+print(Foo(5))

@@ -30,7 +30,7 @@ def handle_func():
 
 
 def get_result():
-    #有时候我们是得知某个任务结束了,就去获取结果,而不是一直判断每个任务有没有结束。
+    # 有时候我们是得知某个任务结束了,就去获取结果,而不是一直判断每个任务有没有结束。
     # 这是就可以使用as_completed方法一次取出所有任务的结果
     
     executor = ThreadPoolExecutor(max_workers=2)

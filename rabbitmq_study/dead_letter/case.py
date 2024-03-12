@@ -46,7 +46,7 @@ class RabbitMQClient:
     def declare_queue(
             self,
             queue='',  # 队列的名字,默认为空,此时将自动创建一个名字,
-            passive=False,  # 检查一下队列是否存在,如果该参数为True,该方法判断队列存在否,不会声明队列；存在返回queue的状态,不存在报错
+            passive=False,  # 检查一下队列是否存在,如果该参数为True,该方法判断队列存在否,不会声明队列;存在返回queue的状态,不存在报错
             durable=False,  # 队列持久化参数,默认不持久化
             exclusive=False,  # 设置独享队列,该队列只被当前的connection使用,如果该tcp关闭了,队列会被删除
             auto_delete=False,  # 当最后一个消费者退订后自动删除,默认不开启
@@ -139,7 +139,7 @@ class RabbitMQClient:
             self,  # 启动队列消费者,告诉服务端开启一个消费者
             consumer_callback,  # 消费者回调函数
             queue,  # 队列名称
-            auto_ack=False,  # 发送确认,默认开启消息确认模式,为True是关闭消息确认；如果回调函数中不发送消息确认,消息会一直存在队列中,等待推送给新连接的消费者
+            auto_ack=False,  # 发送确认,默认开启消息确认模式,为True是关闭消息确认;如果回调函数中不发送消息确认,消息会一直存在队列中,等待推送给新连接的消费者
             exclusive=False,  # 设置独享消费者,不允许其他消费者订阅该队列
             consumer_tag=None,  # 消费者标签,如果不指定,系统自动生成
             arguments=None):  # 字典,额外的参数
