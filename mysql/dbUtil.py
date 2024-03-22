@@ -6,11 +6,11 @@ class DBUitl(object):
         """初始化"""
         try:
             self.connection = pymysql.connect(
-                host='192.168.0.121',
-                user='mysql',
+                host='rm-wz9l2z6gh3ktg6q30bo.mysql.rds.aliyuncs.com',
+                user='hctest',
                 port=3306,
-                passwd='123456',
-                db='test',
+                passwd='viGAxF922bimNnhV',
+                db='tiangongjiali',
                 charset='utf8'
             )
             # cursor = pymysql.cursors.DictCursor设置数据返回结果类型为字典
@@ -31,9 +31,9 @@ class DBUitl(object):
         try:
             self.conn.execute(sql, args)
             # 返回结果集
-            return self.conn.fetchall()
+            # return self.conn.fetchall()
             # return self.conn.fetchone()
-            # return self.conn.fetchmany(size=0)
+            return self.conn.fetchmany(size=5)
         except Exception as e:
             print(e)
         finally:
@@ -62,6 +62,9 @@ if __name__ == "__main__":
     # count = dbutil.DML(sql, 24, 'tom', 33)
     # print(count)
 
-    sql = "select id, name, age from student where age>%s"
-    data = dbutil.DQL(sql, 25)
+    # sql = "select id, name, age from student where age>%s"
+    # data = dbutil.DQL(sql, 25)
+    
+    sql = "SELECT version();"
+    data = dbutil.DQL(sql,)
     print(data)
