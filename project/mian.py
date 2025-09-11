@@ -182,6 +182,15 @@ def main():
     print(f"3. 生肖过滤剔除的数字:{', '.join(shengxiao_excluded) if shengxiao_excluded else '无'}")
     print(f"4. 最终保留的数字:{', '.join(val) if val else '无'}")
 
+    print("\n===== 最终处理结果（新格式） =====")
+    if composite_excluded:
+        print(f"{', '.join(composite_excluded)}")
+    if head_check_excluded:
+        print(f"{', '.join(head_check_excluded)}")
+    if shengxiao_excluded:
+        print(f"{', '.join(shengxiao_excluded)}")
+    print(f"{', '.join(val) if val else '无'}")
+
 if __name__ == "__main__":
     main()
     
